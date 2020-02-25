@@ -37,6 +37,8 @@ fury车队历年资料整理
 
 ## 底盘
 
+- [减速箱电机防松证明 (图片)](fury资料整理/1234.jpg)
+
 ## 电气
 
 - [Design and Development of the Electrical Systems in an Electric Formula SAE Race Car](@qiniu/fury资料整理/电气/Design_and_Development_of_the_Electrical_Systems_in_an_Electric_Formula_SAE_Race_Car.pdf.pdf)
