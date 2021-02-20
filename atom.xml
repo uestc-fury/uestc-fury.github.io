@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>fury车队</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://uestc-fury.github.io/"/>
+  <updated>2021-02-20T07:29:34.236Z</updated>
+  <id>https://uestc-fury.github.io/</id>
+  
+  <author>
+    <name>fury车队</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020电气组寒假培训第15讲_急停，惯性，制动超行程开关</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC15%E8%AE%B2_%E6%80%A5%E5%81%9C%EF%BC%8C%E6%83%AF%E6%80%A7%EF%BC%8C%E5%88%B6%E5%8A%A8%E8%B6%85%E8%A1%8C%E7%A8%8B%E5%BC%80%E5%85%B3/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第15讲_急停，惯性，制动超行程开关/</id>
+    <published>2020-02-18T15:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第15讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="急停开关"><a href="#急停开关" class="headerlink" title="急停开关"></a>急停开关</h2><ul><li>安放在车辆主环顶部左右各一个，驾驶舱内一个</li><li>常闭开关，按下断开</li></ul><h2 id="惯性开关"><a href="#惯性开关" class="headerlink" title="惯性开关"></a>惯性开关</h2><blockquote><p>12.5.3 惯性开关必须能够被赛车的 6-11g 的减速度所触发，阈值取决于减速时间，详细见 Sensata 产品说明书</p></blockquote><ul><li>在车辆受到撞击时，瞬间断开安全回路</li></ul><h2 id="制动超行程开关"><a href="#制动超行程开关" class="headerlink" title="制动超行程开关"></a>制动超行程开关</h2><ul><li>当刹车失灵时，刹车踏板可踩踏的最大限度超过设计范围，此时刹车踏板触碰制动超行程开关，断开安全回路</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="安全回路" scheme="https://uestc-fury.github.io/categories/%E5%AE%89%E5%85%A8%E5%9B%9E%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第14讲_电池管理系统</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC14%E8%AE%B2_%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第14讲_电池管理系统/</id>
+    <published>2020-02-15T16:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第14讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="电池管理系统-BMS"><a href="#电池管理系统-BMS" class="headerlink" title="电池管理系统(BMS)"></a>电池管理系统(BMS)</h2><ul><li>对动力电池进行管理</li></ul><p><img src="2020电气组寒假培训第14讲_电池管理系统/image-20200216003324145.png" alt="image-20200216003324145"></p><h2 id="检测功能"><a href="#检测功能" class="headerlink" title="检测功能"></a>检测功能</h2><ul><li><p>①电压采集：从控负责，将每一个电池单体的正负极都连接至从控，采集每一个电池单体的电压- </p></li><li><p>②电流采集：霍尔电流传感器，信号线接入主控</p></li><li><p>③温度采集：热敏电阻贴到电池表面，信号线接入从控</p></li></ul><h2 id="评估功能"><a href="#评估功能" class="headerlink" title="评估功能"></a>评估功能</h2><ul><li>SOC（State of Charge）荷电状态，电池的剩余电量</li></ul><h2 id="控制功能"><a href="#控制功能" class="headerlink" title="控制功能"></a>控制功能</h2><ul><li><p>继电器的控制：将继电器的线圈黑线接到主控上，在满足上电需要时，BMS在对应的接线处给出GND信号；当BMS检测到电池发生异常，发出警告，并且断开所有继电器。</p></li><li><p>若BMS出现一级警报，断开所有继电器的同时，串联进安全回路的K5-也会断开安全回路，此时继电器红黑线全断。</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="安全回路" scheme="https://uestc-fury.github.io/categories/%E5%AE%89%E5%85%A8%E5%9B%9E%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>底盘车身基础01-轮胎</title>
+    <link href="https://uestc-fury.github.io/2020/02/%E5%BA%95%E7%9B%98%E8%BD%A6%E8%BA%AB%E5%9F%BA%E7%A1%8001-%E8%BD%AE%E8%83%8E/"/>
+    <id>https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/</id>
+    <published>2020-02-09T14:50:00.000Z</published>
+    <updated>2021-02-20T07:29:34.240Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑</p><a id="more"></a><p>为什么说轮胎最重要，相信大家在看简介的时候就已经有了一定的理解。赛车的全部抓地力都是由轮胎与地面不过巴掌大的接触面实现的。所以我们为了赛车的提升做的所有优化本质上都是为了提升轮胎对地面的最大摩擦力。因此在所有的子系统之前，我们必须了解轮胎。</p><blockquote><p>轮胎是一台汽车上最重要的零件（没有之一）。</p><p>​                                                                    ——<del>鲁迅</del></p></blockquote><h2 id="轮胎坐标系"><a href="#轮胎坐标系" class="headerlink" title="轮胎坐标系"></a>轮胎坐标系</h2><p>为了清晰地描述车轮的运动模式，我们定义轮胎坐标系来描述轮胎的运动模式。</p><p><img src="底盘车身基础01-轮胎/轮胎坐标系.png" alt="轮胎坐标系"></p><p>轮胎坐标系为一个以<strong>车轮正前方</strong>为x轴正方向，<strong>与地面垂直的正上方</strong>为z轴正方向的<strong>右手系</strong>。</p><p>在这个坐标系上我们可以清楚地表示一些轮胎的运动规律：</p><ul><li>轮胎运动过程中受到切向，侧向与地面法向三个方向的地面反作用力<strong><em>F<sub>X</sub></em></strong>，<strong><em>F<sub>Y</sub></em></strong>，<strong><em>F<sub>Z</sub></em></strong>；</li><li>轮胎受到三个方向的力矩：切向称为<strong>翻转力矩<em>T<sub>X</sub></em></strong>，地面法向称为<strong>回正力矩<em>T<sub>Z</sub></em></strong>，侧向为<strong>滚动阻力矩<em>T<sub>Y</sub></em></strong>；</li><li>轮胎的滚动并不是圆柱体的滚动，轮胎滚动可能存在<strong>外倾角<em>γ</em></strong>；</li><li>轮胎的<strong>实际行驶方向</strong>可能与轮胎朝向产生偏角，这被表示为<strong>侧偏角<em>u</em></strong>。</li></ul><h2 id="附着力"><a href="#附着力" class="headerlink" title="附着力"></a>附着力</h2><p>赛车依靠轮胎受到的<strong>地面的反作用力</strong>运动，这就是所谓的“抓地力”，为了表示它的极限值，我们引入了<strong>附着力</strong>的概念。同时类比于摩擦系数，我们使用<strong>附着系数</strong>来称呼附着力与地面正压力的比值。</p><script type="math/tex; mode=display">F_{max}=F_Zφ\qquad φ=\frac{F_{max}}{F_Z}</script><p>式中<strong><em>F<sub>max</sub></em></strong>为附着力，<strong><em>φ</em></strong>为附着系数。根据力的合成分解原理，附着力与附着系数还可以分为<strong>纵向(切向)</strong>与<strong>横向(侧向)</strong>，分别对应最大的纵向与侧向的地面反力。与此同时，我们还使用<strong>附着率<em>C</em></strong>表示轮胎实际附着情况：</p><script type="math/tex; mode=display">C=\frac{F}{F_Z}</script><p>可以看出附着率是一个变量，他与附着系数之恒间有<strong><em>C ≤ φ</em></strong>。</p><p>我们知道，优化赛车的根本手段是提高赛车轮胎的附着力。根据公式，附着力的提高有两种方法。</p><ol><li><p>提高<strong>正压力<em>F<sub>Z</sub></em></strong></p><p>如果单纯使用增重提高正压力的话，车重带来的惯量会损失赛车的灵活性。尤其是有输出功率限制的FSAE比赛，增重会极大的影响赛车的直线加速成绩。所以最好地提升手段是使用空气动力学套件，利用<strong>气动下压力</strong>使赛车在速度较快的弯角获得更大的附着力。</p></li><li><p>提高<strong>附着系数<em>φ</em></strong></p><p>附着系数是一个受到<strong>地面质量、轮胎橡胶性质、轮胎花纹、轮胎接地面积、轮胎倾角、滑移率、侧偏角</strong>等等很多物理属性影响决定的常量。</p><p>因为它非常复杂，随着工况变化而变化，所以目前没有实时定量的技术水平，只能通过测试估计。但是工程上已经针对各种条件总结出了<strong>附着系数的估计值与变化规律</strong>。整个底盘系统绝大部分优化基于附着系数变化的规律，我们在之后的章节中细节分析。请大家牢记附着系数的概念。</p></li></ol><h2 id="轮胎的纵向运动"><a href="#轮胎的纵向运动" class="headerlink" title="轮胎的纵向运动"></a>轮胎的纵向运动</h2><p>之前我们了解到，当车轮转矩过大时，轮胎的滚动状态就会被破坏而进入滑动状态，发生空转或抱死。现在我们来讲点细节。</p><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>如果车轮是一个刚性的圆柱体，而地面是理想粗糙平面，那么车轮与地面之间的滚动就完全依靠圆柱面与地面之间的静摩擦力实现了，此时地面的<strong>附着系数</strong>完全等于<strong>滑动摩擦系数</strong>。这时车轮转矩对应到地面切向反力会有两种状态：</p><ul><li>当车轮转矩输出到接触面面上的切向力小于附着力(<strong><em>rT ≤ F<sub>Xmax</sub></em></strong>)，此时车轮完全滚动。切向力等于这个转矩的输出。</li><li>当车轮转矩输出到接触面上大于附着极限(<strong><em>rT &gt; F<sub>Xmax</sub></em></strong>)，此时车轮开始滑动，切向力达到附着力并保持在附着力上。</li></ul><p>然而现实中的轮胎是充气的柔软橡胶表面，地面也是颗粒不平的粗糙平面。这个现实问题让我们不能用上述简单模型描述轮胎运动。实际上的轮胎运动过程中，由于橡胶的柔软，轮辋经由轮胎将力传导至地面的过程中，<strong>轮胎接地面会产生微小的形变</strong>。所以轮胎在加减速行驶过程中，胎面一直会与地面之间产生<strong>微观上的滑移</strong>。也就是说，轮胎在加减速行驶过程中，一直处于一种“<strong>边滚边滑</strong>”的状态。</p><p><img src="底盘车身基础01-轮胎/纵向轮胎变形.png" alt="纵向轮胎变形"></p><p>为了描述这种状态，我们引入<strong>滑移率</strong>的定义：</p><h3 id="滑移率"><a href="#滑移率" class="headerlink" title="滑移率"></a>滑移率</h3><script type="math/tex; mode=display">s=\frac{u-u_w}{u}\times100\%=\frac{u-rω}{u}\times100\%</script><p>式中<strong><em>u</em></strong>表示车速，<strong><em>u<sub>ω</sub></em></strong>表示车轮转动线速度，<strong><em>ω</em></strong>为车轮滚动角速度，<strong><em>r</em></strong>为车轮半径。滑移率表示<strong>滑动摩擦在车轮纵向运动中所占的比重</strong>。当车轮纯滚动时，<strong><em>u<sub>ω</sub>= u</em></strong> ，<strong><em>s = 0</em></strong>；当车轮抱死纯滑动时，<strong><em>u<sub>ω</sub>= 0</em></strong> , <strong><em>s =100%</em></strong>；当车轮边滚边滑时，<strong><em>u &gt; u<sub>ω</sub></em></strong> ，<strong><em>0 &lt; s &lt; 100%</em></strong>。车轮滑移率越大，说明车轮在运动中滑动成分所占的比例越大。</p><p>滑移率能够描述轮胎因为<strong>微观形变产生的滑移</strong>（肉眼几乎不可见），也能够描述<strong>轮胎的宏观滑移</strong>（明显的车轮滑行）。经验告诉我们，一般当滑移率<strong><em>s ≤ 0.2</em></strong>，轮胎几乎不会产生宏观滑移；当这个数值超过<strong><em>0.2</em></strong>并逐渐增大，轮胎开始产生宏观滑移，并且微观滑移的强度会随着这个数值增大而减弱。这个规律的产生原因与橡胶轮胎的物理特性有关，我把有关内容放扩展吧这里不赘述。</p><p>现在我们来看看滑移率这个指标对赛车的影响</p><h3 id="定性分析"><a href="#定性分析" class="headerlink" title="定性分析"></a>定性分析</h3><p>由于<strong>轮胎的变形程度受到地面纵向反力的直接影响</strong>，即有地面纵向反力的产生意味着轮胎一定产生微观滑移。也就是说若将<strong>滑移率</strong>与车轮所受<strong>纵向反力</strong>作图，这条线将会<strong>通过原点</strong>。因此<strong>滑移率能够在一定程度上直接反应轮胎所受纵向反力的大小</strong>。</p><p>现在我们将滑移率直接设置为车轮的参数变量，这意味着如果此时有一个地面法向反力作用在这个带有滑移的车轮上，车轮将输出这个滑移所对应的纵向反力。</p><script type="math/tex; mode=display">F_X=f[F_Z,s]</script><p>显然这个纵向反力是能够根据输入的法向力<strong><em>F<sub>Z</sub></em></strong>与滑移率<strong><em>s</em></strong>唯一确定的。并且这个力应当是在这个状态下轮胎能够受到的最大纵向反力，符合<strong>纵向附着力<em>F<sub>Xmax</sub></em></strong>的定义。</p><script type="math/tex; mode=display">F_{X_{max}}=f[F_Z,s]</script><p>所以若我们消去地面法向反力<strong><em>F<sub>Z</sub></em></strong>的影响，就可以看出<strong>滑移率<em>s</em></strong>与<strong>纵向附着系数<em>φ<sub>X</sub></em></strong>之间存在的对应关系。这样我们就得到了<strong>滑移率 - 纵向附着系数</strong>的图像。</p><script type="math/tex; mode=display">φ_X=f[s]</script><p><img src="底盘车身基础01-轮胎/滑移率一.png" alt="滑移率一"></p><p>从这个图像里我们可以看出：</p><ul><li>在非松质路面下<ul><li>随着滑移率提升，轮胎的附着能力基本符合<strong>线性增长-峰值区间-衰减</strong>的规律；</li><li>附着系数峰值普遍出现在上文提到的<strong>微观滑移与宏观滑移相结合</strong>的区间。也就是说，最佳的加速或制动性能出现在轮胎肉眼观察将要出现滑动的临界点，符合客观规律；</li><li>这个曲线会受到<strong>路面条件</strong>很大的影响，实际上附着系数本身就是一个受到很多因素影响的常量。</li></ul></li><li>在松质路面下<ul><li>斜率变化平缓，超高的滑移率反而会带来更强的附着能力；</li><li>后段附着能力提升来源于轮胎在松质土地中“刨地”的现象。这就是拉力赛中车手更多使用漂移技术的原因。如果你了解拉力，你会发现虽然在烂路赛段车手会漂移，但在铺装路面赛段车手还是会老实抓地跑的。</li></ul></li></ul><p>实际上轮胎的纵向力学性能受到很多因素的影响，这条曲线的参数还会因为轮胎的配方花纹气压等因素发生改变，在此不赘述。</p><p>以上就是轮胎纵向力学的基本规律，接下来讲轮胎的侧向力学规律。</p><h2 id="轮胎的侧偏运动"><a href="#轮胎的侧偏运动" class="headerlink" title="轮胎的侧偏运动"></a>轮胎的侧偏运动</h2><p>轮胎侧向力学研究的是轮胎实际行驶方向与轮胎指向产生<strong>侧偏角</strong>的原因。</p><h3 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h3><p>与纵向运动采用相同的方式开始吧：我们再次假设轮胎是一个刚性圆柱，而地面是一个粗糙的理想平面。轮胎与地面的<strong>侧向附着系数<em>φ<sub>Y</sub></em></strong>等于胎面的<strong>摩擦系数</strong>。此时如果车轮带有初速度，并且不受外力作用，车轮将匀速地沿着轮胎所指的方向滚动。此时如果给轮胎施加<strong>侧向力<em>F<sub>y</sub></em></strong>，那么轮胎会受到地面的<strong>侧向反力<em>F<sub>Y</sub></em></strong>的作用。按照这个逻辑，就可以估计出轮胎侧向运动的现象：</p><ul><li>当<strong>侧向力</strong>未达到轮胎的侧向附着力(<strong><em>F<sub>y</sub> ≤ F<sub>Ymax</sub></em></strong>)，轮胎在侧向上与地面仍然是静摩擦的状态，所以轮胎依旧沿着原有的方向直线匀速滚动；</li><li>当侧向力超过了轮胎的侧向附着极限(<strong><em>F<sub>y</sub> &gt; F<sub>Ymax</sub></em></strong>)，轮胎在侧向上开始了<strong>滑动摩擦</strong>，发生<strong>侧向运动</strong>。侧向运动与原有的滚动的合运动与轮胎的指向间产生了一个角度，我们称其为<strong>侧偏角<em>α</em></strong>，轮胎的行驶方向与实际指向不同，这就是轮胎的<strong>侧偏运动</strong>。</li></ul><p><img src="底盘车身基础01-轮胎/侧偏角.png" alt="侧偏角"></p><p>然而需要再一次强调的，现实中的轮胎是一个柔软的充气橡胶物体，地面也是颗粒不平的，所以上述理想模型肯定是无法描述实际情况的。侧偏运动的实际原理较之纵向运动在理解上稍复杂一些，我们另起一段↓</p><p>在地面侧向反力的作用下，如果轮胎是静止不动的，那么轮胎靠近地面的部分就会被“掰弯”</p><p><img src="底盘车身基础01-轮胎/轮胎形变.png" alt="轮胎形变"></p><p>在这种形变下，<strong>轮胎接地面的中心轨迹就会发生变化</strong>，我们可以在图上清楚地看出来：<strong>A<sub>0</sub></strong>到<strong>A<sub>5</sub></strong>的位置在正视图上发生了明显的弯曲。如果此时轮胎滚动的话，很容易想象的是，<strong>车轮的滚动路线就会沿着轮胎的中心线发生偏移</strong>。一个柔软的轮胎在收到侧向力状态下滚动的时候，这种弯曲的状态是实时发生的，轮胎每转过一个点，就会随着这个轨迹发生偏移。因为这个现象，<strong>只要轮胎受到侧向力的作用，它就会产生侧偏运动</strong>。</p><p>理解了之前在纵向运动中描述的“<strong>微观形变</strong>”，你就会意识到，轮胎<strong>侧偏角</strong>与<strong>滑移率</strong>一样，与轮胎受到的侧向反力直接对应，<strong>当轮胎受到侧向反力<em>F<sub>Y</sub></em>，它就会产生侧偏角<em>α</em></strong>。因此我们也可以用<strong>侧偏角一定程度上反应轮胎受到侧向反力的大小</strong>。</p><h3 id="定性分析-1"><a href="#定性分析-1" class="headerlink" title="定性分析"></a>定性分析</h3><p>现在我们可以用熟悉的方式操作了：我们将侧偏角也作为车轮运动的参数变量，将<strong>法向反力<em>F<sub>Z</sub></em></strong>、<strong>侧偏角<em>α</em></strong>作为输入，就可以直接得到轮胎所受到的<strong>侧向反力<em>F<sub>Y</sub></em></strong>的值：</p><script type="math/tex; mode=display">F_Y=f[F_Z,α]</script><p>可以看到，这个侧向反力也是可以根据输入唯一确定的，我们把它直接换成<strong>侧向附着力<em>F<sub>Ymax</sub></em></strong>:</p><script type="math/tex; mode=display">F_{Y_{max}}=f[F_Z,α]</script><p>然后我们将<strong>轮胎的法向力<em>F<sub>Z</sub></em></strong>设为不同的定值，就得到了<strong>侧偏角 - 侧向反力</strong>的图像。</p><script type="math/tex; mode=display">F_{Y}=f[α]</script><p><img src="底盘车身基础01-轮胎/侧偏角一.png" alt="侧偏角一"></p><p>这个图像告诉我们：</p><ul><li>与滑移率相同，侧偏角图像有一个<strong>线性增长</strong>的区间，而在到达峰值后会<strong>很缓慢的衰减</strong>；</li><li>由于轮胎侧向运动的速度与纵向运动速度之间存在着很大的差距，所以侧向反力的图像<strong>与纵向附着系数的前段非常相似</strong>。</li><li>图像因变量为侧向反力，所以随着<strong>地面法向反力<em>F<sub>Z</sub></em></strong>的增加和减少，曲线的幅度会发生变化。</li></ul><p>看到这里大家可能产生了一点疑惑：<strong>为什么使用侧向反力作为因变量，而不是侧向附着系数呢？</strong></p><p>再稍加仔细地观察，上面的图像中随着正压力的变化，曲线的变化并不是线性的：<strong>轮胎的侧向附着系数与轮胎所受的法向反力相关</strong>。轮胎产生扭转变形引起的侧偏运动相较于纵向的滑移，对压力更加敏感，过高的压力会引起侧向附着系数的下降。</p><p>因此我们描述轮胎侧向性能的时候，一般不用侧向附着系数，而是<strong>侧偏刚度<em>k</em></strong>。在很多文献中的<strong>附着系数<em>φ</em></strong>指纵向附着系数。</p><h3 id="侧偏刚度"><a href="#侧偏刚度" class="headerlink" title="侧偏刚度"></a>侧偏刚度</h3><p>侧偏刚度定义为轮胎所受<strong>侧向力<em>F<sub>y</sub></em>与侧偏角<em>α</em>的比值</strong>，单位为（<strong><em>N/deg</em></strong>)。在轮胎坐标系中观察规律，我们会发现侧向力与侧偏角的方向是相反的，所以<strong>侧偏刚度是一个负值</strong>。如果将它放在图像上，它是<strong>侧偏角 - 侧向力</strong>图像在原点的斜率。由于图像在到达峰值区域前仍然有相当长的一段线性区间，因此侧偏刚度还是能够很好地用来描述轮胎的侧向性能的。</p><p>现在我们看看<strong>垂直载荷(法向力) - 侧偏刚度</strong>的图像</p><p><img src="底盘车身基础01-轮胎/垂直载荷-侧偏刚度.jpg" alt="垂直载荷-侧偏刚度"></p><p>↑很清楚地看见，对于同种型号的轮胎，随着法向力的增加，侧偏刚度有<strong>线性增长 - 增速放缓 - 下降</strong>的变化趋势。因此可以很自然地看出为什么在评价侧向性能指标时不使用侧向附着系数。在这个趋势下我们做出<strong>垂直载荷 - 侧偏力(侧向反力)</strong>的图像，它应该是这样的↓</p><p><img src="底盘车身基础01-轮胎/垂直载荷-侧偏力.jpg" alt="垂直载荷-侧偏力"></p><p>这两幅图像告诉我们：</p><ul><li>决定赛车过弯性能的本质还是轮胎，赛车轮胎本身更高的侧偏刚度决定了赛车能够实现远超民用车的过弯响应；</li><li>由于侧偏性能受到轮胎垂直载荷的影响，重量大的赛车在弯道上必然陷入劣势。因此<strong>车子还是越轻越好</strong>；</li><li>气动下压力能够在不提升车重的基础上提升过弯性能。</li></ul><p>实际上如果垂直载荷无限增大，轮胎的纵向力学特性也会受到这样的影响。但是一般载荷无法增大到这个量级，而且在到达明显变化的区间之前，轮胎应该已经爆了（笑</p><h3 id="附着椭圆"><a href="#附着椭圆" class="headerlink" title="附着椭圆"></a>附着椭圆</h3><p>现在我们来看看侧偏运动与纵向运动之间的关系。之前我们了解过<strong>g值圆</strong>的概念。使用g值圆衡量车手驾驶水平时，我们会注意刹车 - 入弯的加速度转移过程。<img src="底盘车身基础01-轮胎/图18.png" alt="图18"></p><p>纵向附着与侧向附着的共同点就是都伴随着轮胎的形变，<strong>橡胶的变形张力极限</strong>就是这些加速度极限的来源。所以轮胎能提供的最大纵向力与侧向力是关联在一起的。如果将轮胎的纵向附着力与侧向附着力做图，就会是如下的形式↓<img src="底盘车身基础01-轮胎/附着椭圆.jpg" alt="附着椭圆"></p><p>在图上我们很容易就能看出：在不同的侧偏角下，侧向附着都有随着随着纵向附着增大而减小的趋势。这些图线的包络形成一个椭圆形，因此被称为<strong>附着椭圆</strong>。</p><p>如果你理解了以上内容，你就已经掌握轮胎行驶过程中两个分运动方向的基本运动形式了。现在我们了解一些其他的关键知识点吧。</p><h2 id="回正力矩"><a href="#回正力矩" class="headerlink" title="回正力矩"></a>回正力矩</h2><p>我们转向时，会在方向盘上感受到促使方向盘回正的力，组成这个力的成分中，就有一部分来自于轮胎的<strong>回正力矩</strong>。</p><h3 id="现象-2"><a href="#现象-2" class="headerlink" title="现象"></a>现象</h3><p>在轮胎坐标系中，回正力矩被定义为地面法向的力矩。当轮胎侧偏运动的时候，在这个方向上就会有力矩使<strong>轮胎倾向于与轮胎实际运动的方向对正</strong>。</p><p>要解释这个力矩产生的原因，我们还是那句老话：<strong>轮胎是一个柔软的充气橡胶圆柱</strong>。由于刚性轮理想模型不会产生回正力矩，这里我们直接讲实际现象。</p><p>当在地面上滚动的时候，柔软的<strong>轮胎与地面之间存在一个近似于椭圆或圆角矩形的接地面</strong>。如果我们再细分，这个面可以被分为很多<strong>与轮轴平行的线微元</strong>。很好理解的是，在轮胎滚动的瞬态过程中(不存在宏观滑移)，这个接地平面最后段旧的微元离开地面，而最前端又有新的微元接触地面，循环往复。↓<img src="底盘车身基础01-轮胎/回正力矩图解1.png" alt="回正力矩图解1"></p><p>现在我们给轮胎加上侧向力，于是轮胎开始有了侧偏运动，接地面就与正常滚动的轮胎相比发生偏移↓<img src="底盘车身基础01-轮胎/接地面偏移.png" alt="接地面偏移"></p><p>上图中存在一个非常明显的问题：接地面前后端的偏移量是相同的,这是轮胎静止产生的。在轮胎滚动的过程中，由于接地面的前后端接地时间不同，<strong>后端明显比前端接触地面时间更长，偏移距离也更长</strong>，因此这个接地面在滚动时应该是一个接近平行四边形的状态↓<img src="底盘车身基础01-轮胎/接地面偏移修正.png" alt="接地面偏移修正"></p><p>这样一来回正力矩的产生也就不难理解了：根据弹力的原理，<strong>接地面后端更大的形变量显然会引起更大的轮胎回弹力</strong>。在接地面上的<strong>前后弹力差</strong>形成了促使轮胎指向实际行驶方向的回正力矩。</p><h3 id="定性分析-2"><a href="#定性分析-2" class="headerlink" title="定性分析"></a>定性分析</h3><p>回正力矩与侧偏运动是同时存在的，我们使用侧偏角来关联轮胎产生的侧向附着力，也用侧偏角来关联回正力矩。先人根据经验整理出了如下图所示的关系↓<img src="底盘车身基础01-轮胎/回正力矩图像.jpg" alt="回正力矩图像"></p><p>这张图像可以很清晰地看出：</p><ul><li>回正力矩的变化趋势同样是近<strong>线性增长 - 峰值区间 - 减弱</strong>；</li><li>随着正压力的变化存在幅度变化；</li></ul><p>更加仔细地观察，我们会发现，相较于纵向附着与侧向力，<strong>回正力矩的下降非常剧烈</strong>。究其原因还是它的发生机理：当轮胎接近附着极限时，接地面的后端显然会比前端更早突破极限并开始宏观滑移。当<strong>后端回弹力不再增大而前端回弹力持续增加</strong>，轮胎的回正力矩就开始下降，甚至在极端情况下达到负值。因此，有经验的车手能够通过方向盘力回馈的变化来判断赛车转向过程中侧向极限的逼近程度。<img src="底盘车身基础01-轮胎/回正力矩极限.jpg" alt="回正力矩极限"></p><p>如果将接地面所受的力积分，我们会发现这个合力在数值上就是<strong>侧向反力<em>F<sub>Y</sub></em></strong>。它的作用点恰好能将这个合力分为数值相等的前后两部分，作用点与轮胎坐标系z轴的纵向距离被称为<strong>轮胎拖距<em>e</em></strong>。显然的对于<strong>回正力矩<em>T<sub>Z</sub></em></strong>存在</p><script type="math/tex; mode=display">\vec T_Z=\vec F_Y\times \vec e</script><h2 id="外倾角"><a href="#外倾角" class="headerlink" title="外倾角"></a>外倾角</h2><p>轮胎坐标系中还有一个定位输入量——外倾角。之前描述的现象中，我们都有“轮胎正着滚动”这样一个大前提，现在我们加入最后一个变量。</p><h3 id="现象-3"><a href="#现象-3" class="headerlink" title="现象"></a>现象</h3><p>轮胎在滚动过程中出现了倾角，那么它会开始转向倾倒的方向滚动，直到倒下为止。你可以试着滚一枚硬币，当它开始倾倒的时候也会出现这种现象。这是因为倾斜滚动的物体可以类比为一个滚动的圆锥或圆台，因为滚动半径的不同，必然会向着滚轴倾斜的方向转弯。这种现象也会被称为“滚锥效应”。<img src="底盘车身基础01-轮胎/滚锥效应.jpg" alt="滚锥效应"></p><p>↑因此当轮胎指向固定而带着外倾角行驶时，外倾的偏转行驶趋势受到轮胎固定装置的<strong>约束力<em>F<sub>y</sub></em></strong>作用，会与地面之间产生额外的<strong>侧向反力<em>F<sub>Y<sub>γ</sub>&lt;/sub&gt;</sub></em></strong>。这个力被称为<strong>外倾侧向力</strong>。</p><h3 id="定性分析-3"><a href="#定性分析-3" class="headerlink" title="定性分析"></a>定性分析</h3><p>我们将外倾角与滑移率或侧偏角一样，作为轮胎的一个参数输入轮胎的话，就会得到<strong>外倾角 - 外倾侧向力</strong>的关系↓<img src="底盘车身基础01-轮胎/外倾侧向力.jpg" alt="外倾侧向力"></p><p>根据图像所示的关系，我们不难推断：</p><ul><li>外倾角与外倾侧向力关系基本是线性的；</li><li>类比于<strong>侧偏刚度<em>k</em></strong>，我们将外倾角转化为外倾侧向力的系数称为轮胎的<strong>外倾刚度<em>k<sub>γ</sub></em></strong>；</li><li>如果一个轮胎在滚动中同时带有侧偏角与外倾角，那么这两个变量带来的侧向力能够<strong>叠加</strong>。<img src="底盘车身基础01-轮胎/外倾叠加.jpg" alt="外倾叠加"></li></ul><p>所以如图所示↑，一个轮胎所受的<strong>侧向力<em>F<sub>Y</sub></em></strong>可以有如下关系：</p><script type="math/tex; mode=display">F_Y=k\alpha +k_{\gamma}\gamma</script><h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>至此，我们基本了解了与轮胎有关的所有参数与变量。事实上在现代的工程设计过程中，轮胎的特性参数会根据一系列的测试建立数学模型，并封装到仿真工具中。实际操作过程中可能并不会接触到这些底层的问题。但是一定要有对这些现象的基本理解，因为这些关系本身就是很多设计思路的理论基础。</p><p>轮胎模型系统一般以如下的形式存在：</p><p><img src="底盘车身基础01-轮胎/轮胎模型.png" alt="轮胎模型"></p><p>轮胎<strong>魔术公式</strong>模型是由代尔夫特理工大学的Hans B. Pacejka教授提出的一系列描述轮胎动态力学性质的数学模型，目前在工程界被广泛地使用。关于它的具体关系在此不做赘述，大家有兴趣的或者工作涉及仿真与轮胎模型时请自行查阅吧。</p><h3 id="一些资源"><a href="#一些资源" class="headerlink" title="一些资源"></a>一些资源</h3><ul><li><a href="https://www.gcores.com/articles/93039" target="_blank" rel="noopener">James Sun - 从拟真向竞速游戏出发，聊聊关于赛车动力学的事（轮胎篇）</a></li><li><a href="https://wenku.baidu.com/view/34a4c450ef06eff9aef8941ea76e58fafab04598.html" target="_blank" rel="noopener">汽车理论课件-汽车理论第五版-清华大学余志生 - 百度文库</a></li><li><a href="https://en.wikipedia.org/wiki/Hans_B._Pacejka" target="_blank" rel="noopener">Hans B. Pacejka - wikipedia</a></li><li><a href="https://www.cnblogs.com/xpvincent/archive/2013/02/03/2890802.html" target="_blank" rel="noopener">马语者 - 轮胎的魔术公式(Magic Fomula)模型</a></li><li><a href="https://www.bilibili.com/video/av67716364/" target="_blank" rel="noopener">汽车理论（清华大学） - bilibili</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="底盘组培训" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="车身组培训" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="底盘车身基础" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E8%BD%A6%E8%BA%AB%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="陈松格" scheme="https://uestc-fury.github.io/tags/%E9%99%88%E6%9D%BE%E6%A0%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第13讲_绝缘检测装置</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC13%E8%AE%B2_%E7%BB%9D%E7%BC%98%E6%A3%80%E6%B5%8B%E8%A3%85%E7%BD%AE/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第13讲_绝缘检测装置/</id>
+    <published>2020-02-09T11:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.240Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第13讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="搭铁"><a href="#搭铁" class="headerlink" title="搭铁"></a>搭铁</h2><ul><li><p>车架与低压GND相连</p></li><li><p>将低压电池的负极与车架相连，由于车架导电，因此所有低压元器件的GND线直接与车架相连即可</p></li></ul><h2 id="绝缘检测装置-IMD"><a href="#绝缘检测装置-IMD" class="headerlink" title="绝缘检测装置(IMD)"></a>绝缘检测装置(IMD)</h2><ul><li>两个电气连接点之间电阻无穷大，称为绝缘</li><li>由于实际工程非理想情况，因此电阻大于一定值即可认为绝缘</li></ul><blockquote><p>7.4.3 当和驱动系统的最大工作电压关联时，绝缘检测装置的响应值需设定为小于等于 500Ω/V</p></blockquote><p>$4.2V \times 80 \times 500Ω/V=168KΩ=0.168MΩ$</p><ul><li>漏电指动力电池正负极与车架电阻过低</li><li>因此，漏电发生时，必须马上采取安全措施，断开安全回路</li></ul><blockquote><p>7.4.4 当发生绝缘故障或绝缘检测装置故障时，绝缘检测装置必须断开安全回路。这必须在不受任何 逻辑运算(如微控制器)的影响下完成。在绝缘故障发生后再次激活驱动系统的方法见第五章 7.1.6。</p></blockquote><p><img src="2020电气组寒假培训第13讲_绝缘检测装置/image-20200211193508534.png" alt="image-20200211193508534"></p><ul><li><p>（该图接线错误，2020版规则要求HV+和HV-两根高压检测线连接继电器输出侧）也就是如下图所示</p><p><img src="2020电气组寒假培训第13讲_绝缘检测装置/image-20200211193455947.png" alt="image-20200211193455947"></p></li><li><p>当电池正负极和GND之间电阻过低时，该绝缘检测装置输出信号突变</p></li><li>正常情况下，该装置输出12V,绝缘故障时，输出9.3V</li></ul><blockquote><p>7.4.5 座舱内在显眼位置必须装配一个标识为“IMD”的红色的指示灯，当绝缘检测装置检测到一个绝 缘故障或自身故障时，指示灯必须点亮。指示灯在强烈阳光照射下必须清晰可见。控制这个指示的 信号是系统关键信号，见第二章 12.4。</p></blockquote><ul><li>由于漏电为整台车最危险的情况之一，因此专门采用醒目的指示灯指示绝缘故障</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="安全回路" scheme="https://uestc-fury.github.io/categories/%E5%AE%89%E5%85%A8%E5%9B%9E%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第12讲_制动可靠性检测</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC12%E8%AE%B2_%E5%88%B6%E5%8A%A8%E5%8F%AF%E9%9D%A0%E6%80%A7%E6%A3%80%E6%B5%8B/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第12讲_制动可靠性检测/</id>
+    <published>2020-02-08T16:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第12(2)讲.m4v" controls="">您的浏览器不支持video标签</video><blockquote><p>2.4 加速踏板/制动踏板可靠性检查 </p><blockquote><p>2.4.1 当加速踏板位置传感器的信号输出超过 25%并踩下制动踏板，且这一状态持续 500ms 以上时， 电机的目标转矩必须为 0Nm。加速踏板规则第二章 12.3。</p></blockquote></blockquote><ul><li><p>当油门刹车同时踩下，相当于油门不踩，只有当油门刹车松开，再踩下油门，才恢复正常</p></li><li><p>IF 油门传感器的电压&lt;某值 and 刹车传感器的电压&lt;某值</p><p>Then 电机转矩=0</p></li></ul><blockquote><p>7.5.1 当用力制动（车轮未抱死）并且电机控制器依旧输出正向电流（使赛车有前进趋势的电流）时 安全回路必须由一个独立非编程电路永久的断开。只有低压系统主开关可以重置此功能并闭合安全 回路。</p></blockquote><h2 id="刹车的工作原理"><a href="#刹车的工作原理" class="headerlink" title="刹车的工作原理"></a>刹车的工作原理</h2><ul><li><p>踩下刹车踏板后，杠杆推动主缸释放刹车油，刹车油通过刹车油路流向卡墙，刹车油压越大，卡钳夹紧刹车盘越紧</p></li><li><p>因此，刹车油压传感器可以最大限度地反映刹车工作情况</p></li><li>规则要求，BSPD对刹车的检测必须使用刹车油压传感器</li></ul><blockquote><p>12.6.5 为了检测紧急制动，必须安装一个制动系统压力传感器。阈值的选择必须是没有车轮锁死 或者制动压力 &lt;= 30bar。</p></blockquote><h2 id="刹车油压传感器"><a href="#刹车油压传感器" class="headerlink" title="刹车油压传感器"></a>刹车油压传感器</h2><ul><li><p>串联进入刹车油路，讲刹车油压转化为电压值</p></li><li><p>讲刹车油压传感器的信号线连接到电压比较器，电压比较器的阈值设为1.5V</p></li></ul><h2 id="霍尔电流传感器"><a href="#霍尔电流传感器" class="headerlink" title="霍尔电流传感器"></a>霍尔电流传感器</h2><ul><li>霍尔电流传感器采集高压线上的电流，因为电流直接决定了电机功率</li><li>霍尔电流传感器可以将电流转化为电压，将该电压接入电压比较器</li></ul><h2 id="BSPD"><a href="#BSPD" class="headerlink" title="BSPD"></a>BSPD</h2><ul><li>当刹车油压传感器的电压比较器和霍尔电流传感器的电压比较器都输出高电位时，断开安全回路</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="安全回路" scheme="https://uestc-fury.github.io/categories/%E5%AE%89%E5%85%A8%E5%9B%9E%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第11讲_行程传感器，低压主开关</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC11%E8%AE%B2_%E8%A1%8C%E7%A8%8B%E4%BC%A0%E6%84%9F%E5%99%A8%EF%BC%8C%E4%BD%8E%E5%8E%8B%E4%B8%BB%E5%BC%80%E5%85%B3/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第11讲_行程传感器，低压主开关/</id>
+    <published>2020-02-08T12:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第11讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="刹车传感器"><a href="#刹车传感器" class="headerlink" title="刹车传感器"></a>刹车传感器</h2><ul><li><p>直线位移传感器，本质上是一个滑动变阻器</p></li><li><p>行程的变化对应阻值的变化</p></li><li>输入一个额定电压，将输出线连接至单片机，单片机采集输出电压来确定刹车踏板的深浅</li></ul><p><img src="2020电气组寒假培训第11讲_行程传感器，低压主开关/image-20200208201550010.png" alt="image-20200208201550010"></p><h2 id="油门传感器"><a href="#油门传感器" class="headerlink" title="油门传感器"></a>油门传感器</h2><ul><li>采用节气门传感器，具体工作原理同上</li></ul><h2 id="低压系统主开关"><a href="#低压系统主开关" class="headerlink" title="低压系统主开关"></a>低压系统主开关</h2><ul><li>低压系统主开关启动后，低压设备启动</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第10讲_测量点，DC/DC</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC10%E8%AE%B2_%E6%B5%8B%E9%87%8F%E7%82%B9%EF%BC%8CDCDC/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第10讲_测量点，DCDC/</id>
+    <published>2020-02-06T12:30:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第十讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="测量点"><a href="#测量点" class="headerlink" title="测量点"></a>测量点</h2><ul><li><p>需要在维护车辆时测量电控两端的电压</p></li><li><p>高压回路中没有电压测量点（安全考虑）</p></li><li><p>将电控的正负极引出至车身表面，并且保证安全</p></li><li><p>测量点回路由人体保护电阻和香蕉插座组成</p></li><li><blockquote><p>5.7.6 每个驱动系统测量点都必须用根据下表用限流电阻保护起来。禁止用保险丝保护驱动系统测量 ~ 92 ~ 点。电阻的额定功率的选择必须能够承受当两个驱动系统测量点短路时的电流。</p></blockquote></li></ul><p>人体保护电阻防止TS+和TS-之间的短路</p><h2 id="香蕉插座"><a href="#香蕉插座" class="headerlink" title="香蕉插座"></a>香蕉插座</h2><ul><li>电气行业上的专用电压采集插座</li></ul><blockquote><p>5.7.3 驱动系统测量点应采用具有达到 CATⅢ-1000V 标准或更高标准的非黑色 4mm 电气专业绝 缘插头。</p></blockquote><ul><li>香蕉插座作为测量点与电控正负极相连，香蕉插头连接万用表</li></ul><p><img src="2020电气组寒假培训第10讲_测量点，DCDC/image-20200206201852338.png" alt="image-20200206201852338"></p><p><img src="2020电气组寒假培训第10讲_测量点，DCDC/image-20200206201905288.png" alt="image-20200206201905288"></p><h2 id="DC-DC"><a href="#DC-DC" class="headerlink" title="DC/DC"></a>DC/DC</h2><ul><li>将动力电池的高压转化为低压电，供大功率低压设备使用</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三维绘图01-零件还原</title>
+    <link href="https://uestc-fury.github.io/2020/02/%E4%B8%89%E7%BB%B4%E7%BB%98%E5%9B%BE01-%E9%9B%B6%E4%BB%B6%E8%BF%98%E5%8E%9F/"/>
+    <id>https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/</id>
+    <published>2020-02-05T16:50:00.000Z</published>
+    <updated>2021-02-20T07:29:34.240Z</updated>
+    
+    <content type="html"><![CDATA[<p>【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。</p><a id="more"></a><p>零件的范例模型会在实例中发出来。希望需要学习三维制图的同学一定跟着实例讲解一步一步动手操作，在绘制实例的过程周了解课程或者网络资源上讲述的画图功能的综合运用方法，真正掌握灵活的绘图技巧。</p><h2 id="实例：iPhone-5"><a href="#实例：iPhone-5" class="headerlink" title="实例：iPhone 5"></a>实例：iPhone 5</h2><p>点击下载→<a href="三维绘图01-零件还原\iPhone 5.SLDPRT">范例模型</a></p><p>请安装<a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=2650199099&amp;idx=3&amp;sn=a5ba516295d46084000fdfe60b657e5f&amp;exportkey=AxGu%2FIcqIOMfR5x%2Bi91P2aQ%3D&amp;pass_ticket=gg3UwSJIdyvqPuA%2F5cXd9W%2FrH8eSgfM%2FOG5Y6WND07td9oVNcWW2XkmMhjeZJcWc" target="_blank" rel="noopener">SolidWorks 2016</a>或以上版本查看</p><p><img src="三维绘图01-零件还原\01.png" alt="01"></p><p>iPhone 5相信很多用过的同学手上都有实物，如果你有卡尺角度尺之类的量具的话可以自己掏出旧手机打开SolidWorks尝试着画一下。当然一定是有人没用用过的（比如我）。所以我看的是图纸和网上的图片。</p><p><img src="三维绘图01-零件还原/Official-Apple-iPhone-5-Dimensional-Drawing.jpg" alt="Official-Apple-iPhone-5-Dimensional-Drawing"></p><p>拿到图纸以后首先思考如何开始这个零件的绘制：</p><ul><li>这台手机近似于一个立方体的形状，所以我们可以从一个立方体开始增加细节；</li><li>手机周围的孔与按钮是许多拉伸凸台与拉伸切除；</li><li>手机上有许多按钮是槽口形状，可以直接在草图中绘制；</li><li>手机表面的光泽效果来源于透明件，可以在模型中复制这个效果；</li><li>手机的摄像头内部结构复杂，如何简化从而使用最少的特征还原效果；</li><li>手机的表面有许多接缝和分色，如何还原这个效果。</li></ul><p>进行了以上甚至更多思考之后，我们开始一面一面的将这台手机还原出来。</p><h2 id="三维建模"><a href="#三维建模" class="headerlink" title="三维建模"></a>三维建模</h2><h3 id="正面"><a href="#正面" class="headerlink" title="正面"></a>正面</h3><p>首先起形，读到图中手机主体部分最外廓的信息，我们绘制出主体凸台，并添加圆角R9.15；<img src="三维绘图01-零件还原\03.png" alt="03"></p><p>然后加上两面的倒角；<img src="三维绘图01-零件还原\04.png" alt="04"></p><p>然后使用<code>特征-&gt;曲线-&gt;分割线</code>特征将手机的屏幕，听筒，光探头和前摄轮廓画来；<img src="三维绘图01-零件还原\05.png" alt="05"></p><p>↑由于图纸上并没有确标出光探头的孔径，这里使用目测估算。</p><p>然后我们将HOME键周围画出0.1mm的缝隙，这条缝隙会在制作透明效果时体现作用。注意使用薄壁特征时切除应在圆环外侧。<img src="三维绘图01-零件还原\06-1.png" alt="06-1"></p><h4 id="前置摄像头"><a href="#前置摄像头" class="headerlink" title="前置摄像头"></a>前置摄像头</h4><p>现在我们画前摄，使用旋转切除的方式还原效果，首先建立基准面：为了建立经过旋转轴的基准面，我们在建立面之前先画一条草图线<img src="三维绘图01-零件还原\06.png" alt="06"></p><p>通过草图线与平面就可以建立基准面了：选择<code>特征-&gt;参考几何体-&gt;基准面</code>建立基准面；<img src="三维绘图01-零件还原\07.png" alt="07"></p><p>然后绘制如图所示草图，并旋转切除；<img src="三维绘图01-零件还原\08.png" alt="08"></p><p>↑需要注意的是，我们为了避免报错，会十分注意<strong>尽量将切除特征画成闭环切除</strong>；<img src="三维绘图01-零件还原\09.png" alt="09"></p><h4 id="正面玻璃护边"><a href="#正面玻璃护边" class="headerlink" title="正面玻璃护边"></a>正面玻璃护边</h4><p>如果你仔细观察，iPhone 5的正面玻璃是镶嵌安装的，手机的正面周围会有凸起的护边，这也是图纸中标出的。护边的加入让手机厚度达到了7.60mm。事实上，从iPhone 4一直到iPhone SE正面都会有这一圈护边的存在。</p><p>首先拉伸画出护边环<img src="三维绘图01-零件还原\10.png" alt="10"></p><p>然后使用圆角特征加入细节，还原实机<img src="三维绘图01-零件还原\11.png" alt="11"></p><h4 id="电话听筒"><a href="#电话听筒" class="headerlink" title="电话听筒"></a>电话听筒</h4><p>根据实机观察，电话听筒的图纸只标出了它的倒角外扩，实际上内部结构还有一个内陷，我们一点点还原它。<img src="三维绘图01-零件还原\13.png" alt="13"></p><p>首先我们现在玻璃的下层画出听筒的实际大小和听筒的下陷。听筒的实际大小可以使用草图绘制中的<strong>等距实体</strong>。<img src="三维绘图01-零件还原\14.png" alt="14"></p><h4 id="正面玻璃"><a href="#正面玻璃" class="headerlink" title="正面玻璃"></a>正面玻璃</h4><p>画完听筒之后，我们就可以给模型覆盖上正面玻璃，这块玻璃会覆盖摄像头与光感，但是会露出Home键和耳机孔。首先使用<strong>转换实体引用</strong>将需要填充玻璃的部分画出来，Home键处选择一薄壁缝隙的外沿<img src="三维绘图01-零件还原\15.png" alt="15"></p><p>然后选择草图中的各部分，拉伸凸台。<strong>注意在左边栏将“合并结果”的对勾√消去</strong>，这样拉伸出来的实体不会与之前画出的主体融合在一起。<img src="三维绘图01-零件还原\16.png" alt="16"></p><p>然后我们将听筒的倒角特征加上<img src="三维绘图01-零件还原\17.png" alt="17"></p><p>这样一块前面板玻璃就画好了</p><h4 id="Home键"><a href="#Home键" class="headerlink" title="Home键"></a>Home键</h4><p><img src="三维绘图01-零件还原\18.png" alt="18">如果你自己观察Home键结构就会发现它有三个特点</p><ul><li>手指触摸的表面是一个弧面</li><li>再细看发现弧面下图案印在平面上，是一个类似于正面玻璃“镶嵌”的结构</li><li>经典的圆角正方形着色似乎与白色有分层效果</li></ul><p>现在我们同样按照分层实现这个效果，首先与前置摄像头方法相同，我们画一个基准面<img src="三维绘图01-零件还原\19.png" alt="19"></p><p>然后在这个基准面上，用一个草图将镶嵌层与透明层都画出来<img src="三维绘图01-零件还原\20.png" alt="20"></p><p>使用下面的形状块将下层画出，注意轮廓的选择，以及不要勾选合并结果<img src="三维绘图01-零件还原\21.png" alt="21"></p><p>然后使用分割线，将圆角正方形刻画在这个平面上<img src="三维绘图01-零件还原\22.png" alt="22"></p><p>最后使用原有草图的上半块区域旋转出透明层，同样注意不要勾选合并结果。Home键就画好了。<img src="三维绘图01-零件还原\23.png" alt="23"></p><p>正面的特征刻画完毕，我们来画侧面</p><h3 id="侧面"><a href="#侧面" class="headerlink" title="侧面"></a>侧面</h3><h4 id="电源键"><a href="#电源键" class="headerlink" title="电源键"></a>电源键</h4><p>电源键在图纸上只有凸起厚度，实际特征我们需要在实机上比对目测。首先我们先使用草图中的槽口工具画出电源键，并拉伸出来<img src="三维绘图01-零件还原\24.png" alt="24"></p><p>然后使用同一个草图对电源键外侧薄壁切除一定深度，做出缝隙效果<img src="三维绘图01-零件还原\25.png" alt="25"></p><p>最后根据实机图，我们给他加上倒角<img src="三维绘图01-零件还原\26.png" alt="26"></p><h4 id="静音拨码-amp-音量键"><a href="#静音拨码-amp-音量键" class="headerlink" title="静音拨码 &amp; 音量键"></a>静音拨码 &amp; 音量键</h4><p>根据图纸绘制出轮廓并拉伸出特征。由于拨码口圆角矩形图纸中没有，所以我们使用目测估计的办法画出深度合适的矩形口。<img src="三维绘图01-零件还原\27.png" alt="27"></p><p>根据图纸给出的凸起画出拨码后，我们再次利用目测法给他们加上倒角。<img src="三维绘图01-零件还原\28.png" alt="28"></p><p>观察发现，图纸标注的拨码位置为“静音”，拨码有红标注释，所以我们用分割线画上标记<img src="三维绘图01-零件还原\29.png" alt="29"></p><p>利用草图槽口，我们画上音量键的“+”、“-“号<img src="三维绘图01-零件还原\30.png" alt="30"></p><p>然后拉伸切除。注意这里为了实现效果，使用了<strong>拔模</strong>选项。拔模本意是指在拉伸过程中赋予主体的侧面一定的倾角，如果这个物体是通过注模成型，那么这个倾角会方便脱模取出。<img src="三维绘图01-零件还原\31.png" alt="31"></p><p>”-“键方法相同，这样音量键绘制完毕<img src="三维绘图01-零件还原\32.png" alt="32"></p><h4 id="卡槽"><a href="#卡槽" class="headerlink" title="卡槽"></a>卡槽</h4><p>由于以单一零件绘制不涉及卡槽拆装，所以这里我们只要求外观符合。首先使用槽口与薄壁切除画出外侧接缝<img src="三维绘图01-零件还原\33.png" alt="33"></p><p>然后目测估计取卡针孔的大小拉伸出插针孔，卡槽就画好了<img src="三维绘图01-零件还原\34.png" alt="34"></p><h4 id="lightning接口-amp-耳机接口-amp-底部麦克风-amp-螺钉"><a href="#lightning接口-amp-耳机接口-amp-底部麦克风-amp-螺钉" class="headerlink" title="lightning接口 &amp; 耳机接口 &amp; 底部麦克风 &amp; 螺钉"></a>lightning接口 &amp; 耳机接口 &amp; 底部麦克风 &amp; 螺钉</h4><p>首先根据图纸画出底部接口所用的凹槽。切除深度可以参考接口的机械标准。这里我们简化一下，只画出柱状深口。螺钉可以用分割线画出进行简化。<img src="三维绘图01-零件还原\35.png" alt="35"></p><p>然后进行两组麦克风的开口：在草图中选择“<strong>线性草图阵列</strong>”可以将单个的圆进行队列复制。<img src="三维绘图01-零件还原\36.png" alt="36"></p><p>↑需要注意的是，如果未勾选标注，草图阵列并不会自动加上尺寸约束。因此在<strong>阵列完成退出时，草图还是蓝的</strong>。因此在阵列结束后，我们需要通过额外约束限制草图。<strong>所有草图都必须完全定义！</strong>车队的制图任务有这一个标准。</p><p>切除麦克风口后，我们通过拉伸与倒角补完插口细节<img src="三维绘图01-零件还原\37.png" alt="37"></p><p>最后我们通过<strong>草图圆周阵列</strong>与<strong>样条曲线</strong>进行<strong>拔模拉伸切除</strong>补完螺牙细节<img src="三维绘图01-零件还原\38.png" alt="38"></p><p>↑需要注意的是，这里因为<strong>样条曲线的复杂性</strong>，仅对于样条曲线类的制图没有上述<strong>完全定义</strong>的要求。通俗地讲就是<strong>只有样条曲线可以是蓝的</strong>。</p><p>通过阵列特征将螺牙复制到另一个螺钉上，底部绘制完成<img src="三维绘图01-零件还原\39.png" alt="39"></p><p>最后我们绘制背面</p><h3 id="背面"><a href="#背面" class="headerlink" title="背面"></a>背面</h3><p>iPhone 5的背面由三段构成，分别为玻璃板摄像头段，磨砂苹果标段，与玻璃板段。这两块玻璃板我们参考正面玻璃的绘制方法进行绘制。</p><p>首先通过切除与<strong>镜像特征</strong>画出玻璃背后的平面<img src="三维绘图01-零件还原\40.png" alt="40"></p><h4 id="摄像头-amp-背面麦克风-amp-闪光灯"><a href="#摄像头-amp-背面麦克风-amp-闪光灯" class="headerlink" title="摄像头 &amp; 背面麦克风 &amp; 闪光灯"></a>摄像头 &amp; 背面麦克风 &amp; 闪光灯</h4><p>与正面相似，我们用分割线画出轮廓，分割后成为摄像头与闪光灯的金属外环<img src="三维绘图01-零件还原\41.png" alt="41"></p><p>而后利用画前摄像头的方法，我们参考实机图片画出后摄像头复杂的层叠结构<img src="三维绘图01-零件还原\42.png" alt="42"><img src="三维绘图01-零件还原\43.png" alt="43"></p><p>然后拉伸切除出闪光灯与麦克风。麦克风的完整绘制方法与正面的听筒相同<img src="三维绘图01-零件还原\44.png" alt="44"></p><p>最后我们给这两个面盖上玻璃，并添加倒角背面玻璃板部分就画好了<img src="三维绘图01-零件还原\45.png" alt="45"></p><h4 id="苹果Logo"><a href="#苹果Logo" class="headerlink" title="苹果Logo"></a>苹果Logo</h4><p>苹果标是由很多具有斐波那契数列关系的圆弧组成的。首先用整数半径的圆进行苹果标的作图。由于在一个草图上绘制，图形与约束非常复杂，大家在画复杂草图过程中不要做幅度太大的操作。每做一步先确认约束好了再画下一步，这样能够极大程度避免严重的定义冲突。尽量减小定义复杂导致图形画乱或软件崩溃的风险<img src="三维绘图01-零件还原\46.png" alt="46"></p><p>第一个苹果标草图完成后，先使用另一个草图进行转换实体引用，再做缩放和移动操作，这样可以极大程度避免过于复杂的草图出现未知定义错误<img src="三维绘图01-零件还原\47.png" alt="47"></p><h4 id="天线"><a href="#天线" class="headerlink" title="天线"></a>天线</h4><p>使用分割线将苹果标画在背板后，再使用分割线画出侧边天线白条<img src="三维绘图01-零件还原\48.png" alt="48"></p><p>至此，iPhone 5的建模部分全部完成<img src="三维绘图01-零件还原\49.png" alt="49"></p><h2 id="质量属性"><a href="#质量属性" class="headerlink" title="质量属性"></a>质量属性</h2><p>画完三维图纸后，我们应该赋予零件质量属性，这样零件就可以在装配的时候体现质量，整车质量也就可以进行准确估算。</p><p>质量属性菜单位于<code>评估-&gt;质量属性</code></p><p><img src="三维绘图01-零件还原\50.png" alt="50"></p><p>大家可以看到，质量属性功能可以根据零件密度计算零件质量，这是大多数机械零件的质量评估方法。</p><ul><li>机械零件可以通过赋予零件材料属性，这样不仅可以输出零件的质量，还可以给零件附带材料属性，这样就可以使用SolidWorks插件进行简单的有限元分析</li></ul><p>然而对于很多整体购买的装配好的电子元件，我们是以单一零件形式画图的，这样就不能通过密度计算质量。</p><p>所以我们就使用质量属性的<code>覆盖质量属性</code>选项，这样就可以直接设置材料的质量，质心位置，密度等信息。<img src="三维绘图01-零件还原\51.png" alt="51"></p><p>iPhone 5的质量是112g，所以我们在编辑界面输入<img src="三维绘图01-零件还原\52.png" alt="52"></p><p>点击<code>确定</code>后，模型就被赋予了覆盖质量属性了。<img src="三维绘图01-零件还原\53.png" alt="53"></p><h2 id="着色与渲染"><a href="#着色与渲染" class="headerlink" title="着色与渲染"></a>着色与渲染</h2><p>建模完成后，我们对模型进行上色。上色工具在SolidWorks外观选项中，相信大家已经有所了解。外观我就不做细节讲解了，大家参考我发的范例模型就能够明白。</p><p>模型的外观由<strong>颜色、纹理、光泽度、发光度、透明度</strong>等属性组成。在进行外观操作的过程中大家需要注意几点</p><ul><li>着色面可以选择<strong>零件</strong>、<strong>实体面</strong>、<strong>曲面</strong>与<strong>特征</strong>等。大家需要清楚这些定义；</li><li>着色过程中对不同面的选择可以实现一些现实外观效果。譬如之前提过的<strong>Home键</strong>颜色的层次感。</li><li>由于不少电脑不能做到实时渲染，部分特征的点选过程可能看不清楚，大家可以灵活一点。比如先用看得清楚的颜色着色完再换为实际颜色。</li><li>SolidWorks自带有许多材质。大家在着色过程中可以开启PhotoView 360渲染工具插件通过预览查看着色情况，对着色做细致调整，力求真实。</li></ul><p>上述操作的具体方法大家可以查阅网络资料，这里就不赘述了。给大家的范例模型是银色的，大家可以看下范例模型的着色方法以及渲染效果。<img src="三维绘图01-零件还原\54.png" alt="54"></p><h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><p>当然，作为一篇教程，最后给想学三维制图的同学布置一点简单的小任务：</p><p>不会做可以积极请教老队员哦（笑</p><h3 id="【任务·简单】"><a href="#【任务·简单】" class="headerlink" title="【任务·简单】"></a>【任务·简单】</h3><ul><li>参考实机（图片），将范例模型颜色更改为<ul><li>iPhone 5 黑</li></ul></li><li>跟随范例自主建模并着色，独立完成一台<ul><li>iPhone 5 白</li></ul></li></ul><h3 id="【任务·普通】"><a href="#【任务·普通】" class="headerlink" title="【任务·普通】"></a>【任务·普通】</h3><ul><li>参考实机（图片）与图纸，将模型的Home键与后摄像头部分稍作改动，完成<ul><li>iPhone 5s 深空灰</li><li>iPhone 5s 东北银</li><li>iPhone 5s 土豪金</li><li>iPhone SE 少女粉</li></ul></li></ul><p><img src="三维绘图01-零件还原/Official-Apple-iPhone-5s-Dimensional-Drawing.jpg" alt="Official-Apple-iPhone-5s-Dimensional-Drawing"></p><h3 id="【任务·困难】"><a href="#【任务·困难】" class="headerlink" title="【任务·困难】"></a>【任务·困难】</h3><ul><li>参考实机（图片）与图纸，独立建模完成<ul><li>iPhone 4 白</li><li>iPhone 4 黑</li></ul></li></ul><p><img src="三维绘图01-零件还原/Official-Apple-iPhone-4-Dimensional-Drawing.png" alt="Official-Apple-iPhone-4-Dimensional-Drawing"></p><h3 id="【任务·地狱】"><a href="#【任务·地狱】" class="headerlink" title="【任务·地狱】"></a>【任务·地狱】</h3><ul><li>画出自己的手机<ul><li>尺寸精度要求不高，没有卡尺的同学可以用塑料文具尺测量，<strong>目测看不出明显的尺寸问题</strong>；</li><li>尝试称重，并赋予手机<strong>质量属性</strong>；</li><li>给模型加上外观，并尽量使<strong>渲染图</strong>接近实机；</li><li>画出你<strong>能力范围内能表达的所有细节</strong>，如果你愿意甚至可以画出碎屏的裂纹；</li><li>端着下图这种形式的照片<strong>夸一夸自己</strong>（笑</li></ul></li></ul><p><img src="三维绘图01-零件还原\55.jpg" alt="55"></p><p><img src="三维绘图01-零件还原\56.jpg" alt="56"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="底盘组培训" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="车身组培训" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="SolidWorks三维建模" scheme="https://uestc-fury.github.io/categories/SolidWorks%E4%B8%89%E7%BB%B4%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+      <category term="陈松格" scheme="https://uestc-fury.github.io/tags/%E9%99%88%E6%9D%BE%E6%A0%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第9讲_放电回路</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC9%E8%AE%B2_%E6%94%BE%E7%94%B5%E5%9B%9E%E8%B7%AF/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第9讲_放电回路/</id>
+    <published>2020-02-04T03:00:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第九讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="放电回路"><a href="#放电回路" class="headerlink" title="放电回路"></a>放电回路</h2><ul><li>当车辆断电后，电机控制器内的电容上的电荷无法被消耗，因此电容会一直带有300多V的高压，此时为驱动系统激活状态</li><li>在车辆断电时，需要一个电阻释放电容的电荷，是其电压下降，由此引入放电回路</li><li>放电回路由放电电阻和放电继电器构成</li></ul><h2 id="常闭继电器"><a href="#常闭继电器" class="headerlink" title="常闭继电器"></a>常闭继电器</h2><ul><li>线圈断电时继电器闭合，线圈供电时继电器断开</li><li>当安全回路接通，此时车辆上高压，线圈得到12V，继电器断开，电阻不接入</li><li>当车辆断电，安全回路断开，此时继电器闭合，电阻接入</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电气组电路应用寒假培训阶段一</title>
+    <link href="https://uestc-fury.github.io/2020/02/%E7%94%B5%E6%B0%94%E7%BB%84%E7%94%B5%E8%B7%AF%E5%BA%94%E7%94%A8%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E9%98%B6%E6%AE%B5%E4%B8%80/"/>
+    <id>https://uestc-fury.github.io/2020/02/电气组电路应用寒假培训阶段一/</id>
+    <published>2020-02-03T10:27:08.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p>寒假期间关于硬件电路(PCB)学习主要包括三个阶段：</p><p>阶段一：典型基本电路的了解及仿真练习：讲解内容主要涉及到仿真应用，通过仿真软件了解各基本电路的实现方式，不会涉及推导过程（本节内容只涉及到目前我们整车上面使用的一些基本电路，仿真软件可以选择Multisim或MATLAB）。</p><p>阶段二：根据大赛规则，了解学习当前整车硬件电路 （各个模块） 设计思路。学习使用AltiumDesigner软件，试着画出各模块的原理图。（可选）1、自己能根据电路原理图分析并画出逻辑流程图。2、有时间和能力的可以学习了解PCB板的绘制。</p><p>阶段三：（可选）如果大家有能力可以自己根据理解来将某一模块 (BSPD、TSAL、主板) 的电路进行仿真分析，验证自己阶段二学习过程中总结的电路逻辑。</p><p>需要提前了解三极管基础知识及Multisim的基本使用。本人能力有限若有错误的地方，希望大家能够及时指出，共同学习。</p><a id="more"></a><hr><p><strong>阶段一</strong></p><hr><h3 id="电压比较器"><a href="#电压比较器" class="headerlink" title="电压比较器"></a>电压比较器</h3><p>​        大赛规则第2章12.9节中所描述的系统关键信号中的部分需要系统实时监测，且必须由硬件电子装置直接控制，不能使用软件及可编程装置控制。故选择电压比较器对关键信号进行检测。下图为电压比较器的电路图。</p><p><img src="电气组电路应用寒假培训阶段一/wps1.jpg" alt="img" style="zoom: 200%;"> </p><div class="table-container"><table><thead><tr><th style="text-align:center">引脚编号</th><th style="text-align:center">功能</th></tr></thead><tbody><tr><td style="text-align:center">8</td><td style="text-align:center">VCC</td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">+ 输入端</td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">GND</td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">- 输入端</td></tr><tr><td style="text-align:center">1</td><td style="text-align:center">输出端</td></tr></tbody></table></div><p>​        电压比较器是对输入信号进行鉴幅与比较的集成器件，它可将模拟信号转换成二值信号，即只有高电平和低电平两种状态的离散信号。图1为电压比较器电路图。常用的电压比较器应用电路有单限比较器、窗口比较器等。电压比较器可以看作是差模增益接近“无穷大”的运算放大器，只要同相 (+) 输入端与反相 (-) 输入端之间有无穷小的差值电压，输出电压就将达到正的最大值或负的最大值。</p><p>​        电压比较器的功能：比较两个电压的大小（用输出电压的高或低电平，表示两个输入电压的大小关系）：当”+”输入端电压高于”－”输入端时，电压比较器输出为高电平；当”+”输入端电压低于”－”输入端时，电压比较器输出为低电平；  <strong>目前比较器输出多为集电极开路输出级</strong>（后面会讲解，大家需要理解）</p><p>接下来将针对介绍两类电压比较器应用电路进行讲解</p><p>选取比较常用的电压比较器：<em>LM393集成模块</em> </p><p><img src="电气组电路应用寒假培训阶段一/wps2.png" alt="img" style="zoom:150%;"><img src="电气组电路应用寒假培训阶段一/wps3.jpg" alt="img" style="zoom:150%;"> </p><p>​                          上述图片为LM393集成模块实物图及内部电路原理图</p><h4 id="单限电压比较器"><a href="#单限电压比较器" class="headerlink" title="单限电压比较器"></a>单限电压比较器</h4><p>下图为单限电压比较器的Multisim仿真电路图</p><p><img src="电气组电路应用寒假培训阶段一/wps4.jpg" alt="img"><br>                                                                                     注：XSC1为示波器</p><p>​        仿真电路图中正反相输入电压都可通过滑动变阻器进行调节，当正相输入端电压大于反相输入端时，输出端输出高电平。同理小于时，输出端输出低电平。  </p><p>​        为什么输出端要加上拉电阻？上面中我们说了当前比较器的输出端多为集电极开路输出，集电极开路输出一般多与上拉电阻进行相连(上拉电阻是上述仿真图中的VCC和5KΩ电阻与输出端连接部分)。</p><p>​                   左图为LM393内部电路图                                                       右图为集电极开路输出  </p><p><img src="电气组电路应用寒假培训阶段一/wps5.jpg" alt="img">  <img src="电气组电路应用寒假培训阶段一/wps6.jpg" alt="img"></p><p>​         上述图示表明LM393的输出为集电极开路输出，该输出只有两种输出状态（输出端三极管Q8的导通或截止，影响着输出状态，而正负相输入端的电平决定着输出端三极管Q8的导通状态），当正相输入端电压大于反相输入端时，输出端三极管Q8截止，三极管Q8集电极输出为开路状态（高阻态）；当正相输入端电压小于反相输入端时，输出端三极管Q8导通，集电极输出为低电平。</p><p>​        在输出端加上上拉电阻后。当正相输入端电压大于反相输入端时，三极管Q8截止，集电极输出端为开路状态，但是上拉电阻的存在导致输出端为高电平；当正相输入端电压小于反相输入端时，三极管Q8导通，VCC与电压比较器输出端三极管Q8构成回路，集电极输出端为低电平。此时就完成一个单限电压比较器的电路。</p><p><img src="电气组电路应用寒假培训阶段一/wps7.jpg" alt="img"></p><p>​        在实际整车电路中，我们需要对某个端口的电压值进行实时的监测，例如绝缘监测装置的状态输出，当输出电压Ui高于UR时，认为整车线路绝缘正常输出高电平，否则认为故障输出低电平。电路系统中采用单限比较器对该状态输出进行监测。</p><p>要求重点了解为什么LM393输出端需要上拉电阻？</p><p>后续要求大家使用仿真软件（Multisim）进行模拟仿真实验，自由发挥验证。</p><h4 id="双限电压比较器（窗口比较器）"><a href="#双限电压比较器（窗口比较器）" class="headerlink" title="双限电压比较器（窗口比较器）"></a>双限电压比较器（窗口比较器）</h4><p>​        单限比较器有一个特点，即Ui单方向变化(正向过程或负向过程)时，Uo（输出端电压）只跳变一次。只能检测一个输入信号的电平，这种比较器称为单限比较器。   </p><p>​        双限比较器又称窗口比较器。它的特点是输入信号单方向变化(例如Ui 从足够低单调升高到足够高)，可使输出电压Uo跳变两次，其电路图及传输特性如下：（牢记LM393是集电极开路输出）</p><p><img src="电气组电路应用寒假培训阶段一/wps8.jpg" alt="img"> </p><p>为方便描述，上下处的电压比较器分别称为C1、C2。</p><p>​        当输入电压Uin &lt; UR1时：C1正相输入电压小于反相输入电压，C1输出端三极管导通。C2正相输入电压大于反相输入电压，C2输出端三极管截止。由于上拉电阻存在，Uo输出为低电平。</p><p>​        当输入电压Uin &gt; UR2时：C1正相输入电压大于反相输入电压，C1输出端三极管截止。C2正相输入电压小于反相输入电压，C2输出端三极管导通。由于上拉电阻存在，Uo输出为低电平。</p><p>​        当输入电压UR1 &lt; Uin &lt; UR2时：C1、C2正相输入电压大于反相输入电压，输出端三极管都截止。由于上拉电阻存在，Uo输出为高电平。 UR1为下限电压，UR2为上限电压。</p><p>下面根据Multisim软件的仿真过程进行讲解：</p><p><img src="电气组电路应用寒假培训阶段一/wps9.jpg" alt="img"> </p><p>​        上图是双限电压比较器的仿真电路（基于软件Multisim），U1A的正相输入端电压为3.75V（上限电压），U1B的反相输入端电压为1.25V（下限电压），U1A的反相输入端和U1B的正相输入端通过滑动变阻器R6进行调节（输入电压Uin），图中输入电压Uin小于1.25V，故分析输出端电压为低电平，右侧是仿真示波器的界面，显示输出端电压为411mV。（411mV是三极管导通时，集电极和发射极之间的压降）。</p><p><img src="电气组电路应用寒假培训阶段一/wps10.jpg" alt="img"> </p><p>此时调节滑动变阻器，使输入电压Uin电压值为2.5V，故分析输出端电压为高电平，右侧示波器的检测电压为4.9V。</p><p>同理大家可根据上述的仿真图，调节输出电压大于上限电压，进行分析验证。</p><p>（可选）网上了解学习关于线与的定义，进一步理解集电极开路输出（OC输出）实现线与的功能。</p><h3 id="TTL集成门电路器件"><a href="#TTL集成门电路器件" class="headerlink" title="TTL集成门电路器件"></a>TTL集成门电路器件</h3><p>​        首先了解门电路的含义：用以实现基本逻辑运算和复合逻辑运算的单元电路称为门电路。常用的门电路在逻辑功能上有与门、或门、非门、与非门、或非门、与或非门、异或门等几种（一般用到前面三个）。门电路大都是集成模块，目前使用到的有74ls04（与门）、74ls08（非门）等。我们只需要了解使用即可。</p><p><img src="电气组电路应用寒假培训阶段一/74ls081.jpg" alt="img" style="zoom:50%;"><img src="电气组电路应用寒假培训阶段一/74ls082.jpg" alt="img" style="zoom: 67%;"></p><p>​                                        左图为74ls08集成模块                         右图为74ls08内部电路原理图</p><p>​        提到逻辑运算必然涉及到逻辑‘1’及逻辑‘0’，在逻辑电路中我们视不同分段的电压值为不同的逻辑值。在TTL门电路中也有相应的定义。电平是个电压范围，TTL电平规定如下：输出高电平 &gt; 2.4V,输出低电平 &lt; 0.4V。输入高电平 &gt;= 2.0V，输入低电平 &lt;= 0.8V，噪声容限是0.4V。</p><p>​        为了验证TTL集成电路模块，采用Multisim软件进行仿真验证。下图为软件的仿真电路。</p><p><img src="电气组电路应用寒假培训阶段一/wps12.jpg" alt="img"></p><p>​        上述仿真电路TTL逻辑门电路两路输入电压为都为2.75V。故通过TTL电平标准，判断两路输入都为高电平，两路信号通过与门电路后输出电平为高电平（示波器B端口电压为5V）。</p><p><img src="电气组电路应用寒假培训阶段一/wps11.jpg" alt="img" style="zoom:80%;"><img src="电气组电路应用寒假培训阶段一/wps13.jpg" alt="img" style="zoom:80%;">  </p><p>​           </p><p>​        接下来通过调节一路输入为低电平，验证门电路的输出电压。仿真电路如下：       </p><p><img src="电气组电路应用寒假培训阶段一/wps14.jpg" alt="img"></p><p>​        根据滑动变阻器的变化，得出R2输入电压没有变化，仍为高电平。R1输入电压值变为1.75V，故通过TTL电平标准，判断该路输入为低电平，故两路信号通过与门电路后输出电平为低电平（示波器B端口电压为0V）。</p><h3 id="减法运算电路"><a href="#减法运算电路" class="headerlink" title="减法运算电路"></a>减法运算电路</h3><p>​        在TSAL模块的逻辑策略中，电池箱内部继电器侧电压和箱外电机控制器侧电压需要实时监测是否相同匹配，由于上述电压位于驱动线路，其电压值较大，系统选取电压变送器将驱动线路的高压线性转换为1V ~ 5V范围内的低压。将转换为低压的两路电压通过减法运算电路来判断电压匹配状态。   </p><p>​        集成器件模块选择LM358元件（两路运算电路）   </p><p>​                                                                        下图为LM358内部原理图      </p><p><img src="电气组电路应用寒假培训阶段一/wps15.png" alt="img"></p><p>​        减法运算电路选取最常用的差分比例运算电路：</p><p><img src="电气组电路应用寒假培训阶段一/wps16.jpg" alt="img"></p><p>​                   </p><p>​        电路实现了对输如差模信号的比例运算， 输出电压Uo = Rf / R * (Ui2 - Ui1)</p><p>​        下图为减法器运算电路仿真图及示波器显示图：</p><p><img src="电气组电路应用寒假培训阶段一/wps17.jpg" alt="img"></p><p><img src="电气组电路应用寒假培训阶段一/wps20.jpg" alt="img"></p><p>​        由示波器XSC2得出正相输入电压为3.727V，反相输入为2.500V，由推导公式得出Uo = Rf / R (Ui2 - Ui1) = 2.454V，由示波器XSC1得出输出端电压为2.46V，故成立。</p><p>​        注意：① 由于LM358的驱动电源VCC输入为5V，故输出电压最大值不会超过VCC，即使Ui2 - Ui1 &gt; 2V后，输出电压仍会为4V。（实际情况可能会有所偏差，最好可以自己验证）② 当Ui2 - Ui1 &lt; 0V时，输出电压一直为0V。大家可以自己设计新的减法器运算电路验证。</p><h3 id="继电器模块"><a href="#继电器模块" class="headerlink" title="继电器模块"></a>继电器模块</h3><p>​      主要介绍5脚继电器模块、8脚继电器模块（电磁继电器）。</p><p><img src="电气组电路应用寒假培训阶段一/wps21.jpg" alt="img"><img src="电气组电路应用寒假培训阶段一/wps22.jpg" alt="img"></p><p><img src="电气组电路应用寒假培训阶段一/wps26.jpg" alt="img"><img src="电气组电路应用寒假培训阶段一/wps27.jpg" alt="img"></p><p>​               上图分别列出了八脚及五脚继电器的集成模块和内部电路原理图（5脚继电器原理图后续要使用）</p><p><img src="电气组电路应用寒假培训阶段一/wps23.jpg" alt="img"></p><p>​        什么是继电器呢？这个东西很常见，在电子设备以及电力系统中的应用都很广泛，简单的来就是一种用小电流来控制大电流的开关。小电流通过线圈，产生磁场，这个磁场使得控制大电流的开关吸合。从而使得人们能够安全的超控大电流大电压设备。电磁式继电器一般由铁芯、线圈、衔铁、触点簧片等组成的。只要在线圈两端加上一定的电压，线圈中就会流过一定的电流，从而产生电磁效应，衔铁就会在电磁力吸引的作用下克服返回弹簧的拉力吸向铁芯，从而带动衔铁的动触点与静触点（常开触点）吸合。当线圈断电后，电磁的吸力也随之消失，衔铁就会在弹簧的反作用力返回原来的位置，使动触点与原来的静触点（常闭触点）吸合。这样吸合、释放，从而达到了在电路中的导通、切断的目的。对于继电器的“常开、常闭”触点，可以这样来区分：继电器线圈未通电时处于断开状态的静触点，称为“常开触点”；处于接通状态的静触点称为“常闭触点”。</p><p>​        继电器模块的内部结构一定要熟记于心，接下来根据上面集成模块的原理图来分析5脚继电器模块。继电器由<strong>线圈工作的控制电路</strong>和<strong>触点接通电路</strong>两个部分组成。在线圈两端（图中为A、B两端）加上电压或通人电流，产生电磁力，当电磁力大于弹簧反力时，吸动衔铁使常开常闭接点（3端口为常闭，2端口为常开）动作，常开触点与公共端（1端口）闭合，常闭触点（2端口）与公共端断开；当线圈的电压或电流下降或消失时衔铁释放，触点恢复原状态。 8脚继电器模块类似，多出了一组触点接通电路。下面针对继电器仿真电路进行分析。由于继电器线圈的驱动电流需要20mA - 50mA，线圈电阻100-200欧姆，因此需要添加驱动电路，仿真电路选择三极管驱动。 </p><p><img src="电气组电路应用寒假培训阶段一/wps25.jpg" alt=""><img src="电气组电路应用寒假培训阶段一/wps24.jpg" alt="img"></p><p>​       </p><p>​        在Multisim软件中，继电器模块就是K1（EMR011A09），其中左侧是线圈，右侧是触点。解释各个元件的作用：D1 1N4007是整流二极管，当三极管截止后，D1可为线圈产生的反向电动势提供回路，防止其他元件的损坏（当三极管导通，线圈工作时可将D1视为断路，不予考虑）。R1、R2都是限流的作用，防止三极管及发光二极管电流过大而损毁。R3的作用为了使三极管截止状态更加可靠。整个电路的思路如下：按钮Key的通断决定着三极管Q1处于导通还是截止状态，当Key按下时，三极管基极与发射极压降增加，三极管Q1导通。继电器线圈线路导通，产生电磁力，使得常开触点与公共触点闭合，线路中的LED1进入工作。当按钮回位时，三极管基极与发射极压降为0，三极管Q1截止，LED1。继电器线圈在三极管关断的瞬间产生反向电动势，通过D1释放电能。</p><p>​        Multisim中继电器模块和实际使用的模块并不完全一致，但原理相同。大家有兴趣的话可以对该电路可以改进，通过添加发光二极管实时显示线圈导通与否，注意发光二极管的正向导通压降为1.7V左右，正常工作电流大于10mA，需要添加限流电阻配合工作。</p><h3 id="延时电路"><a href="#延时电路" class="headerlink" title="延时电路"></a>延时电路</h3><h4 id="RC延时电路"><a href="#RC延时电路" class="headerlink" title="RC延时电路"></a>RC延时电路</h4><p>​        系统对部分关键信号需要进行延时处理，最简单常见的应用电路就是RC延时电路。由于在电容两端加上电压时，电容会不断充电至所加的电压值，利用电容的充电时间来进行信号延迟。</p><p>​       系统在BSPD模块中使用的RC延时电路，来确定信号的可靠性。当相关信号输入时，RC电路中电容开始充电，信号持续一定时间后，电容侧两端电压电压将会增加至输入信号电压值，确定信号可靠。若信号中间中断，则会导致电容放电，电容两端电压下降，判定为非可靠信号。</p><p>​      下面对仿真电路图进行分析：</p><p><img src="电气组电路应用寒假培训阶段一/wps28.jpg" alt="img"> </p><p>​       R1与多个并联电容构成RC延迟电路，R2的作用是为了当按钮Key断开时为电容提供放电回路。当按钮按下时，VCC输入进来，此时可以视为整车某一关键信号的输入，对电容进行充电，示波器是示数可以看出，当接近1S时，电容两端的电压为2.1V（达到TTL输入高电平，TTL门电路认为信号产生了），此时就完成1S的延迟功能。</p><h4 id="NE555定时器"><a href="#NE555定时器" class="headerlink" title="NE555定时器"></a>NE555定时器</h4><p>​        在规则中熄火电路必须保持断开状态直到对低压系统主开关重新上电，或者 BPSD 可以在上述断开条件消失且持续 10s 以上时自行复位。10s的延迟时间，可采用555定时器实现。只需要了解标准电路应用即可。</p><p>​       下面根据仿真图来验证：</p><p><img src="电气组电路应用寒假培训阶段一/wps29.jpg" alt=""></p><p><img src="电气组电路应用寒假培训阶段一/wps30.jpg" alt="img"> </p><p><img src="" alt=""></p><p>​        上图采用了NE555定时器的单稳类应用电路，RST脚功能是直接清零端。当此端接低电平，则时基电路不工作，此时不论TR、TH处于何电平，时基电路输出为“0”，正常工作时应接高电平。DIS脚放电端，延时电路不用。THR、TRI分别为低触发端、高触发端。CON一般连接0.01uf电容与地相连。         该电路的特点是当Key未按下时，Uout = 0V处于稳态；当Key按下时，Uout电压值会瞬间达到VCC，处于暂稳态。只有当Key恢复后，且持续T = 1.1 <em> R2 </em> C2 时间，Uout = 0V会再次进入稳态。通过调节电阻和电容的型号，满足当BSPD断开信号消失10S后才进行复位的要求。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;寒假期间关于硬件电路(PCB)学习主要包括三个阶段：&lt;/p&gt;
+&lt;p&gt;阶段一：典型基本电路的了解及仿真练习：讲解内容主要涉及到仿真应用，通过仿真软件了解各基本电路的实现方式，不会涉及推导过程（本节内容只涉及到目前我们整车上面使用的一些基本电路，仿真软件可以选择Multisim或MATLAB）。&lt;/p&gt;
+&lt;p&gt;阶段二：根据大赛规则，了解学习当前整车硬件电路 （各个模块） 设计思路。学习使用AltiumDesigner软件，试着画出各模块的原理图。（可选）1、自己能根据电路原理图分析并画出逻辑流程图。2、有时间和能力的可以学习了解PCB板的绘制。&lt;/p&gt;
+&lt;p&gt;阶段三：（可选）如果大家有能力可以自己根据理解来将某一模块 (BSPD、TSAL、主板) 的电路进行仿真分析，验证自己阶段二学习过程中总结的电路逻辑。&lt;/p&gt;
+&lt;p&gt;需要提前了解三极管基础知识及Multisim的基本使用。本人能力有限若有错误的地方，希望大家能够及时指出，共同学习。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="硬件电路" scheme="https://uestc-fury.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="王士淳" scheme="https://uestc-fury.github.io/tags/%E7%8E%8B%E5%A3%AB%E6%B7%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第8讲_电压变送器，电压比较器</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC8%E8%AE%B2_%E7%94%B5%E5%8E%8B%E5%8F%98%E9%80%81%E5%99%A8%EF%BC%8C%E7%94%B5%E5%8E%8B%E6%AF%94%E8%BE%83%E5%99%A8/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第8讲_电压变送器，电压比较器/</id>
+    <published>2020-02-02T15:00:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第八讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="TSAL认为驱动系统激活的三个条件"><a href="#TSAL认为驱动系统激活的三个条件" class="headerlink" title="TSAL认为驱动系统激活的三个条件"></a>TSAL认为驱动系统激活的三个条件</h2><ul><li>任何一个AIR闭合（主正主负闭合其一）</li><li>预充继电器闭合</li><li>电池箱外的电压达到 60 V DC </li></ul><h2 id="电控侧电压变送器"><a href="#电控侧电压变送器" class="headerlink" title="电控侧电压变送器"></a>电控侧电压变送器</h2><ul><li><p>直接连接电控两端</p></li><li><p>防止HVD断开后，无法检测电控的电压</p></li><li><p>电压变送器将高压电转化为低压电—将60VDC转化为1.48V，当信号线的电压大于1.48V，灯红闪</p><p><img src="2020电气组寒假培训第8讲_电压变送器，电压比较器/image-20200202230947285.png" alt="image-20200202230947285"></p></li></ul><h2 id="电压比较器"><a href="#电压比较器" class="headerlink" title="电压比较器"></a>电压比较器</h2><ul><li><p>当输入大于阈值，输出高电位；当输入小于阈值，输出低电位</p></li><li><p>实现将模拟量（电压）转化为数字量（0或1）</p><p><img src="2020电气组寒假培训第8讲_电压变送器，电压比较器/image-20200202231023135.png" alt="image-20200202231023135"></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第7讲_HVD，能量计</title>
+    <link href="https://uestc-fury.github.io/2020/02/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC7%E8%AE%B2_HVD%EF%BC%8C%E8%83%BD%E9%87%8F%E8%AE%A1/"/>
+    <id>https://uestc-fury.github.io/2020/02/2020电气组寒假培训第7讲_HVD，能量计/</id>
+    <published>2020-02-02T11:00:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第七讲.m4v" controls="">您的浏览器不支持video标签</video></p><h2 id="高压断开装置"><a href="#高压断开装置" class="headerlink" title="高压断开装置"></a>高压断开装置</h2><ul><li><p>如果两个AIR都发生粘连，那么由于无法接触到电池箱内部，会发生高压无法断开的风险</p></li><li><p>在车外，放置一个易于接触的，百分之百能断开高压的装置</p></li><li><p>HVD分为插头插座，插座的两根螺柱连接高压线，当插头插座结合时，螺柱通过两个铜牌（插头）导通，当插头插座分离时，两个铜牌一定不会导通。</p></li><li><p><img src="2020电气组寒假培训第7讲_HVD，能量计/image-20200202191006364.png" alt="image-20200202191006364"></p></li><li><blockquote><p>5.8.5 必须能够徒手移除 HVD。因此一个辅助接触点/互锁应当在 HVD 被移除的时候断开安全回路。</p></blockquote></li></ul><h2 id="能量计"><a href="#能量计" class="headerlink" title="能量计"></a>能量计</h2><ul><li>计算赛车的电能消耗，效率测试所用</li><li>能量计是赛会组委会下发的，以保证公平</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第6讲_预充回路，上电逻辑</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC6%E8%AE%B2_%E9%A2%84%E5%85%85%E5%9B%9E%E8%B7%AF%EF%BC%8C%E4%B8%8A%E7%94%B5%E9%80%BB%E8%BE%91/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第6讲_预充回路，上电逻辑/</id>
+    <published>2020-01-30T11:00:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第六讲.m4v" controls="">您的浏览器不支持video标签</video><h2 id="预充回路"><a href="#预充回路" class="headerlink" title="预充回路"></a>预充回路</h2><ul><li>电池直接连接电控的电容，此时变为一阶RC电路的充电响应求解</li><li>电流达到三万多安培，会烧毁元器件</li><li>解决办法：增大串联电阻，此时电容两端电压缓慢上升，电流缓慢下降</li><li>又因为电阻会耗散电池的电能，做无用功，因此需要①串联电阻限流②在大电流放电时，断开该电阻</li></ul><h2 id="上电逻辑"><a href="#上电逻辑" class="headerlink" title="上电逻辑"></a>上电逻辑</h2><p><img src="2020电气组寒假培训第6讲_预充回路，上电逻辑/image-20200130134225870.png" alt="image-20200130134225870"></p><p>①闭合主负继电器</p><p>②闭合预充继电器，等到电容两端电压与电池电压相近时，断开预充继电器，同时闭合主正继电器</p><blockquote><p>6.7.1 需要设计电路保证在闭合第二个电池箱绝缘继电器之前，中间回路电容的电压值达到了电池箱 电压的 95％。因此中间回路电容的电压必须被测量。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简介-如何科学地飙车</title>
+    <link href="https://uestc-fury.github.io/2020/01/%E7%AE%80%E4%BB%8B-%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E9%A3%99%E8%BD%A6/"/>
+    <id>https://uestc-fury.github.io/2020/01/简介-如何科学地飙车/</id>
+    <published>2020-01-30T03:04:20.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p>相信刚刚加入车队的新老司机们肯定多少开过车子，这篇文章紧接着上一篇比赛介绍，想给大家简单地总结一哈飙车的科学原理（捂</p><p>这篇文章主要是想向大家介绍赛车的一些基本常识。我不知道大家之前对赛车有多少了解，所以我会尝试非 常 细 致地介绍赛车驾驶的有关内容。文字比较啰嗦比较小儿科，大家轻喷哈（笑</p><a id="more"></a><h2 id="飙车的基本技巧"><a href="#飙车的基本技巧" class="headerlink" title="飙车的基本技巧"></a>飙车的基本技巧</h2><p>这一段我们主要谈谈竞速赛的飙车方法，想让大家对赛车手的开车方法产生一个<strong>感性的认识</strong>，帮助大家理解一些飙车的方法。</p><h3 id="赛车线"><a href="#赛车线" class="headerlink" title="赛车线"></a>赛车线</h3><p>我们知道，除了直线加速赛和单纯的转弯测试，一条回环的场地赛道或是一条点到点的拉力赛道都是由直道与弯道组成的，那么如何在这样一条赛道中用最少的时间走完全程呢，相信基本不需要思考大家就能得到如下的答案：</p><ul><li>在通过赛道的时候选择<strong>尽可能短</strong>的路线</li><li>用<strong>尽可能快</strong>的速度通过每一段赛道</li></ul><p>这两种方案我们应该如何选择呢，我们举个栗子吧</p><p>这是<a href="http://www.sohu.com/a/225954741_100133547" target="_blank" rel="noopener">株洲国际卡丁车场</a>的航拍图，让我们截取一个赛段</p><p><img src="简介-如何科学地飙车/图01.png" alt="图1"></p><p>停，放大，再放大以后，我们首先画出通过这一段的<strong>最短路线</strong></p><p><img src="简介-如何科学地飙车/图02.png" alt="图2"></p><p>可以看到，这条路线是由<strong>简单的直线</strong>与<strong>紧贴着赛道内侧的定半径圆弧</strong>组成的（画图渣。如果赛车的速度始终不变的话，这条线就是理论上通过这段赛道的最快路线了。</p><p>HOWEVER，常识告诉我们，赛车在行驶过程中速度是不可能不发生变化的。赛车能够在直道上达到很高的速度，但是如果在弯道中依然尝试用很高的速度行驶的话，就会发生转不过弯的情况。所以实际上我们在开车转弯的时候，都会经历一个<strong>高速直道-刹车-低速转弯-重新加速</strong>的过程。</p><p><img src="简介-如何科学地飙车/图03.png" alt="图3"></p><p>发生这种情况的根本原因应该不难理解：如果把汽车转弯理解为<strong>平面上的匀速圆周运动</strong>的话，赛车转弯所依靠的向心加速度全部由轮胎与地面之间的静摩擦力来实现了。</p><script type="math/tex; mode=display">F=\frac{mv^2}{r}</script><p>经验告诉我们，<strong>车轮与地面之间的摩擦力是有限的</strong>，所以当我们尝试使用这条最短路径过弯时，过小的转弯半径使我们不得不大幅减速。为了得到更高的过弯速度以及出弯速度，我们尝试<strong>将转弯半径尽量拉大</strong>，于是我们得到了赛车过弯时使用的<strong>外-内-外</strong>过弯路线。</p><p><img src="简介-如何科学地飙车/图04.png" alt="图4"></p><p>看到这里，可能会有同学产生疑惑：<strong>为了一点速度优势多走了这么多距离，怎么就更快了呢？</strong></p><p>在考虑转弯线路时，加大转弯半径虽然在转弯过程中发生了时间损失，但是实际赛道是由直道段与弯道段组合而成的，<strong>更高的出弯速度</strong>带来直道加速段的初速度优势<strong>会在长距离的直道中不断累积</strong>，从而产生<strong>总体上的时间优势</strong>。与此同时，由于弯中速度的提高，入弯前的<strong>刹车段也将变的更短</strong>，刹车幅度更小。拉大半径提高速度在实际场景下还能够获取<strong>更大的空气动力学效应</strong>，<strong>更低的轮胎磨损</strong>等优势。所以总而言之，当今的赛车手都是使用这样的线路通过弯道的。</p><p>最终在整合了上述因素后，我们就得到了组合弯道目标行驶路线了。</p><p><img src="简介-如何科学地飙车/图05.png" alt="图5"></p><p>可以看到，<strong>并不是所有弯道都会按照外-内-外的规律规划路线</strong>。这是因为在赛道上许多弯道是<strong>连续组合</strong>的，我们知道我们之所以要提高弯中速度是为了<strong>尽量提高出弯后的直道速度</strong>，从而获得<strong>总体的时间收益</strong>。因此在连续弯道路线规划中并不会全部严格按照外-内-外的规律，而是将弯道路线综合考虑组合方式，最终才得出一条赛道的理想路线。</p><p><img src="简介-如何科学地飙车/图06.png" alt="图6"></p><p>除此之外，赛车的性能，赛道的路面，天气变化等现实世界中的变化也会对路线选择产生影响。当然，这些内容不在这篇文章的讨论范畴，我就不废话了（捂。</p><p><a href="https://www.bilibili.com/video/av37458672/" target="_blank" rel="noopener">[中字] 关于弯角你需要知道的一切</a></p><p><a href="https://www.bilibili.com/video/av23229684/" target="_blank" rel="noopener">【弹幕中字 Chain Bear F1】搞懂赛车线！ - “红色烈火拖拉机” 中字翻译</a></p><p><a href="https://www.bilibili.com/read/cv114325" target="_blank" rel="noopener">驾驶课程-初级课程 [赛车行驶路线]</a></p><p>路线选择只是上赛道前要做的第一步，赛车在赛道上是怎样沿着既定的路线形式的，这就是我们接下来要讨论的话题。</p><h3 id="抓地力"><a href="#抓地力" class="headerlink" title="抓地力"></a>抓地力</h3><p>能够改变赛车速度和方向的力，<strong>全部来自于地面和赛车轮胎之间的摩擦力</strong>。具体而言，在赛车完全按照预定轨迹行驶的过程中，轮胎与地面之间的纵向“静摩擦力”改变速度；侧向“静摩擦力”改变方向。</p><p><img src="简介-如何科学地飙车/图07.png" alt="图7"></p><p>这里的“静摩擦力”并不是严格意义上的静摩擦力，而是形容赛车在按照轨迹行驶时，车轮应该是完全滚动摩擦。实际上赛车轮胎的运动非常复杂，使用“静摩擦”来类比可以比较浅显地解释一些现象。</p><p>比如有”静摩擦“就会有”滑动摩擦“。</p><p>当赛车速度过快，轮胎能够提供的最大侧向摩擦力不足以抵消循迹需要的惯性离心力时，赛车就无法循迹，产生向弯道外侧的滑移。换句话说，一台赛车的轮胎能产生多大的侧向摩擦力，<strong>这决定了赛车能用多快的速度通过弯道</strong>。这就是赛车的转弯时能够达到的极限速度。</p><p>同样的，当赛车加速或刹车时，赛车会对轮胎施加转矩。而轮胎通过摩擦力使赛车加速或减速。当这个转矩过大，轮胎就会出现<strong>空转</strong>或是<strong>抱死</strong>。而轮胎在纵向能够提供的最大摩擦力<strong>决定了赛车能够有多大的加减速能力</strong>，这就是赛车加速与刹车的极限。</p><p><img src="简介-如何科学地飙车/图08.png" alt="图8"></p><p>一台赛车的极限速度受到很多因素的影响，悬架调校、四轮定位、路面质量等等很多因素都会对赛车的性能产生巨大的影响。努力提升这个极限速度，就是车队的工程技术团队的核心任务。</p><p><a href="https://www.bilibili.com/read/cv107064" target="_blank" rel="noopener">驾驶课程-初级课程 [抓地力]</a></p><h3 id="g值圆"><a href="#g值圆" class="headerlink" title="g值圆"></a>g值圆</h3><p>一般在描述赛车行驶受力的时候，我们使用更好测定的加速度表示。以重力加速度<strong>g</strong>为单位，赛车向任意方向受到的加速度被除以<strong><em>g</em></strong>表示出来，比如赛车过弯时受到<strong>1.2</strong>倍重力加速度的向心加速度，我们就描述为<strong>1.2g</strong>。这种描述方法十分常见，相信大家都不陌生。</p><p>描述赛车在地平面上的运动受力我们一般使用叫做<strong>g值圆</strong>的图表。这种图表类似于<strong>极坐标</strong>，使用同心圆来表示加速度的量，使用不同的方向角来表示方向。使用这种图表我们可以实时了解到赛车的受力情况，还可以直观地将赛车的极限表示出来。</p><p><a href="https://www.bilibili.com/video/av21309118/" target="_blank" rel="noopener">本田思域Type R 纽北破纪录实况</a></p><p><img src="简介-如何科学地飙车/图09.png" alt="图9"></p><p>在远古时期，穷苦的赛车手用不上加速度仪表时，智慧的劳动人民就想到过一种指示加速度的替代办法——水杯。</p><p><img src="简介-如何科学地飙车/图10.png" alt="图10"></p><p>如果你明白了赛车为什么存在极限速度，想必你也就能够很自然能够明白赛车就是一项游走在极限上的运动。那么现在我们来看一些极限的情况吧。</p><h3 id="转弯的极限"><a href="#转弯的极限" class="headerlink" title="转弯的极限"></a>转弯的极限</h3><p>众所周知，赛车有前轮和后轮(废话)，如果把它们分开来看的话，<strong>它们都会有各自的极限</strong>。越过极限的一侧轮胎<strong>失去循迹能力</strong>，就会向弯道外侧滑移。</p><p><strong>转向不足(Understeer)</strong>是<strong>前轮比后轮先失去循迹能力</strong>的情况。在这种情况下，<strong>赛车无法随着前轮的指向移动</strong>，而是会因为惯性指向弯道外侧。所以车手会感觉无论怎样向扭动方向盘，赛车都无法随着指向转弯。转向不足也被俗称为“<strong>推头</strong>”。为了改出这种情况，需要车手减速，以至于速度降低至前轮抓地力能够承受转向要求的离心力作用，而恢复循迹。</p><p><a href="https://www.bilibili.com/read/cv160656" target="_blank" rel="noopener">驾驶课程-初级课程 [转向不足]</a></p><p><strong>转向过度(Oversteer)</strong>是<strong>后轮比前轮先失去循迹能力</strong>的情况。在这种情况下赛车的尾部会因为惯性离心力的作用甩向弯道外侧，因此也被俗称为“<strong>甩尾</strong>”。这种情况出现时，赛车会因为惯性自然地指向弯道内侧，甚至出现打转的情况。当这种情况出现时，车手除了需要减速，一般还需要反打方向使前轮指向正确的行驶方向。如果这种动作操作得当，车手就能控制后轮滑行的幅度，并以甩尾的姿态通过弯道，这就是所谓“<strong>漂移</strong>”。</p><p><a href="https://www.bilibili.com/read/cv241318" target="_blank" rel="noopener">驾驶课程-中级课程 [转向过度]</a></p><p><img src="简介-如何科学地飙车/图11.png" alt="图11"></p><p><img src="简介-如何科学地飙车/图12.gif" alt="图12"></p><p>在正常的循迹驾驶过程中，这两种情况的出现就意味着赛车失去控制。但实际上因为赛车轮胎的运动特性非常复杂，这两种情况经常并不是瞬间出现的，而是随着速度的变化逐渐产生。所以大家可以看到在一般情况下车子虽然发生前轮或后轮的滑行，但是依然具有一定的循迹能力。</p><p><a href="https://www.bilibili.com/video/av10743301/" target="_blank" rel="noopener">【66熟肉】推头和甩尾的区别，你真的懂吗</a></p><p>转向过度或是转向不足除了描述上述现象，更多地是用来<strong>形容一台赛车转弯时容易出现的运动趋势</strong>，或被称作赛车的<strong>弯道动态特性</strong>。因为这种情况的出现与前后轮的极限有关，所以这种特性是<strong>可以通过调校改变</strong>的。一台调校得当的赛车在正常操作下，可以出现前后轮同时达到极限的情况，赛车可以很轻松地跟着方向盘的转动转弯，这样调校的赛车就被认为具有<strong>中性转向特性(Neutral)</strong>。一般这种调校的赛车会被认为是将抓地力潜力发挥到极限的。但是赛车特性的决定因素与许多因素有关联，现实中几乎不可能做到完美。市面上调校赛车或是调校所有汽车时，都会将汽车调校成具有轻度转向不足特性，因为转向不足现象只需要减速就可以改出，相比转向过度具有绝对的安全性优势。</p><h3 id="刹车的极限"><a href="#刹车的极限" class="headerlink" title="刹车的极限"></a>刹车的极限</h3><p>在进入弯道之前，赛车一般需要减速从而循迹通过弯道。这时，赛车的制动能力就显得非常重要了。一个迅猛的制动快速降速，能够尽量缩短刹车距离，拉长制动前的全速路段，从而获得时间优势，学过积分的同学们一定不难理解这一点。那么问题来了：<strong>什么样的刹车动作是一次优秀的刹车呢？</strong></p><p>我们知道，制动的机械过程就是通过人脚踩下<strong>制动踏板</strong>，从而利用<strong>杠杆与液压放大作用</strong>将踩踏力转化为<strong>对制动盘的夹紧力</strong>，利用制动盘与刹车片之间的<strong>摩擦</strong>来给车轮施加制动力矩，最后通过轮胎与地面之间的摩擦力实现赛车的减速。</p><p><img src="简介-如何科学地飙车/图13.jpg" alt="图13"></p><p>轻踩下踏板时，车轮的制动力矩不够抵消地面对车轮的静摩擦力产生的力矩，于是赛车缓缓地减速，减速度的大小就与人踩踏踏板的力正相关。</p><p>当踩下踏板的力达到了一定大小，踏板被踩到了一定深度，此时车轮的制动力矩增大，以至于能够与车轮与地面摩擦力产生的力矩相抵消，车轮就会发生抱死现象。这时制动盘与刹车片之间静摩擦，无论如何增大踩踏力度，车轮与地面之间都会保持滑动摩擦状态，赛车减速度基本稳定在了这个滑动摩擦力提供的减速度上。</p><p><img src="简介-如何科学地飙车/图14.png" alt="图14"></p><p>那么把车轮踩到抱死的刹车是一次优秀的刹车吗？不是。</p><ul><li><p>滑动摩擦力并不是车轮能够提供的最大摩擦力。在实际环境中，滑动摩擦力会略小于最大静摩擦力。</p></li><li><p>无论前轮还是后轮先发生锁死都意味着失去循迹能力，赛车的减速轨迹会高度不可控。前轮锁死会发生严重转向不足，赛车会笔直地沿着前进方向惯性移动。后轮锁死则会有转向过度的可能，若操作不当使赛车受到侧向力，赛车则会直接在制动过程中发生甩尾打转且极难救车。</p></li><li><p>车轮与地面的滑动摩擦会严重磨损车胎。车胎在摩擦后还会引起轻微的车轮失圆，这个失圆产生的振动如果一不小心对上了某些共振频率还会引起更大的麻烦<a href="https://www.bilibili.com/video/av47944756" target="_blank" rel="noopener">(比如颠掉前翼)@歪头</a></p><p><img src="简介-如何科学地飙车/图15.jpg" alt="图15"></p></li></ul><p>所以说车轮抱死的刹车<strong>不仅不优秀，反而是最糟糕的一种情况</strong>。</p><p><img src="简介-如何科学地飙车/图16.gif" alt="图16"></p><p>优秀的刹车同样与轮胎极限有关。一个优秀的赛车手能够将刹车控制在<strong>车轮转与不转的边缘</strong>，车轮与地面间已经不完全是滚动摩擦，但仍然保持旋转，因此仍然具有一定的循迹能力。这就是<strong>临界刹车</strong>。这种技术在没有<a href="https://baike.baidu.com/item/防抱死制动系统" target="_blank" rel="noopener">防抱死系统(Anti-lock Braking System)</a>的方程式赛车上有很高的操作难度，因为需要很精确的踩踏力度控制。<strong>最优秀的刹车与最糟糕的刹车之间也许只有一张纸的距离</strong>。但这种细致的控制技术也是赛车运动魅力的来源(之一)。</p><p><a href="https://www.bilibili.com/video/av29983278/" target="_blank" rel="noopener">AMG驾驶学校 第2集 [刹车基础]</a></p><p><a href="https://www.bilibili.com/read/cv152410" target="_blank" rel="noopener">驾驶课程-初级课程 [刹车技术]</a></p><p><a href="https://www.bilibili.com/read/cv238651" target="_blank" rel="noopener">驾驶课程-初级课程 [临界刹车技术]</a></p><h3 id="循迹刹车"><a href="#循迹刹车" class="headerlink" title="循迹刹车"></a>循迹刹车</h3><p>了解了临界刹车，我们现在来了解一种更为极限的减速操作</p><p>我们在描述赛车抓地力时发现赛车的抓地力被分为了纵向与侧向分力。实际上的轮胎受力应该是这两个分力的合力。这个合力转化为加速度，就可以被g值圆表示出来。同样的，赛车能够循迹行驶的极限加速度，也是由侧向极限与纵向极限合成的。这个合成的极限表现在g值圆上，应该是一个近圆形。</p><p><img src="简介-如何科学地飙车/图17.png" alt="图17"></p><p>在极限的操作下，一个优秀的车手在入弯时由减速进入转向的过程中，可以一直保持赛车处于极限边缘。也就是说，在减速状态与转向状态转换过程中，一个优秀的车手是可以做到“<strong>转弯与制动同时进行</strong>”的操作的，这就是循迹刹车技术。</p><p><img src="简介-如何科学地飙车/图18.png" alt="图18"></p><p>相比只在直线路段刹车，能够做到循迹刹车的车手无疑拥有更强的速度控制能力。循迹刹车技术也能够在复合弯路段中充分利用赛道长度进行减速，最大化利用赛道中的加减速距离。但是相必大家已经能够从上文的描述中看到这种刹车操作的难度。刹车技术是赛车中最重要的单项技术之一，能够在刹车与转向的复合加速度变化中准确把握赛车的极限，用身体感受动态过程中的加速度变化，勤奋的练习和天赋都非常重要。同时作为工程师，我们也必须要理解这种技术的存在。</p><h3 id="加速的极限"><a href="#加速的极限" class="headerlink" title="加速的极限"></a>加速的极限</h3><p>说完转向和刹车，我们来了解最后一个控制赛车的基本操作——踩油门。</p><p>刚刚在讲刹车的时候提到：如果对轮子加上<strong>过高的转矩</strong>(比如制动力矩)以至于突破了轮胎与地面之间的最大静摩擦力，轮胎和地面之间就会发生滑动摩擦。所以反过来也是一样的，当驱动力矩过高的时候，车轮就会发生空转。</p><p>那么这个驱动力矩在什么时候会大到引发车轮空转呢？</p><p>我们在高中时有做过汽车启动过程中最大加速度与最大功率有关的题目，我们知道在输出功率较低的区域，或可以理解为<strong>车速相对较低的区域开始加速</strong>的过程中，赛车能够输出非常大的驱动力。这一点在电动车上可以很容易地感受到。如果在低速时深踩油门，就会使赛车瞬间向驱动轮输出非常大的驱动力矩。这时如果赛车动力足够强劲，这个力矩就会使驱动轮发生空转。</p><p><img src="简介-如何科学地飙车/图19.gif" alt="图19"></p><p>如果起步时驱动轮发生空转，赛车起步反应时间会受到很大的影响，导致落后于人。后驱车起步甚至有可能发生偏航与旋转，一不小心画出一个甜甜圈。</p><p><img src="简介-如何科学地飙车/图20.gif" alt="图20"></p><p>想必大家看到这里已经能够理解为什么起步与出弯阶段会成为油门控制的难点了。起步与出弯阶段都是赛车从低速状态开始向全力加速变化。如果油门踩踏过深，就会导致驱动轮极限被突破。而在两侧驱动轮进入滑动摩擦状态后，它们与地面之间的摩擦力就基本完全取决于地面摩擦系数了。万一出现左右摩擦力不均而在两侧驱动轮之间出现力矩，就有很大的可能导致赛车偏航。</p><p>所以完美的出弯加速与循迹刹车道理相同，当输入更大的油门时，转向就应该做出相应的回正，让赛车尽量保持在轮胎的极限范围上。</p><p><img src="简介-如何科学地飙车/图21.gif" alt="图21"></p><p>如果在弯中或是出弯时踩深了油门，还会因为驱动形式的不同产生不同的结果。</p><ul><li><p>前驱车：前轮抓地破坏，发生转向不足。</p></li><li><p>后驱车：后轮抓地破坏，发生转向过度，甚至原地画圈。</p></li><li><p>四驱车：四轮抓地破坏，赛车向弯外侧偏离，高度失控。</p></li></ul><p><a href="https://www.bilibili.com/video/av69262668/" target="_blank" rel="noopener">头哥卡丁车甜甜圈</a></p><p>现在我们说完了油门，刹车，转弯这三大开车基本操作中可能遇到的极限情况了。如果完全明白了以上的内容，你就已经基本掌握了赛车运动的基本规律了。在此基础上，我们说点有意思的，比如围场中火药味最浓的部分：</p><h2 id="超车"><a href="#超车" class="headerlink" title="超车"></a>超车</h2><p>在多车竞技的赛场上，能够实现名次上升的最直接有效的办法就是超越。如何不断超车以至于赢下比赛，我们从最简单粗暴的开始讲吧。</p><h3 id="开一台跑的更快的车"><a href="#开一台跑的更快的车" class="headerlink" title="开一台跑的更快的车"></a>开一台跑的更快的车</h3><ul><li><p><strong>赛车场上决定名次的最重要因素是车！</strong></p></li><li><p>不要试图怀疑上一条的正确性！车手技术再好赛车上限不高也没用！</p></li><li><p><del>其实上一条的后半句反过来也适用@法拉利。</del></p></li><li><p><del>开86的拓海是无论如何也赢不了开奔驰的叔叔的！</del></p></li><li><p>开86的拓海是赢不了开法拉利的舒马赫的！</p></li><li><p>赛车是烧钱的运动！<del>氪金不一定使你变得更强！但不氪金只会被时代抛弃！</del></p></li></ul><p>所以最简单的超车办法就是：</p><p><strong>老子直道比你快</strong></p><p>气不气？</p><h3 id="弯道超车的规则"><a href="#弯道超车的规则" class="headerlink" title="弯道超车的规则"></a>弯道超车的规则</h3><p>了解完最简单粗暴的直道超越，我们回到现实（笑。一般赛车比赛由于规则限制，不同车手的赛车之间虽然或多或少存在动力差距，但一般只有火星车与慢车之间会出现直道超越。不少赛事还有明确的功率限制。所以在现在的赛车比赛中大量的超车发生在弯道中。那么在了解大量的弯道超车之前必须了解一些弯道超车的规则。</p><p>众所周知，赛车存在碰撞体积（废话。所以如果没有规则的限制，跑在前面的车手是可以将跑在后面的车手阻拦住，或是将它们挤出赛道的。所以一般多车齐跑的赛车比赛，都会对线路做出很大的限制，以保证赛车手的安全以及赛场和谐。一般约定俗成的内容大致为：</p><ul><li>赛车在直道上进行超越时，被超越车不能恶意挤撞超越车，不能在后车逼近时通过反复变线(画龙)恶意阻拦。</li><li>赛车在弯道争抢过程中，一般当两车侧面范围有重叠，它们就有义务在弯道中互相让出赛车线。比如：<ul><li>当超越车在入弯时成功插入被超越车的内侧弯道，被超越车就不可以向内线挤压迫使超越车驶离赛道；</li><li>当超越车在出弯时成功进入被超越车的外侧弯道，被超越车就不可以向外线挤压迫使超越车驶离赛道</li></ul></li><li>一般赛车所有车轮驶出赛道边缘白线视为驶出赛道。</li><li>如果通过不合理手段(碰撞、切弯)超越，则有义务将位置归还。</li></ul><p><img src="简介-如何科学地飙车/图22.png" alt="图22"></p><p>看明白这些基本规则，我们就可以开始讲一些操作方法啦。</p><h3 id="进入内线"><a href="#进入内线" class="headerlink" title="进入内线"></a>进入内线</h3><p>首先是相对最好理解的内线超越。内线有更短的转弯距离和更快的过弯速度，能够在入弯时进入前车内线就会有很好的超车机会。切入内线主要有以下几种方法：</p><ul><li><p>尾流提速</p><p>赛车在行驶过程中会受到空气阻力极大的影响。如果能够在直道或是加速路段进入前车正后方区域，就可以<strong>利用前车破风效果</strong>跟上前车获得直道末端的速度优势，通过突然抽头变线进入内线。</p><p><a href="https://www.bilibili.com/read/cv494269" target="_blank" rel="noopener">驾驶课程-中级课程 [尾流超车]</a></p></li><li><p>延迟刹车</p><p>延迟刹车是更普遍被使用的技术，通过<strong>延后刹车点</strong>并<strong>更加剧烈地减速</strong>使赛车获得短暂的速度优势以进入内线。但是想必大家对上面的刹车章节还有印象，延迟刹车需要良好的<strong>车况</strong>，熟练的<strong>技巧</strong>以及高度的<strong>自信</strong>。</p></li></ul><p><img src="简介-如何科学地飙车/图23.png" alt="图23"></p><p>当然，进入内线的超车是一项比较容易进行防守的技术。领先的赛车也可以通过延迟刹车，甚至提前占领内线的方式进行防守。</p><h3 id="外线超车"><a href="#外线超车" class="headerlink" title="外线超车"></a>外线超车</h3><p>外线超车利用的是<strong>大半径转弯带来的速度优势</strong>。当你能够在弯中并排占据外线，更快的速度会使你在直道上超越对手。外线超车相当考虑车手对赛车侧向极限的把握以及出弯油门的控制。在顶级的赛场上利用车况以及轮胎优势的外道超车也是非常常见的，甚至领先车会让出内线位置，利用更宽的过弯路线来获得出弯后的速度优势进行反击。</p><p><img src="简介-如何科学地飙车/图24.png" alt="图24"></p><h3 id="组合弯的博弈"><a href="#组合弯的博弈" class="headerlink" title="组合弯的博弈"></a>组合弯的博弈</h3><p>在一些车况相近，车手水平相近的情况下，一次成功的超车也许会需要长期的缠斗。这个缠斗的具体内容，就是在多弯组合的赛道上复杂的线路博弈。弯道线路的取舍，延迟刹车的程度，都会成为决定胜负的一部分。</p><p><img src="简介-如何科学地飙车/图25.png" alt="图25"></p><p><a href="https://www.bilibili.com/video/av22638592/" target="_blank" rel="noopener">【弹幕中字 Chain Bear F1】超车的艺术：里卡多在中国的制胜之道</a></p><p><a href="https://www.bilibili.com/video/av22995095/" target="_blank" rel="noopener">【弹幕中字 Chain Bear F1】防守的艺术：巴库超车中的成与败</a></p><p><a href="https://www.bilibili.com/video/av59474176/" target="_blank" rel="noopener">维斯塔潘咊勒克莱尔ポ及緻嘚輪對輪攻防戰 | 2019英慖大獎賽</a></p><h2 id="说回FSAE"><a href="#说回FSAE" class="headerlink" title="说回FSAE"></a>说回FSAE</h2><p>最后我们还是应该回到大学生方程式的部分。毕竟作为教育导向的比赛为了学生安全，将赛车简化为了桩桶赛道与计时赛的形式。3米宽的桩桶赛道省略的复杂的车线选择，禁止超车的耐久赛规则也极大限度避免了安全事故与财产损失。将比赛的重心更多地向赛车的工程设计转移。当然作为一个实打实的方程式赛车比赛级别，FSAE有它自己的参赛要领。</p><p>如果你是一个工程师，你应该充分地明白赛车的优化重点，帮助赛车提升极限：</p><ul><li><strong>增强动力</strong>是一台赛车最本质的优化方式。动力系统（电池、电控、电机）不管放在哪个级别的赛车上，都是<strong>成本最高</strong>，需要投入最多精力的部分。可以说动力决定了你的赛车在围场中的排名范围，所有的设计都是从动力系统的选型开始的。</li><li><strong>更轻的质量</strong>是在整个设计过程中贯彻的。更轻的质量意味着更快的提速降速转弯，更小的机械极限负荷，也意味着更高的成本，更高的设计难度与更细致的流程控制需求。可以说，轻量化是所有赛车的工程追求，也是<strong>一支车队技术水平与管理水平的综合体现</strong>，尤其是在没有质量下限的FSAE围场。</li><li><strong>更好的人机工程</strong>实际上是最有效的提升手段。无论是在机械上进行专项优化，还是利用复杂的电子系统辅助。大学生方程式不存在顶级的车手与成熟的工程师。无论是利用技术辅助车手感知极限，<strong>降低操控难度</strong>；还是利用技术帮助工程师读取数据，<strong>简化维护步骤</strong>。都是变相提升赛车速度的重要方法。</li><li><strong>可靠性</strong>是体现性能的基础！在利用理论知识提升赛车理论极限时，不要忘记赛车绝非一堆模型和数据，而是实打实的工业产品，需要经历多变的实际工作环境的考验。一台不能坚持到比赛结束的赛车，甚至一台无法通过车检的赛车是没有成绩可言的。</li></ul><p>如果你是一个车手，你应该明白能够提升驾驶能力的要素，包括但不限于：</p><ul><li>更<strong>细腻的驾驶技术</strong>。感受刹车与油门踏板细致到蝉衣厚度的变化并控制它，感受方向盘受到地面颠簸的微小转动并控制它。细腻代表着更逼近极限与更小的失误；</li><li>更<strong>强健的身体</strong>。强健的体魄意味着能够在更大的加速度变化中保持操作的细腻与头脑的清醒，这需要极强的核心力量与心肺功能。赛车运动也是一项耐力项目，如果你的体力坚持不完体测长跑，那么你甚至恐怕会在长时间的驾驶后脱力扭不动方向盘；</li><li><strong>勇气</strong>。当你敢于将赛车推向失控的边缘，毫无疑问你会变得更快。（莽</li></ul><p>赛车运动之所以特别，是因为它从来不仅仅是对车手个人的身体力考验，更是对团队综合实力的考验。越是高水平的赛车比赛，车手就越需要做到如机械般的细腻敏感与稳定持久。整个团队一环扣一环，每一环都同样重要。</p><h2 id="最后扯皮"><a href="#最后扯皮" class="headerlink" title="最后扯皮"></a>最后扯皮</h2><p>emm就这些内容是关于赛车的非常非常基本的知识，所以想让车队所有人都能够在脑子里对赛车这个东西有个基本的概念，以后不管是做什么方面的开发都会有自己的小目标，能够在自己心里把车子该有的样子刻画出来，能够顾及到车队整个团队做子系统之间的配合吧emm</p><p>当然关于车子的底盘机械空气动力学之类的这篇肯定是顾及不到的emm一个是这篇就想写面向全体队员的内容然后其他的细节我后面会像梁师傅一样散装往上传的emm</p><p>我自己其实19年整年做下来虽然都有顾及到但是都是学艺不精这样的一个状态，本身专业也不是机械底盘这类emm所以后面一些细节内容我会尽量写我知道的emm但是特别细致的东西应该是要交给下一届以后更有时间精力做子系统的同学研究了emm我尽力帮助大家入门然后少走弯路吧emmm</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相信刚刚加入车队的新老司机们肯定多少开过车子，这篇文章紧接着上一篇比赛介绍，想给大家简单地总结一哈飙车的科学原理（捂&lt;/p&gt;
+&lt;p&gt;这篇文章主要是想向大家介绍赛车的一些基本常识。我不知道大家之前对赛车有多少了解，所以我会尝试非 常 细 致地介绍赛车驾驶的有关内容。文字比较啰嗦比较小儿科，大家轻喷哈（笑&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="简介" scheme="https://uestc-fury.github.io/categories/%E7%AE%80%E4%BB%8B/"/>
+    
+      <category term="底盘组培训" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="车身组培训" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E5%BA%95%E7%9B%98%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E8%BD%A6%E8%BA%AB%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+    
+      <category term="陈松格" scheme="https://uestc-fury.github.io/tags/%E9%99%88%E6%9D%BE%E6%A0%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第5讲_辅助触点的目的，TSAL入门</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC5%E8%AE%B2_%E8%BE%85%E5%8A%A9%E8%A7%A6%E7%82%B9%E7%9A%84%E7%9B%AE%E7%9A%84%EF%BC%8CTSAL%E5%85%A5%E9%97%A8/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第5讲_辅助触点的目的，TSAL入门/</id>
+    <published>2020-01-28T08:40:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第五讲.mp4" controls="">您的浏览器不支持video标签</video></p><h2 id="辅助触点的目的，TSAL入门"><a href="#辅助触点的目的，TSAL入门" class="headerlink" title="辅助触点的目的，TSAL入门"></a>辅助触点的目的，TSAL入门</h2><ul><li><p>规则6.6.1的目的</p><p>防止继电器粘连</p></li></ul><p>无法通过声音来判断电池是否对电控供电</p><p>由此引入 驱动系统激活指示灯（TSAL)</p><h2 id="TSAL"><a href="#TSAL" class="headerlink" title="TSAL"></a>TSAL</h2><blockquote><p>5.10 驱动系统激活指示灯（TSAL）</p><blockquote><p>5.10.1 赛车必须有一个 TSAL 用于指示驱动系统的状态。TSAL 不允许执行其他功能。一个 TSAL 中允许包含多个 LED 灯。</p></blockquote></blockquote><p>TSAL指示驱动系统内是否存在高压电</p><p>当主环顶部的TSAL指示灯红色闪烁时，表示驱动系统已经激活。</p><blockquote><p>5.10.2 当下列情况中中满足任何一个都视为驱动系统处于激活状态：有一个 AIR 闭合；预充电回路 工作； 电池箱外的电压达到 60 V DC 或 25 V AC RMS。这意味着即使在 HVD 被移除的情况下， TSAL 也要能够检测所有直流母线电容器的电压。</p></blockquote><ul><li>存在高压的情况：①当两个AIR闭合时，箱外一定存在高压，又因为两个AIR闭合时，至少有一个AIR已经先行闭合，此时规则认为驱动系统已经激活。</li><li>辅助触点帮助TSAL判断AIR是否闭合</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="TSAL" scheme="https://uestc-fury.github.io/categories/TSAL/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第4讲_整车工作原理</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC4%E8%AE%B2_%E6%95%B4%E8%BD%A6%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第4讲_整车工作原理/</id>
+    <published>2020-01-28T08:20:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/第四讲.m4v" controls="">您的浏览器不支持video标签</video><h2 id="整车工作原理"><a href="#整车工作原理" class="headerlink" title="整车工作原理"></a>整车工作原理</h2><blockquote><p>6.6 电池箱隔离继电器（AIRs）</p><blockquote><blockquote><p>6.6.1 每个电池箱中都必须至少有两个电池箱隔离继电器</p></blockquote></blockquote></blockquote><p>当安全回路导通，继电器线圈高侧得到12V;当电池无故障，继电器线圈低侧得到GND信号，此时AIR导通，车辆正常上电工作。</p><h3 id="继电器"><a href="#继电器" class="headerlink" title="继电器"></a>继电器</h3><p><img src="2020电气组寒假培训第4讲_整车工作原理\QQ截图20200128155345.png" alt="QQ截图20200128155345"></p><p>两根螺柱：主触点，高压电流流经</p><p>线圈两根线：一根给高电位（12V),一根接地，主触点就吸合</p><p>辅助触点两根线：当主触点吸合时，辅助触点两根线相互连通</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="整车电路" scheme="https://uestc-fury.github.io/categories/%E6%95%B4%E8%BD%A6%E7%94%B5%E8%B7%AF/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第3讲_动力电池续</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC3%E8%AE%B2_%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E7%BB%AD/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第3讲_动力电池续/</id>
+    <published>2020-01-25T14:20:00.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><p><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/2020电气组寒假培训第三讲_动力电池续.mp4" controls="">您的浏览器不支持video标签</video></p><h2 id="串联增加电压，并联增加容量-功率"><a href="#串联增加电压，并联增加容量-功率" class="headerlink" title="串联增加电压，并联增加容量/功率"></a>串联增加电压，并联增加容量/功率</h2><ul><li><script type="math/tex; mode=display">总能量=22Ah \times 80 \times 3.7V=6.512kWh=6.5度电</script></li></ul><p><img src="2020电气组寒假培训第3讲_动力电池续/QQ截图20200125221348.png" alt="QQ截图20200125221348"></p><h2 id="规则解释"><a href="#规则解释" class="headerlink" title="规则解释"></a>规则解释</h2><blockquote><p>6.3.2 每个电池组最高电压不超过 120VDC，最大能量不超过 6MJ（1.67kWh），能量计算方法见第 五章 6.1.3。</p></blockquote><script type="math/tex; mode=display">每个模组的能量=16 \times 4.2V \times 22AH=1.47kWh</script><blockquote><p>6.4.4 要使用维护插头使内部电池组在电气上分离。电池箱内所有电池组的 正负极都必须可以实现分离，包括第一个和最后一个电池组在内的所有电池组的两极。</p></blockquote><p>开箱之后，做任何操作之前，拔掉所有的维护插头，使得电池组在电气上隔离。</p><blockquote><p>9.2.3 无论何时，一旦电池箱被打开，电池单元（cell segment）必须用维护插头分开，参见第五章 6.4.4。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="电池" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B1%A0/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第2讲_动力电池介绍</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC2%E8%AE%B2_%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第2讲_动力电池介绍/</id>
+    <published>2020-01-23T11:18:01.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/1.22_动力电池.m4v" controls="">您的浏览器不支持video标签</video><!-- <video src="2020电气组寒假培训第2讲_动力电池介绍/1.22_动力电池.m4v" preload="metadata" controls playsinline poster="">Sorry, your browser does not support the video tag.</video> --><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><h2 id="三电系统"><a href="#三电系统" class="headerlink" title="三电系统"></a>三电系统</h2><ul><li>电池</li><li>电机</li><li>电机控制器</li></ul><h2 id="动力电池分类"><a href="#动力电池分类" class="headerlink" title="动力电池分类"></a>动力电池分类</h2><ul><li>软包 (我们使用)</li><li>圆柱形 (18650)</li><li>方壳</li></ul><h2 id="模组-Pack"><a href="#模组-Pack" class="headerlink" title="模组 (Pack)"></a>模组 (Pack)</h2><p>电池单体 (Cell) 的串并联</p><p><img src="2020电气组寒假培训第2讲_动力电池介绍/image-20200123120108229.png" alt="image-20200123120108229"></p><h2 id="电池重要参数"><a href="#电池重要参数" class="headerlink" title="电池重要参数"></a>电池重要参数</h2><h3 id="电压"><a href="#电压" class="headerlink" title="电压"></a>电压</h3><h3 id="电流"><a href="#电流" class="headerlink" title="电流"></a>电流</h3><h3 id="容量"><a href="#容量" class="headerlink" title="容量"></a>容量</h3><ul><li>Ah</li><li><script type="math/tex; mode=display">1Ah=1000mAh=1A \times 1h</script></li></ul><p><img src="2020电气组寒假培训第2讲_动力电池介绍/image-20200123135554336.png" alt="image-20200123135554336"></p><h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><ul><li>kWh (度)</li><li><script type="math/tex; mode=display">W=Fx=mgx</script></li><li><script type="math/tex; mode=display">能量=容量 \times 电压</script></li><li><script type="math/tex; mode=display">20Ah \times 3.7V=74Wh</script></li></ul><h2 id="2020赛季电池参数"><a href="#2020赛季电池参数" class="headerlink" title="2020赛季电池参数"></a>2020赛季电池参数</h2><div class="table-container"><table><thead><tr><th>单体电压</th><th>3.7V</th></tr></thead><tbody><tr><td>模组形式</td><td>16串 5模组串联=80串</td></tr><tr><td>单体容量</td><td>22Ah</td></tr><tr><td>总能量</td><td>$22Ah \times 80 \times 3.7V=6.512kWh=6.5度电$</td></tr></tbody></table></div><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+      <category term="电池" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B1%A0/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020电气组寒假培训第1讲_绪论</title>
+    <link href="https://uestc-fury.github.io/2020/01/2020%E7%94%B5%E6%B0%94%E7%BB%84%E5%AF%92%E5%81%87%E5%9F%B9%E8%AE%AD%E7%AC%AC1%E8%AE%B2_%E7%BB%AA%E8%AE%BA/"/>
+    <id>https://uestc-fury.github.io/2020/01/2020电气组寒假培训第1讲_绪论/</id>
+    <published>2020-01-23T11:17:19.000Z</published>
+    <updated>2021-02-20T07:29:34.232Z</updated>
+    
+    <content type="html"><![CDATA[<p><span></span></p><a id="more"></a><video src="http://q4v73d4us.bkt.clouddn.com/fury教程/2020电气组寒假培训/1.22_绪论.m4v" controls="">您的浏览器不支持video标签</video><!-- <video src="2020电气组寒假培训第1讲_绪论/1.22_绪论.m4v" preload="metadata" controls playsinline poster="">Sorry, your browser does not support the video tag.</video> --><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><h3 id="高压"><a href="#高压" class="headerlink" title="高压"></a>高压</h3><p><img src="2020电气组寒假培训第1讲_绪论/image-20200123114410141.png" alt="image-20200123114410141"></p><h3 id="低压-安全回路"><a href="#低压-安全回路" class="headerlink" title="低压 (安全回路)"></a>低压 (安全回路)</h3><p><img src="2020电气组寒假培训第1讲_绪论/image-20200123114444891.png" alt="image-20200123114444891"></p><h3 id="软件-单片机"><a href="#软件-单片机" class="headerlink" title="软件 (单片机)"></a>软件 (单片机)</h3><p><img src="2020电气组寒假培训第1讲_绪论/image-20200123114513024.png" alt="image-20200123114513024"></p><h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><ul><li>规则</li><li>技术检查表</li><li>ESF</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="电气组培训" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/"/>
+    
+      <category term="2020寒假" scheme="https://uestc-fury.github.io/categories/%E7%94%B5%E6%B0%94%E7%BB%84%E5%9F%B9%E8%AE%AD/2020%E5%AF%92%E5%81%87/"/>
+    
+    
+      <category term="梁洪豪" scheme="https://uestc-fury.github.io/tags/%E6%A2%81%E6%B4%AA%E8%B1%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>fury教程系列</title>
+    <link href="https://uestc-fury.github.io/2020/01/fury%E6%95%99%E7%A8%8B%E7%B3%BB%E5%88%97/"/>
+    <id>https://uestc-fury.github.io/2020/01/fury教程系列/</id>
+    <published>2020-01-16T09:27:41.000Z</published>
+    <updated>2021-02-20T07:29:34.236Z</updated>
+    
+    <content type="html"><![CDATA[<p>fury历年教程整理</p><a id="more"></a><h2 id="培训"><a href="#培训" class="headerlink" title="培训"></a>培训</h2><ul><li><a href="/2020/01/简介-大学生方程式是一个什么样的赛车比赛">简介-大学生方程式是一个什么样的赛车比赛</a></li><li><a href="/2020/01/简介-如何科学地飙车">简介-如何科学地飙车</a></li></ul><h3 id="电气"><a href="#电气" class="headerlink" title="电气"></a>电气</h3><h4 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h4><ul><li><a href="/2019/01/一些单片机基础概念">一些单片机基础概念</a></li><li><a href="/2019/01/嵌入式与C-侧重调试">嵌入式与C-侧重调试</a></li><li><a href="/2019/02/python速成-python图像处理体验">python速成-python图像处理体验</a></li></ul><h4 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h4><ul><li><a href="/2020/01/2020电气组寒假培训第1讲_绪论">2020电气组寒假培训第1讲_绪论</a></li><li><a href="/2020/01/2020电气组寒假培训第2讲_动力电池介绍">2020电气组寒假培训第2讲_动力电池介绍</a></li><li><a href="/2020/01/2020电气组寒假培训第3讲_动力电池续">2020电气组寒假培训第3讲_动力电池续</a></li><li><a href="/2020/01/2020电气组寒假培训第4讲_整车工作原理">2020电气组寒假培训第4讲_整车工作原理</a></li><li><a href="/2020/01/2020电气组寒假培训第5讲_辅助触点的目的，TSAL入门">2020电气组寒假培训第5讲_辅助触点的目的，TSAL入门</a></li><li><a href="/2020/01/2020电气组寒假培训第6讲_预充回路，上电逻辑">2020电气组寒假培训第6讲_预充回路，上电逻辑</a></li><li><a href="/2020/01/2020电气组寒假培训第7讲_HVD，能量计">2020电气组寒假培训第7讲_HVD，能量计</a></li><li><a href="/2020/01/2020电气组寒假培训第8讲_电压变送器，电压比较器">2020电气组寒假培训第8讲_电压变送器，电压比较器</a></li><li><a href="/2020/01/2020电气组寒假培训第9讲_放电回路">2020电气组寒假培训第9讲_放电回路</a></li><li><a href="/2020/01/2020电气组寒假培训第10讲_测量点，DCDC">2020电气组寒假培训第10讲_测量点，DCDC</a></li><li><a href="/2020/01/2020电气组寒假培训第11讲_行程传感器，低压主开关">2020电气组寒假培训第11讲_行程传感器，低压主开关</a></li><li><a href="/2020/01/2020电气组寒假培训第12讲_制动可靠性检测">2020电气组寒假培训第12讲_制动可靠性检测</a></li><li><a href="/2020/01/2020电气组寒假培训第13讲_绝缘检测装置">2020电气组寒假培训第13讲_绝缘检测装置</a></li><li><a href="/2020/01/2020电气组寒假培训第14讲_电池管理系统">2020电气组寒假培训第14讲_电池管理系统</a></li><li><a href="/2020/01/2020电气组寒假培训第15讲_急停，惯性，制动超行程开关">2020电气组寒假培训第15讲_急停，惯性，制动超行程开关</a></li></ul><h2 id="软件使用"><a href="#软件使用" class="headerlink" title="软件使用"></a>软件使用</h2><h3 id="文档编写"><a href="#文档编写" class="headerlink" title="文档编写"></a>文档编写</h3><h4 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h4><ul><li><a href="https://leojhonsong.github.io/zh-CN/2019/09/23/Markdown安利-Typora简要使用教程/" target="_blank" rel="noopener">Markdown安利&amp;Typora简要使用教程</a></li></ul><h3 id="3D建模"><a href="#3D建模" class="headerlink" title="3D建模"></a>3D建模</h3><h4 id="SolidWorks"><a href="#SolidWorks" class="headerlink" title="SolidWorks"></a>SolidWorks</h4><ul><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=2650199099&amp;idx=3&amp;sn=a5ba516295d46084000fdfe60b657e5f&amp;exportkey=AxGu%2FIcqIOMfR5x%2Bi91P2aQ%3D&amp;pass_ticket=gg3UwSJIdyvqPuA%2F5cXd9W%2FrH8eSgfM%2FOG5Y6WND07td9oVNcWW2XkmMhjeZJcWc" target="_blank" rel="noopener">SolidWorks2016安装包及安装教程</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=2650203835&amp;idx=2&amp;sn=905786ecd815465deac02cb2f3360536&amp;exportkey=A6uLbfz9xkknFDAS13kboqE%3D&amp;pass_ticket=gg3UwSJIdyvqPuA%2F5cXd9W%2FrH8eSgfM%2FOG5Y6WND07td9oVNcWW2XkmMhjeZJcWc" target="_blank" rel="noopener">SolidWorks2018安装包及安装教程</a></li></ul><h3 id="电路板绘制"><a href="#电路板绘制" class="headerlink" title="电路板绘制"></a>电路板绘制</h3><h4 id="Altium-Designer"><a href="#Altium-Designer" class="headerlink" title="Altium Designer"></a>Altium Designer</h4><ul><li><a href="http://baijiahao.baidu.com/s?id=1601512490293063889&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">AD 09安装包及安装教程</a></li><li><a href="https://www.bilibili.com/video/av38509267?from=search&amp;seid=1415946170835892467" target="_blank" rel="noopener">AD5小时快速入门</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;fury历年教程整理&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

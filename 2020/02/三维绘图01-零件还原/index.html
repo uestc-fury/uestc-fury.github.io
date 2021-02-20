@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+  
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      version: '7.3.0',
+      exturl: false,
+      sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+      copycode: {"enable":true,"show_result":false,"style":"mac"},
+      back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+      bookmark: {"enable":false,"color":"#222","save":"auto"},
+      fancybox: false,
+      mediumzoom: false,
+      lazyload: false,
+      pangu: false,
+      algolia: {
+        appID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {"per_page":10},
+        labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      },
+      localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+      path: 'search.xml',
+      motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+      translation: {
+        copy_button: '复制',
+        copy_success: '复制成功',
+        copy_failure: '复制失败'
+      },
+      sidebarPadding: 40
+    };
+  </script>
+  <meta name="description" content="【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。">
+<meta name="keywords" content="陈松格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三维绘图01-零件还原">
+<meta property="og:url" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/index.html">
+<meta property="og:site_name" content="fury车队">
+<meta property="og:description" content="【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/01.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/Official-Apple-iPhone-5-Dimensional-Drawing.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/03.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/04.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/05.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/06-1.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/06.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/07.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/08.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/09.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/10.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/11.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/13.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/14.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/15.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/16.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/17.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/18.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/19.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/20.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/21.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/22.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/23.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/24.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/25.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/26.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/27.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/28.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/29.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/30.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/31.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/32.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/33.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/34.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/35.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/36.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/37.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/38.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/39.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/40.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/41.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/42.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/43.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/44.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/45.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/46.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/47.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/48.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/49.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/50.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/51.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/52.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/53.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/54.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/Official-Apple-iPhone-5s-Dimensional-Drawing.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/Official-Apple-iPhone-4-Dimensional-Drawing.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/55.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/56.jpg">
+<meta property="og:updated_time" content="2021-02-20T07:29:34.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三维绘图01-零件还原">
+<meta name="twitter:description" content="【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。">
+<meta name="twitter:image" content="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/三维绘图01-零件还原/01.png">
+  <link rel="alternate" href="/atom.xml" title="fury车队" type="application/atom+xml">
+  <link rel="canonical" href="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>三维绘图01-零件还原 | fury车队</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fury车队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>作者</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-schedule">
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://uestc-fury.github.io/2020/02/三维绘图01-零件还原/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fury车队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fury车队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">三维绘图01-零件还原
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user-o"></i>
+              </span>
+              <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/tags/陈松格" itemprop="url" rel="index">
+                  <span itemprop="name">陈松格</span>
+                </a>
+              </span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-06 00:50:00" itemprop="dateCreated datePublished" datetime="2020-02-06T00:50:00+08:00">2020-02-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-20 15:29:34" itemprop="dateModified" datetime="2021-02-20T15:29:34+08:00">2021-02-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/" itemprop="url" rel="index"><span itemprop="name">底盘组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/" itemprop="url" rel="index"><span itemprop="name">车身组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SolidWorks三维建模/" itemprop="url" rel="index"><span itemprop="name">SolidWorks三维建模</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>4.1k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>4 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>【多图警告】相信大家都有自己学过SolidWorks的基本绘图方法了，现在给大家讲解一个稍微有点规模的实物绘制三维模型实例，我会在实例中说明一些规范性要求以及一些实用的方法。</p>
+<a id="more"></a>
+<p>零件的范例模型会在实例中发出来。希望需要学习三维制图的同学一定跟着实例讲解一步一步动手操作，在绘制实例的过程周了解课程或者网络资源上讲述的画图功能的综合运用方法，真正掌握灵活的绘图技巧。</p>
+<h2 id="实例：iPhone-5"><a href="#实例：iPhone-5" class="headerlink" title="实例：iPhone 5"></a>实例：iPhone 5</h2><p>点击下载→<a href="三维绘图01-零件还原\iPhone 5.SLDPRT">范例模型</a></p>
+<p>请安装<a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=2650199099&amp;idx=3&amp;sn=a5ba516295d46084000fdfe60b657e5f&amp;exportkey=AxGu%2FIcqIOMfR5x%2Bi91P2aQ%3D&amp;pass_ticket=gg3UwSJIdyvqPuA%2F5cXd9W%2FrH8eSgfM%2FOG5Y6WND07td9oVNcWW2XkmMhjeZJcWc" target="_blank" rel="noopener">SolidWorks 2016</a>或以上版本查看</p>
+<p><img src="三维绘图01-零件还原\01.png" alt="01"></p>
+<p>iPhone 5相信很多用过的同学手上都有实物，如果你有卡尺角度尺之类的量具的话可以自己掏出旧手机打开SolidWorks尝试着画一下。当然一定是有人没用用过的（比如我）。所以我看的是图纸和网上的图片。</p>
+<p><img src="三维绘图01-零件还原/Official-Apple-iPhone-5-Dimensional-Drawing.jpg" alt="Official-Apple-iPhone-5-Dimensional-Drawing"></p>
+<p>拿到图纸以后首先思考如何开始这个零件的绘制：</p>
+<ul>
+<li>这台手机近似于一个立方体的形状，所以我们可以从一个立方体开始增加细节；</li>
+<li>手机周围的孔与按钮是许多拉伸凸台与拉伸切除；</li>
+<li>手机上有许多按钮是槽口形状，可以直接在草图中绘制；</li>
+<li>手机表面的光泽效果来源于透明件，可以在模型中复制这个效果；</li>
+<li>手机的摄像头内部结构复杂，如何简化从而使用最少的特征还原效果；</li>
+<li>手机的表面有许多接缝和分色，如何还原这个效果。</li>
+</ul>
+<p>进行了以上甚至更多思考之后，我们开始一面一面的将这台手机还原出来。</p>
+<h2 id="三维建模"><a href="#三维建模" class="headerlink" title="三维建模"></a>三维建模</h2><h3 id="正面"><a href="#正面" class="headerlink" title="正面"></a>正面</h3><p>首先起形，读到图中手机主体部分最外廓的信息，我们绘制出主体凸台，并添加圆角R9.15；<img src="三维绘图01-零件还原\03.png" alt="03"></p>
+<p>然后加上两面的倒角；<img src="三维绘图01-零件还原\04.png" alt="04"></p>
+<p>然后使用<code>特征-&gt;曲线-&gt;分割线</code>特征将手机的屏幕，听筒，光探头和前摄轮廓画来；<img src="三维绘图01-零件还原\05.png" alt="05"></p>
+<p>↑由于图纸上并没有确标出光探头的孔径，这里使用目测估算。</p>
+<p>然后我们将HOME键周围画出0.1mm的缝隙，这条缝隙会在制作透明效果时体现作用。注意使用薄壁特征时切除应在圆环外侧。<img src="三维绘图01-零件还原\06-1.png" alt="06-1"></p>
+<h4 id="前置摄像头"><a href="#前置摄像头" class="headerlink" title="前置摄像头"></a>前置摄像头</h4><p>现在我们画前摄，使用旋转切除的方式还原效果，首先建立基准面：为了建立经过旋转轴的基准面，我们在建立面之前先画一条草图线<img src="三维绘图01-零件还原\06.png" alt="06"></p>
+<p>通过草图线与平面就可以建立基准面了：选择<code>特征-&gt;参考几何体-&gt;基准面</code>建立基准面；<img src="三维绘图01-零件还原\07.png" alt="07"></p>
+<p>然后绘制如图所示草图，并旋转切除；<img src="三维绘图01-零件还原\08.png" alt="08"></p>
+<p>↑需要注意的是，我们为了避免报错，会十分注意<strong>尽量将切除特征画成闭环切除</strong>；<img src="三维绘图01-零件还原\09.png" alt="09"></p>
+<h4 id="正面玻璃护边"><a href="#正面玻璃护边" class="headerlink" title="正面玻璃护边"></a>正面玻璃护边</h4><p>如果你仔细观察，iPhone 5的正面玻璃是镶嵌安装的，手机的正面周围会有凸起的护边，这也是图纸中标出的。护边的加入让手机厚度达到了7.60mm。事实上，从iPhone 4一直到iPhone SE正面都会有这一圈护边的存在。</p>
+<p>首先拉伸画出护边环<img src="三维绘图01-零件还原\10.png" alt="10"></p>
+<p>然后使用圆角特征加入细节，还原实机<img src="三维绘图01-零件还原\11.png" alt="11"></p>
+<h4 id="电话听筒"><a href="#电话听筒" class="headerlink" title="电话听筒"></a>电话听筒</h4><p>根据实机观察，电话听筒的图纸只标出了它的倒角外扩，实际上内部结构还有一个内陷，我们一点点还原它。<img src="三维绘图01-零件还原\13.png" alt="13"></p>
+<p>首先我们现在玻璃的下层画出听筒的实际大小和听筒的下陷。听筒的实际大小可以使用草图绘制中的<strong>等距实体</strong>。<img src="三维绘图01-零件还原\14.png" alt="14"></p>
+<h4 id="正面玻璃"><a href="#正面玻璃" class="headerlink" title="正面玻璃"></a>正面玻璃</h4><p>画完听筒之后，我们就可以给模型覆盖上正面玻璃，这块玻璃会覆盖摄像头与光感，但是会露出Home键和耳机孔。首先使用<strong>转换实体引用</strong>将需要填充玻璃的部分画出来，Home键处选择一薄壁缝隙的外沿<img src="三维绘图01-零件还原\15.png" alt="15"></p>
+<p>然后选择草图中的各部分，拉伸凸台。<strong>注意在左边栏将“合并结果”的对勾√消去</strong>，这样拉伸出来的实体不会与之前画出的主体融合在一起。<img src="三维绘图01-零件还原\16.png" alt="16"></p>
+<p>然后我们将听筒的倒角特征加上<img src="三维绘图01-零件还原\17.png" alt="17"></p>
+<p>这样一块前面板玻璃就画好了</p>
+<h4 id="Home键"><a href="#Home键" class="headerlink" title="Home键"></a>Home键</h4><p><img src="三维绘图01-零件还原\18.png" alt="18">如果你自己观察Home键结构就会发现它有三个特点</p>
+<ul>
+<li>手指触摸的表面是一个弧面</li>
+<li>再细看发现弧面下图案印在平面上，是一个类似于正面玻璃“镶嵌”的结构</li>
+<li>经典的圆角正方形着色似乎与白色有分层效果</li>
+</ul>
+<p>现在我们同样按照分层实现这个效果，首先与前置摄像头方法相同，我们画一个基准面<img src="三维绘图01-零件还原\19.png" alt="19"></p>
+<p>然后在这个基准面上，用一个草图将镶嵌层与透明层都画出来<img src="三维绘图01-零件还原\20.png" alt="20"></p>
+<p>使用下面的形状块将下层画出，注意轮廓的选择，以及不要勾选合并结果<img src="三维绘图01-零件还原\21.png" alt="21"></p>
+<p>然后使用分割线，将圆角正方形刻画在这个平面上<img src="三维绘图01-零件还原\22.png" alt="22"></p>
+<p>最后使用原有草图的上半块区域旋转出透明层，同样注意不要勾选合并结果。Home键就画好了。<img src="三维绘图01-零件还原\23.png" alt="23"></p>
+<p>正面的特征刻画完毕，我们来画侧面</p>
+<h3 id="侧面"><a href="#侧面" class="headerlink" title="侧面"></a>侧面</h3><h4 id="电源键"><a href="#电源键" class="headerlink" title="电源键"></a>电源键</h4><p>电源键在图纸上只有凸起厚度，实际特征我们需要在实机上比对目测。首先我们先使用草图中的槽口工具画出电源键，并拉伸出来<img src="三维绘图01-零件还原\24.png" alt="24"></p>
+<p>然后使用同一个草图对电源键外侧薄壁切除一定深度，做出缝隙效果<img src="三维绘图01-零件还原\25.png" alt="25"></p>
+<p>最后根据实机图，我们给他加上倒角<img src="三维绘图01-零件还原\26.png" alt="26"></p>
+<h4 id="静音拨码-amp-音量键"><a href="#静音拨码-amp-音量键" class="headerlink" title="静音拨码 &amp; 音量键"></a>静音拨码 &amp; 音量键</h4><p>根据图纸绘制出轮廓并拉伸出特征。由于拨码口圆角矩形图纸中没有，所以我们使用目测估计的办法画出深度合适的矩形口。<img src="三维绘图01-零件还原\27.png" alt="27"></p>
+<p>根据图纸给出的凸起画出拨码后，我们再次利用目测法给他们加上倒角。<img src="三维绘图01-零件还原\28.png" alt="28"></p>
+<p>观察发现，图纸标注的拨码位置为“静音”，拨码有红标注释，所以我们用分割线画上标记<img src="三维绘图01-零件还原\29.png" alt="29"></p>
+<p>利用草图槽口，我们画上音量键的“+”、“-“号<img src="三维绘图01-零件还原\30.png" alt="30"></p>
+<p>然后拉伸切除。注意这里为了实现效果，使用了<strong>拔模</strong>选项。拔模本意是指在拉伸过程中赋予主体的侧面一定的倾角，如果这个物体是通过注模成型，那么这个倾角会方便脱模取出。<img src="三维绘图01-零件还原\31.png" alt="31"></p>
+<p>”-“键方法相同，这样音量键绘制完毕<img src="三维绘图01-零件还原\32.png" alt="32"></p>
+<h4 id="卡槽"><a href="#卡槽" class="headerlink" title="卡槽"></a>卡槽</h4><p>由于以单一零件绘制不涉及卡槽拆装，所以这里我们只要求外观符合。首先使用槽口与薄壁切除画出外侧接缝<img src="三维绘图01-零件还原\33.png" alt="33"></p>
+<p>然后目测估计取卡针孔的大小拉伸出插针孔，卡槽就画好了<img src="三维绘图01-零件还原\34.png" alt="34"></p>
+<h4 id="lightning接口-amp-耳机接口-amp-底部麦克风-amp-螺钉"><a href="#lightning接口-amp-耳机接口-amp-底部麦克风-amp-螺钉" class="headerlink" title="lightning接口 &amp; 耳机接口 &amp; 底部麦克风 &amp; 螺钉"></a>lightning接口 &amp; 耳机接口 &amp; 底部麦克风 &amp; 螺钉</h4><p>首先根据图纸画出底部接口所用的凹槽。切除深度可以参考接口的机械标准。这里我们简化一下，只画出柱状深口。螺钉可以用分割线画出进行简化。<img src="三维绘图01-零件还原\35.png" alt="35"></p>
+<p>然后进行两组麦克风的开口：在草图中选择“<strong>线性草图阵列</strong>”可以将单个的圆进行队列复制。<img src="三维绘图01-零件还原\36.png" alt="36"></p>
+<p>↑需要注意的是，如果未勾选标注，草图阵列并不会自动加上尺寸约束。因此在<strong>阵列完成退出时，草图还是蓝的</strong>。因此在阵列结束后，我们需要通过额外约束限制草图。<strong>所有草图都必须完全定义！</strong>车队的制图任务有这一个标准。</p>
+<p>切除麦克风口后，我们通过拉伸与倒角补完插口细节<img src="三维绘图01-零件还原\37.png" alt="37"></p>
+<p>最后我们通过<strong>草图圆周阵列</strong>与<strong>样条曲线</strong>进行<strong>拔模拉伸切除</strong>补完螺牙细节<img src="三维绘图01-零件还原\38.png" alt="38"></p>
+<p>↑需要注意的是，这里因为<strong>样条曲线的复杂性</strong>，仅对于样条曲线类的制图没有上述<strong>完全定义</strong>的要求。通俗地讲就是<strong>只有样条曲线可以是蓝的</strong>。</p>
+<p>通过阵列特征将螺牙复制到另一个螺钉上，底部绘制完成<img src="三维绘图01-零件还原\39.png" alt="39"></p>
+<p>最后我们绘制背面</p>
+<h3 id="背面"><a href="#背面" class="headerlink" title="背面"></a>背面</h3><p>iPhone 5的背面由三段构成，分别为玻璃板摄像头段，磨砂苹果标段，与玻璃板段。这两块玻璃板我们参考正面玻璃的绘制方法进行绘制。</p>
+<p>首先通过切除与<strong>镜像特征</strong>画出玻璃背后的平面<img src="三维绘图01-零件还原\40.png" alt="40"></p>
+<h4 id="摄像头-amp-背面麦克风-amp-闪光灯"><a href="#摄像头-amp-背面麦克风-amp-闪光灯" class="headerlink" title="摄像头 &amp; 背面麦克风 &amp; 闪光灯"></a>摄像头 &amp; 背面麦克风 &amp; 闪光灯</h4><p>与正面相似，我们用分割线画出轮廓，分割后成为摄像头与闪光灯的金属外环<img src="三维绘图01-零件还原\41.png" alt="41"></p>
+<p>而后利用画前摄像头的方法，我们参考实机图片画出后摄像头复杂的层叠结构<img src="三维绘图01-零件还原\42.png" alt="42"><img src="三维绘图01-零件还原\43.png" alt="43"></p>
+<p>然后拉伸切除出闪光灯与麦克风。麦克风的完整绘制方法与正面的听筒相同<img src="三维绘图01-零件还原\44.png" alt="44"></p>
+<p>最后我们给这两个面盖上玻璃，并添加倒角背面玻璃板部分就画好了<img src="三维绘图01-零件还原\45.png" alt="45"></p>
+<h4 id="苹果Logo"><a href="#苹果Logo" class="headerlink" title="苹果Logo"></a>苹果Logo</h4><p>苹果标是由很多具有斐波那契数列关系的圆弧组成的。首先用整数半径的圆进行苹果标的作图。由于在一个草图上绘制，图形与约束非常复杂，大家在画复杂草图过程中不要做幅度太大的操作。每做一步先确认约束好了再画下一步，这样能够极大程度避免严重的定义冲突。尽量减小定义复杂导致图形画乱或软件崩溃的风险<img src="三维绘图01-零件还原\46.png" alt="46"></p>
+<p>第一个苹果标草图完成后，先使用另一个草图进行转换实体引用，再做缩放和移动操作，这样可以极大程度避免过于复杂的草图出现未知定义错误<img src="三维绘图01-零件还原\47.png" alt="47"></p>
+<h4 id="天线"><a href="#天线" class="headerlink" title="天线"></a>天线</h4><p>使用分割线将苹果标画在背板后，再使用分割线画出侧边天线白条<img src="三维绘图01-零件还原\48.png" alt="48"></p>
+<p>至此，iPhone 5的建模部分全部完成<img src="三维绘图01-零件还原\49.png" alt="49"></p>
+<h2 id="质量属性"><a href="#质量属性" class="headerlink" title="质量属性"></a>质量属性</h2><p>画完三维图纸后，我们应该赋予零件质量属性，这样零件就可以在装配的时候体现质量，整车质量也就可以进行准确估算。</p>
+<p>质量属性菜单位于<code>评估-&gt;质量属性</code></p>
+<p><img src="三维绘图01-零件还原\50.png" alt="50"></p>
+<p>大家可以看到，质量属性功能可以根据零件密度计算零件质量，这是大多数机械零件的质量评估方法。</p>
+<ul>
+<li>机械零件可以通过赋予零件材料属性，这样不仅可以输出零件的质量，还可以给零件附带材料属性，这样就可以使用SolidWorks插件进行简单的有限元分析</li>
+</ul>
+<p>然而对于很多整体购买的装配好的电子元件，我们是以单一零件形式画图的，这样就不能通过密度计算质量。</p>
+<p>所以我们就使用质量属性的<code>覆盖质量属性</code>选项，这样就可以直接设置材料的质量，质心位置，密度等信息。<img src="三维绘图01-零件还原\51.png" alt="51"></p>
+<p>iPhone 5的质量是112g，所以我们在编辑界面输入<img src="三维绘图01-零件还原\52.png" alt="52"></p>
+<p>点击<code>确定</code>后，模型就被赋予了覆盖质量属性了。<img src="三维绘图01-零件还原\53.png" alt="53"></p>
+<h2 id="着色与渲染"><a href="#着色与渲染" class="headerlink" title="着色与渲染"></a>着色与渲染</h2><p>建模完成后，我们对模型进行上色。上色工具在SolidWorks外观选项中，相信大家已经有所了解。外观我就不做细节讲解了，大家参考我发的范例模型就能够明白。</p>
+<p>模型的外观由<strong>颜色、纹理、光泽度、发光度、透明度</strong>等属性组成。在进行外观操作的过程中大家需要注意几点</p>
+<ul>
+<li>着色面可以选择<strong>零件</strong>、<strong>实体面</strong>、<strong>曲面</strong>与<strong>特征</strong>等。大家需要清楚这些定义；</li>
+<li>着色过程中对不同面的选择可以实现一些现实外观效果。譬如之前提过的<strong>Home键</strong>颜色的层次感。</li>
+<li>由于不少电脑不能做到实时渲染，部分特征的点选过程可能看不清楚，大家可以灵活一点。比如先用看得清楚的颜色着色完再换为实际颜色。</li>
+<li>SolidWorks自带有许多材质。大家在着色过程中可以开启PhotoView 360渲染工具插件通过预览查看着色情况，对着色做细致调整，力求真实。</li>
+</ul>
+<p>上述操作的具体方法大家可以查阅网络资料，这里就不赘述了。给大家的范例模型是银色的，大家可以看下范例模型的着色方法以及渲染效果。<img src="三维绘图01-零件还原\54.png" alt="54"></p>
+<h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><p>当然，作为一篇教程，最后给想学三维制图的同学布置一点简单的小任务：</p>
+<p>不会做可以积极请教老队员哦（笑</p>
+<h3 id="【任务·简单】"><a href="#【任务·简单】" class="headerlink" title="【任务·简单】"></a>【任务·简单】</h3><ul>
+<li>参考实机（图片），将范例模型颜色更改为<ul>
+<li>iPhone 5 黑</li>
+</ul>
+</li>
+<li>跟随范例自主建模并着色，独立完成一台<ul>
+<li>iPhone 5 白</li>
+</ul>
+</li>
+</ul>
+<h3 id="【任务·普通】"><a href="#【任务·普通】" class="headerlink" title="【任务·普通】"></a>【任务·普通】</h3><ul>
+<li>参考实机（图片）与图纸，将模型的Home键与后摄像头部分稍作改动，完成<ul>
+<li>iPhone 5s 深空灰</li>
+<li>iPhone 5s 东北银</li>
+<li>iPhone 5s 土豪金</li>
+<li>iPhone SE 少女粉</li>
+</ul>
+</li>
+</ul>
+<p><img src="三维绘图01-零件还原/Official-Apple-iPhone-5s-Dimensional-Drawing.jpg" alt="Official-Apple-iPhone-5s-Dimensional-Drawing"></p>
+<h3 id="【任务·困难】"><a href="#【任务·困难】" class="headerlink" title="【任务·困难】"></a>【任务·困难】</h3><ul>
+<li>参考实机（图片）与图纸，独立建模完成<ul>
+<li>iPhone 4 白</li>
+<li>iPhone 4 黑</li>
+</ul>
+</li>
+</ul>
+<p><img src="三维绘图01-零件还原/Official-Apple-iPhone-4-Dimensional-Drawing.png" alt="Official-Apple-iPhone-4-Dimensional-Drawing"></p>
+<h3 id="【任务·地狱】"><a href="#【任务·地狱】" class="headerlink" title="【任务·地狱】"></a>【任务·地狱】</h3><ul>
+<li>画出自己的手机<ul>
+<li>尺寸精度要求不高，没有卡尺的同学可以用塑料文具尺测量，<strong>目测看不出明显的尺寸问题</strong>；</li>
+<li>尝试称重，并赋予手机<strong>质量属性</strong>；</li>
+<li>给模型加上外观，并尽量使<strong>渲染图</strong>接近实机；</li>
+<li>画出你<strong>能力范围内能表达的所有细节</strong>，如果你愿意甚至可以画出碎屏的裂纹；</li>
+<li>端着下图这种形式的照片<strong>夸一夸自己</strong>（笑</li>
+</ul>
+</li>
+</ul>
+<p><img src="三维绘图01-零件还原\55.jpg" alt="55"></p>
+<p><img src="三维绘图01-零件还原\56.jpg" alt="56"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/陈松格/" rel="tag"><i class="fa fa-tag"></i> 陈松格</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/2020电气组寒假培训第9讲_放电回路/" rel="next" title="2020电气组寒假培训第9讲_放电回路">
+                  <i class="fa fa-chevron-left"></i> 2020电气组寒假培训第9讲_放电回路
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/2020电气组寒假培训第10讲_测量点，DCDC/" rel="prev" title="2020电气组寒假培训第10讲_测量点，DC/DC">
+                  2020电气组寒假培训第10讲_测量点，DC/DC <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例：iPhone-5"><span class="nav-number">1.</span> <span class="nav-text">实例：iPhone 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三维建模"><span class="nav-number">2.</span> <span class="nav-text">三维建模</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正面"><span class="nav-number">2.1.</span> <span class="nav-text">正面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前置摄像头"><span class="nav-number">2.1.1.</span> <span class="nav-text">前置摄像头</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正面玻璃护边"><span class="nav-number">2.1.2.</span> <span class="nav-text">正面玻璃护边</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电话听筒"><span class="nav-number">2.1.3.</span> <span class="nav-text">电话听筒</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正面玻璃"><span class="nav-number">2.1.4.</span> <span class="nav-text">正面玻璃</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Home键"><span class="nav-number">2.1.5.</span> <span class="nav-text">Home键</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#侧面"><span class="nav-number">2.2.</span> <span class="nav-text">侧面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#电源键"><span class="nav-number">2.2.1.</span> <span class="nav-text">电源键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静音拨码-amp-音量键"><span class="nav-number">2.2.2.</span> <span class="nav-text">静音拨码 &amp; 音量键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卡槽"><span class="nav-number">2.2.3.</span> <span class="nav-text">卡槽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lightning接口-amp-耳机接口-amp-底部麦克风-amp-螺钉"><span class="nav-number">2.2.4.</span> <span class="nav-text">lightning接口 &amp; 耳机接口 &amp; 底部麦克风 &amp; 螺钉</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背面"><span class="nav-number">2.3.</span> <span class="nav-text">背面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#摄像头-amp-背面麦克风-amp-闪光灯"><span class="nav-number">2.3.1.</span> <span class="nav-text">摄像头 &amp; 背面麦克风 &amp; 闪光灯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#苹果Logo"><span class="nav-number">2.3.2.</span> <span class="nav-text">苹果Logo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#天线"><span class="nav-number">2.3.3.</span> <span class="nav-text">天线</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质量属性"><span class="nav-number">3.</span> <span class="nav-text">质量属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#着色与渲染"><span class="nav-number">4.</span> <span class="nav-text">着色与渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务"><span class="nav-number">5.</span> <span class="nav-text">任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#【任务·简单】"><span class="nav-number">5.1.</span> <span class="nav-text">【任务·简单】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【任务·普通】"><span class="nav-number">5.2.</span> <span class="nav-text">【任务·普通】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【任务·困难】"><span class="nav-number">5.3.</span> <span class="nav-text">【任务·困难】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#【任务·地狱】"><span class="nav-number">5.4.</span> <span class="nav-text">【任务·地狱】</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        
+  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <p class="site-author-name" itemprop="name">fury车队</p>
+    <div class="site-description" itemprop="description"></div>
+  </div>
+    <nav class="site-state motion-element">
+      
+        <div class="site-state-item site-state-posts">
+          
+            <a href="/archives/">
+          
+            <span class="site-state-item-count">25</span>
+            <span class="site-state-item-name">文章</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-categories">
+          
+            
+              <a href="/categories/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">分类</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-tags">
+          
+            
+              <a href="/tags/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">作者</span>
+          </a>
+        </div>
+      
+    </nav>
+  
+    <div class="feed-link motion-element">
+      <a href="/atom.xml" rel="alternate">
+        <i class="fa fa-rss"></i>RSS
+      </a>
+    </div>
+  
+
+  
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <!-- <i class="fa fa-heart"></i> -->
+    <svg class="icon" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fury车队</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+  <script src="/js/hexo_resize_image.js"></script>
+</body>
+</html>

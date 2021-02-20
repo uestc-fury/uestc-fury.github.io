@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+  
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      version: '7.3.0',
+      exturl: false,
+      sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+      copycode: {"enable":true,"show_result":false,"style":"mac"},
+      back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+      bookmark: {"enable":false,"color":"#222","save":"auto"},
+      fancybox: false,
+      mediumzoom: false,
+      lazyload: false,
+      pangu: false,
+      algolia: {
+        appID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {"per_page":10},
+        labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      },
+      localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+      path: 'search.xml',
+      motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+      translation: {
+        copy_button: '复制',
+        copy_success: '复制成功',
+        copy_failure: '复制失败'
+      },
+      sidebarPadding: 40
+    };
+  </script>
+  <meta name="description" content="鉴于大家对单片机/嵌入式了解都不多,我们先从一些基础概念说起. 💬 如有任何疑问可以随时问我 (以下许多内容抄自维基)">
+<meta name="keywords" content="LeoJhonSong">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些单片机基础概念">
+<meta property="og:url" content="https://uestc-fury.github.io/2019/01/一些单片机基础概念/index.html">
+<meta property="og:site_name" content="fury车队">
+<meta property="og:description" content="鉴于大家对单片机/嵌入式了解都不多,我们先从一些基础概念说起. 💬 如有任何疑问可以随时问我 (以下许多内容抄自维基)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-02-20T07:29:34.232Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一些单片机基础概念">
+<meta name="twitter:description" content="鉴于大家对单片机/嵌入式了解都不多,我们先从一些基础概念说起. 💬 如有任何疑问可以随时问我 (以下许多内容抄自维基)">
+  <link rel="alternate" href="/atom.xml" title="fury车队" type="application/atom+xml">
+  <link rel="canonical" href="https://uestc-fury.github.io/2019/01/一些单片机基础概念/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>一些单片机基础概念 | fury车队</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fury车队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>作者</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-schedule">
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://uestc-fury.github.io/2019/01/一些单片机基础概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fury车队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fury车队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">一些单片机基础概念
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user-o"></i>
+              </span>
+              <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/tags/LeoJhonSong" itemprop="url" rel="index">
+                  <span itemprop="name">LeoJhonSong</span>
+                </a>
+              </span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-19 01:48:26" itemprop="dateCreated datePublished" datetime="2019-01-19T01:48:26+08:00">2019-01-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-20 15:29:34" itemprop="dateModified" datetime="2021-02-20T15:29:34+08:00">2021-02-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/" itemprop="url" rel="index"><span itemprop="name">电气组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/2019寒假/" itemprop="url" rel="index"><span itemprop="name">2019寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/嵌入式/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>5.5k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>5 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>鉴于大家对单片机/嵌入式了解都不多,我们先从一些基础概念说起.</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png?v8">💬</span> 如有任何疑问可以随时问我 (以下许多内容抄自维基)</p>
+<a id="more"></a>
+<hr>
+<h1 id="嵌入式与单片机的区别"><a href="#嵌入式与单片机的区别" class="headerlink" title="嵌入式与单片机的区别"></a>嵌入式与单片机的区别</h1><p>首先说说为什么我更倾向于称之嵌入式培训而非单片机培训. 实际上车队目前的嵌入式系统中不止有单片机, 目前也打算引进树莓派, 日后也必定会更多的使用单板机, 这个寒假的以了解为主的培训我打算不止将单片机的内容, 也会和大家一起探索些别的. 因此这次培训称作嵌入式培训而不是单片机培训.</p>
+<h2 id="嵌入式"><a href="#嵌入式" class="headerlink" title="嵌入式"></a>嵌入式</h2><p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8">🚩</span> <a href="https://zh.wikipedia.org/wiki/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">嵌入式系统的维基百科</a> (需要翻墙)</p>
+<p>一般说嵌入式都是指<strong>嵌入式系统</strong>，IEEE(InsTItuteof Electrical and ElectronicsEngineers，美国电气和电子工程师协会)对嵌入式系统的定义：“用于控制、监视或者辅助操作机器和设备的装置”。</p>
+<h2 id="单片机"><a href="#单片机" class="headerlink" title="单片机"></a>单片机</h2><p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8">🚩</span> <a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E7%89%87%E6%9C%BA" target="_blank" rel="noopener">单片机的维基百科</a></p>
+<p>单片机，全称<strong>单片微型计算机</strong>（single-chip microcomputer）,但通常缩写为MCU (Micro Controller Unit), 又称微控制器, 是把中央处理器、存储器、定时/计数器（timer/counter）、各种输入输出接口等都集成在一块集成电路芯片上的<strong>微型计算机</strong>.</p>
+<h2 id="举例及相关链接"><a href="#举例及相关链接" class="headerlink" title="举例及相关链接"></a>举例及相关链接</h2><p>由以上两个定义我们可以看出嵌入式系统和单片机是不同层面的概念, 实际上并不应该相提并论.<br>一个嵌入式系统中可以包含单片机,<br>也可以没有单片机.<br>比如我们的赛车的电气部分是一个嵌入式系统, 因为它是我们根据车检规则专门设计的系统, 而这个系统中包含了<a href="#目前车上用到的,将要用到的几种开发板">k60, XC2267M</a>等单片机. 当然如果我们的系统中只有树莓派 (树莓派是一种单板机) 的话,这个系统中明显就没有单片机了.</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 以下几个链接应该可以帮助理解单片机, 单板机和嵌入式, 当然你也可以在网上做更多搜索.</p>
+<ul>
+<li><a href="https://blog.csdn.net/linice01/article/details/5613163" target="_blank" rel="noopener">CSDN-嵌入式和单片机的区别</a></li>
+<li><a href="https://www.zhihu.com/question/266005086" target="_blank" rel="noopener">知乎-请问Linux嵌入式和单片机嵌入式到底什么区别?</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/33167052" target="_blank" rel="noopener">知乎-怎样选择一款合适的单板机？</a></li>
+<li><a href="http://www.eeworld.com.cn/mcu/article_2016031025025.html" target="_blank" rel="noopener">eeworld-单片机、微控制器和微处理器有什么区别？</a></li>
+<li><a href="https://wenku.baidu.com/view/c5decfedb8f67c1cfad6b83e.html" target="_blank" rel="noopener">百度文库-通用PC系统与嵌入式系统的区别</a></li>
+</ul>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">⚠</span> 大家一定要辩证的看待网上的内容, 谁都有可能说错. 软件方面的内容更是要关注文章发布时间, 很有可能因为版本问题你遇到的情况并不能用别人的方法解决.</p>
+<hr>
+<h1 id="目前车上用到的-将要用到的几种开发板"><a href="#目前车上用到的-将要用到的几种开发板" class="headerlink" title="目前车上用到的,将要用到的几种开发板"></a>目前车上用到的,将要用到的几种开发板</h1><h2 id="英飞凌-infineon-的-XC2267M"><a href="#英飞凌-infineon-的-XC2267M" class="headerlink" title="英飞凌 (infineon) 的 XC2267M"></a><a href="https://www.infineon.com/cms/en/product/microcontroller/16-bit-c166-microcontroller/xc2200-family-body/xc22xxm-series/sak-xc2267m-104f80lr-ab/" target="_blank" rel="noopener">英飞凌 (infineon) 的 XC2267M</a></h2><p>这个单片机是目前的主力,放在驾驶舱脚附近的一个铁盒子里,作为<a href="https://zhuanlan.zhihu.com/p/30217241" target="_blank" rel="noopener">VCU</a>.<br>有关这个单片机的资料不多,但也够我们利用. 它的优点是为了稳定性屏蔽了大量接口, 在板子上应该还有一些滤波电路. 缺点就是正因为屏蔽了大量接口, 可拓展性很差.</p>
+<h2 id="飞思卡尔-Freescale-的-k60"><a href="#飞思卡尔-Freescale-的-k60" class="headerlink" title="飞思卡尔 (Freescale) 的 k60"></a><a href="https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/k-seriesperformancem4/k6x-ethernet/kinetis-k60-100-mhz-mixed-signal-integration-microcontrollers-based-on-arm-cortex-m4-core:K60_100" target="_blank" rel="noopener">飞思卡尔 (Freescale) 的 k60</a></h2><p>k60在18年的车上放在车头部,从VCU读取数据并显示在车手的显示器上. 但实际上这个单片机功能并不比<br>XC2367M差, 甚至可拓展性更强, 功能上足以充当VCU. 但因为别的车队用类似单片机作VCU 出现了<br>CAN通信掉线等信号受干扰问题, 我们担心k60的屏蔽做的不够好, 也可能出现类似情况.</p>
+<h2 id="树莓派-RaspberryPi-3b"><a href="#树莓派-RaspberryPi-3b" class="headerlink" title="树莓派 (RaspberryPi)3b+"></a><a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/" target="_blank" rel="noopener">树莓派 (RaspberryPi)3b+</a></h2><p>目前这块板子的具体用途还没定, 但预计会利用它在车上搭建一个网站, 发送车的各种数据, 也负责显示屏的输出.</p>
+<p>树莓派相对上述两个板子性能要强大一些,应用也更智能一些. 但尴尬的是树莓派本身不具备CAN通信接口,需要转换.<br>树莓派是一个微型电脑,但和电脑上常见的x86, x64等<br><a href="https://zh.wikipedia.org/wiki/%E6%8C%87%E4%BB%A4%E9%9B%86%E6%9E%B6%E6%A7%8B#%E6%8C%87%E4%BB%A4%E9%9B%86%E7%9A%84%E5%AF%A6%E4%BD%9C" target="_blank" rel="noopener">指令集</a><br>不同, 采用的是<br><a href="https://zh.wikipedia.org/wiki/ARM%E6%9E%B6%E6%A7%8B#%E5%85%A7%E6%A0%B8%E7%A8%AE%E9%A1%9E" target="_blank" rel="noopener">ARMv8</a><br>架构, 因此不管是装系统还是装软件都需要安装ARM版.</p>
+<p>值得一提的是树莓派是可以安装操作系统的,而且可以安很多种系统. 常见系统有以下几种:</p>
+<h3 id="Raspbian"><a href="#Raspbian" class="headerlink" title="Raspbian"></a><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">Raspbian</a></h3><p>这是树莓派官方系统, Debian系的Linux系统. 相关资源最多, 使用的人也最多.</p>
+<h3 id="Windows-10-IoT-Core"><a href="#Windows-10-IoT-Core" class="headerlink" title="Windows 10 IoT Core"></a><a href="https://docs.microsoft.com/en-us/windows/iot-core/downloads" target="_blank" rel="noopener">Windows 10 IoT Core</a></h3><p>这几年IoT (物联网) 很火, 而树莓派因为足够智能, 入门不难被很多极客喜爱, windows的这个IoT系统就很火啦</p>
+<h3 id="Ubuntu-Mate"><a href="#Ubuntu-Mate" class="headerlink" title="Ubuntu Mate"></a><a href="https://ubuntu-mate.org/raspberry-pi/" target="_blank" rel="noopener">Ubuntu Mate</a></h3><p>Ubuntu是一个很多人用的Linux发行版, 其中也有机器人界公认的操作系统ROS是基于Ubuntu开发的原因.<br>但我自己的体验是ARM架构的Ubuntu系统体感并不好, 相关资源很少,使用的人也不那么多.</p>
+<h3 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h3><p>当然树莓派还能装更多奇奇怪怪的系统, 比如 Windows 10 (ARM版), Mac OS, Android等.</p>
+<hr>
+<h1 id="一些重要概念"><a href="#一些重要概念" class="headerlink" title="一些重要概念"></a>一些重要概念</h1><h2 id="烧录"><a href="#烧录" class="headerlink" title="烧录"></a>烧录</h2><p>参见:</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/36366933" target="_blank" rel="noopener">知乎-为什么烧录叫「烧」录？</a></li>
+<li><a href="http://www.21ic.com/jichuzhishi/mcu/write/2014-03-20/216132.html" target="_blank" rel="noopener">21ic-单片机ISP、IAP和ICP几种烧录方式的区别</a></li>
+</ul>
+<h2 id="波特率"><a href="#波特率" class="headerlink" title="波特率"></a>波特率</h2><p><strong>波特</strong>（Baud）即<strong>调制速率</strong>，即单位时间内载波调制状态变化的次数。它是对符号传输速率的一种度量，1波特即指每秒传输1个符号，而通过不同的调制方式，可以在一个码元符号上负载多个<br>bit位信息。<strong>波特本身已是速率</strong>，所以不需要写成 Baud Rate（Rate 是赘字）。单位“波特”本身就已经是代表每秒的调制数，以“波特每秒”（Baud per second）为单位是一种常见的错误，但是在一般中文口语化的沟通上还是常以“<strong>波特率</strong>”来描述“波特”（Baud）。</p>
+<p>波特率有时候会同比特率混淆，实际上后者是对信息传输速率（传信率）的度量。波特率可以被理解为单位时间内传输符号的个数（传符号率），通过不同的调制方法可以在一个符号上负载多个比特信息。因此信息传输速率即比特率在数值上和波特率有这样的关系：</p>
+<p>$I=S \cdot \log _{2}{N}$</p>
+<p>其中I 为<strong>传信率</strong>，S 为<strong>波特率</strong>，N 为每个符号负载的<strong>信息量</strong>，而 $\log _{2}{N}$<br>以比特为单位。因此<strong>只有在每个符号只代表一个比特信息的情况、或一些简单的调制方式下</strong>，波特率与比特率才在数值上相等，但是它们的意义并不相同。</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a9.png?v8">🚩</span> 以<strong>RS232</strong> (一种串口接口) 为例</p>
+<p>常用的波特率有300, 1200, 2400, 9600, 19200, 38400, 115200等 (虽然我也不知道为什么).<br>假设目前波特率为 9600， 则此RS232的比特率计算为</p>
+<p>$I=S\cdot \log <em>{2}{N}=9600\cdot \log </em>{2}{2}=9600bit/s$</p>
+<p>常有人把RS232的 <strong>N</strong> 误以为是每个符号所夹带的讯息量为$2^{8}$，但实际上每一个比特即为一个符号</p>
+<h2 id="晶振"><a href="#晶振" class="headerlink" title="晶振"></a>晶振</h2><p>晶振是给单片机<strong>提供工作信号脉冲</strong>的. 这个脉冲就是单片机的工作速度, 比如12M晶振的单片机工作速度就是每秒12M.</p>
+<p>参见:</p>
+<ul>
+<li><a href="http://www.eeworld.com.cn/mcu/2015/0817/article_21727.html" target="_blank" rel="noopener">eeworld-单片机晶振电路详解</a></li>
+<li><a href="https://www.eefocus.com/embedded/m/399818" target="_blank" rel="noopener">搞懂51单片机晶振这21问题</a></li>
+</ul>
+<h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%96%B7" target="_blank" rel="noopener">中断</a><br>是计算机领域一个很重要的概念, 在单片机中应用也非常多.</p>
+<p>中断是用以提高计算机工作效率、增强计算机功能的一项重要技术。最初引入<strong>硬件中断</strong>，只是出于性能上的考量。如果计算机系统没有中断，则处理器与外部设备通信时，它必须在向该设备发出指令后进行忙等待（Busy waiting），反复<strong>轮询</strong>该设备是否完成了动作并返回结果。这就造成了<strong>大量处理器周期被浪费</strong>。引入中断以后，当处理器发出设备请求后就可以立即返回以处理其他任务，而当设备完成动作后，发送中断信号给处理器，后者就可以再回过头获取处理结果。这样，在设备进行处理的周期内，处理器可以执行其他一些有意义的工作，而只付出一些很小的切换所引发的时间代价。后来被用于CPU外部与内部紧急事件的处理、机器故障的处理、时间控制等多个方面，并产生通过软件方式进入中断处理（<strong>软中断</strong>）的概念。</p>
+<h2 id="串口与并口"><a href="#串口与并口" class="headerlink" title="串口与并口"></a>串口与并口</h2><h3 id="串口"><a href="#串口" class="headerlink" title="串口"></a>串口</h3><p>串行端口, 即 <strong>COM</strong>口 (Communication port), 是以串行 (在计算机总线或其他数据信道上，每次传输一个比特数据，并连续进行以上单次过程的通信方式), 的方式传输数据的接口.<br>常见接口标准有<strong>RS-232</strong>、<strong>USB</strong> (Universal Serial Bus, 即通用串行总线接口, 这很明显是串口了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>)、<br>RS-422、RS485等.</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">⚠</span> 要注意<strong>接口标准</strong>只对接口的电气特性做出规定，不涉及接插件、电缆或协议。而<strong>连接器</strong> (Connector) 才是我们常说的插头.<br>比如大名鼎鼎的<strong>雷电</strong> (Thunderbolt) 1, 2代以<strong>mini DP</strong>连接器实现而雷电3以<strong>type-C</strong>形式实现.</p>
+<h3 id="并口"><a href="#并口" class="headerlink" title="并口"></a>并口</h3><p>并行端口, 又称 LPT (Logical Parallel Port). 是计算机上数据以并行方式 (多比特数据同时通过并行线进行传送)<br>传递的接口，也就是说<strong>至少有两条线</strong>用于传递数据. 这样数据传送速度大大提高，但并行传送的线路长度受到限制，因为长度增加，干扰就会增加，数据也就容易出错.</p>
+<p>因此虽然按原理看并口可以达到比串口更高的速度, 但并口由于8位通道之间的互相干扰,传输受速度就受到了限制,<br>当传输出错时，要同时重新传8个位的数据。串口没有干扰，传输出错后重发一位就可以了。所以目前串口通常比并口快。</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 以下几个链接应该可以帮助理解串口与并口</p>
+<ul>
+<li><a href="https://www.cnblogs.com/zcshan/archive/2010/12/03/com.html" target="_blank" rel="noopener">并口、串口、COM口区别</a></li>
+<li><a href="https://www.zhihu.com/question/27815296" target="_blank" rel="noopener">知乎-为什么串口比并口快?</a></li>
+</ul>
+<h2 id="上位机-下位机"><a href="#上位机-下位机" class="headerlink" title="上位机, 下位机"></a>上位机, 下位机</h2><p>参见:</p>
+<ul>
+<li><a href="https://www.cnblogs.com/Mculover666/p/9125684.html" target="_blank" rel="noopener">了解上位机</a></li>
+<li><a href="https://blog.csdn.net/xiaolongwang2010/article/details/8393710" target="_blank" rel="noopener">CSDN-上位机和下位机基础概念</a></li>
+</ul>
+<hr>
+<h1 id="常用通信协议"><a href="#常用通信协议" class="headerlink" title="常用通信协议"></a>常用通信协议</h1><p>目前车上主要用到CAN通信, 树莓派因为没有CAN接口, 目前采用用模块将CAN转为SPI的方式接受CAN总线里的数据</p>
+<h2 id="CAN"><a href="#CAN" class="headerlink" title="CAN"></a>CAN</h2><p>参见:</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/0b0da326eb54" target="_blank" rel="noopener">简书-CAN总线协议简介</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/30247549" target="_blank" rel="noopener">知乎-如何学习CAN总线?</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24285704" target="_blank" rel="noopener">知乎-CAN总线基础(上)</a></li>
+</ul>
+<h2 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h2><p>略</p>
+<h2 id="UART"><a href="#UART" class="headerlink" title="UART"></a>UART</h2><p>略</p>
+<h2 id="IIC"><a href="#IIC" class="headerlink" title="IIC"></a>IIC</h2><p>略</p>
+<p>参考: <a href="https://wenku.baidu.com/view/872ba4e8102de2bd96058826" target="_blank" rel="noopener">百度文库-多种工业应用串行总线特性及比较</a></p>
+<hr>
+<h1 id="单片机开发大致流程"><a href="#单片机开发大致流程" class="headerlink" title="单片机开发大致流程"></a>单片机开发大致流程</h1><h2 id="编写程序单片机程序一般使用C-C-语言编写-因为这两个语言能保证运行速度"><a href="#编写程序单片机程序一般使用C-C-语言编写-因为这两个语言能保证运行速度" class="headerlink" title="编写程序单片机程序一般使用C/C++语言编写,因为这两个语言能保证运行速度"></a>编写程序单片机程序一般使用C/C++语言编写,因为这两个语言能保证运行速度</h2><p>(比如可以参考以下<a href="https://blog.csdn.net/a897180673/article/details/77976053" target="_blank" rel="noopener">这个</a>).<br>编写完程序并且可以通过编译后我们会得到一个<strong>hex</strong>文件 (一个十六进制文件), 这个文件正是我们要烧录到单片机的文件.</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">⚠</span> 但也有例外, 有的单片机执行的文件是<strong>bin</strong>文件 (二进制文件), 这类单片机也不需要烧录软件来把执行文件烧录进去, 电脑会将其识别为一个储存设备,直接将文件放进去就可以了.</p>
+<h3 id="Keil"><a href="#Keil" class="headerlink" title="Keil"></a>Keil</h3><p>单片机开发最常用的就是Keil了, <a href="https://www.keil.com/download/product/" target="_blank" rel="noopener">Keil</a>, 从链接中可以看到, Keil对应各种芯片内核推出了 <strong>MDK-Arm</strong>, <strong>C51</strong>, <strong>C251</strong>, <strong>C166</strong> 四个版本.<br>比如我们的XC2267M属于C166系列, 那就该用 Keil C166, 而k60属于Arm系列, 因此该用 Keil MDK-Arm,<br>而如果你想玩51, 就得用Keil C51. <strong>实际上不需要这么麻烦</strong>. 这四个版本之间的差别其实只是分别对另三个系列芯片的功能进行了锁死, 用破解软件的我们只需要对这几个版本都破解以下就可以了<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span>.</p>
+<h3 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h3><p>VSC也是我现在用的很顺手的代码工具. 它虽然只是个编辑器 (也就是记事本那种东西) , 但得益于热心网友们开发的丰富插件, VSC几乎可以用于任何语言的开发 (虽然有些语言的调试功能还是没有IDE强大),<br>因此现在很多人在用. 但VSC不是那么容易上手, 尤其C/C++语言支持的配置有点麻烦, 如果大家有兴趣可以来找我.</p>
+<p>正如上面说到的, 目前单片机开发面临一个很尴尬的局面, 要开发不同单片机通常需要用不同工具.<br>针对这个问题, 一个叫 <a href="https://docs.platformio.org/en/latest/what-is-platformio.html" target="_blank" rel="noopener">PlatformIO</a><br>的项目出现了. 这个项目致力于创造一个统一的单片机开发工具, 目前已经支持绝大多数单片机,<br><a href="https://docs.platformio.org/en/latest/boards/index.html" target="_blank" rel="noopener">这里</a><br>是支持的单片机列表. (实际上它不止支持单片机, 也支持很多单板机). 虽然PlatformIO已经推出了专门的IDE, 但它也有<a href="https://docs.platformio.org/en/latest/ide/pioide.html#vscode" target="_blank" rel="noopener">VSC插件版</a><br>目前我正在使用这个插件, 体验良好<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>Keil只有Windows版, 但VSC是跨平台的, 在Windows, Linux, Mac OS 下都有, 因此我觉得PlatformIO<br>的出现极大的方便了Linux, Mac OS的单片机开发者们. 在这之前在Linux, Mac OS下当然是可以开发单片机的,<br>但需要一定的水平, 总之很麻烦, 也没什么成熟的软件.</p>
+<h2 id="烧录到单片机"><a href="#烧录到单片机" class="headerlink" title="烧录到单片机"></a>烧录到单片机</h2><p>一般操作步骤如下:</p>
+<ol>
+<li>打开烧录软件 (也有的单片机就用Keil就可以烧录)，选择单片机型号和单片机连在电脑上哪个COM端口，选择刚生成那个hex文件</li>
+<li>点击下载</li>
+<li>打开单片机电源,注意不是等下载完成才打开, 开始下载后过几秒就可以按 (有的单片机如果不先断开电源烧录是无法完成的. 但也有的没有电源键的单片机是在烧录完成后需要按重启键重启单片机).</li>
+</ol>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 在Keil下烧录程序到51的具体操作可以参考<br><a href="http://www.21ic.com/jichuzhishi/mcu/write/2014-05-05/345619.html" target="_blank" rel="noopener">这个</a></p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h2><p>相比电脑上开发, 单片机开发有个令人很头疼的地方是不好调试, 也就是我们不是那么容易找出程序哪里出错了.</p>
+<p>使用Keil的话我们可以对单片机进行<a href="https://blog.csdn.net/yuantuo3887/article/details/79748871" target="_blank" rel="noopener">在线调试</a>,<br>这是个很方便的功能, 允许我们打断点等. VSC下的PlatformIO也提供<br><a href="https://docs.platformio.org/en/latest/plus/debugging.html" target="_blank" rel="noopener">许多调试功能</a>不过我并没有体验过.</p>
+<p>至于其他方式… 目测吧.</p>
+<hr>
+<h1 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h1><p>看到最后, 希望大家现在已经能对以下几个问题做出回答</p>
+<ul>
+<li>嵌入式和单片机到底有什么区别?</li>
+<li>为什么我们还在用看起来很麻烦的XC2267M?</li>
+<li>为什么不能直接给树莓派安装电脑常用的Windows 10系统?</li>
+<li>烧录为什么叫烧录?</li>
+<li>如何写一个C语言中断函数?</li>
+<li>串口和并口有什么区别? 哪些常见连接器是串口/并口?</li>
+<li>CAN通信的大致原理是什么?</li>
+<li>在Linux平台下可以作单片机开发吗?</li>
+<li>你猜我还想问什么?<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/LeoJhonSong/" rel="tag"><i class="fa fa-tag"></i> LeoJhonSong</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/01/嵌入式与C-侧重调试/" rel="prev" title="嵌入式与C(侧重调试)">
+                  嵌入式与C(侧重调试) <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#嵌入式与单片机的区别"><span class="nav-number">1.</span> <span class="nav-text">嵌入式与单片机的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入式"><span class="nav-number">1.1.</span> <span class="nav-text">嵌入式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单片机"><span class="nav-number">1.2.</span> <span class="nav-text">单片机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例及相关链接"><span class="nav-number">1.3.</span> <span class="nav-text">举例及相关链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目前车上用到的-将要用到的几种开发板"><span class="nav-number">2.</span> <span class="nav-text">目前车上用到的,将要用到的几种开发板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#英飞凌-infineon-的-XC2267M"><span class="nav-number">2.1.</span> <span class="nav-text">英飞凌 (infineon) 的 XC2267M</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#飞思卡尔-Freescale-的-k60"><span class="nav-number">2.2.</span> <span class="nav-text">飞思卡尔 (Freescale) 的 k60</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树莓派-RaspberryPi-3b"><span class="nav-number">2.3.</span> <span class="nav-text">树莓派 (RaspberryPi)3b+</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Raspbian"><span class="nav-number">2.3.1.</span> <span class="nav-text">Raspbian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-10-IoT-Core"><span class="nav-number">2.3.2.</span> <span class="nav-text">Windows 10 IoT Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu-Mate"><span class="nav-number">2.3.3.</span> <span class="nav-text">Ubuntu Mate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多"><span class="nav-number">2.3.4.</span> <span class="nav-text">更多</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些重要概念"><span class="nav-number">3.</span> <span class="nav-text">一些重要概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#烧录"><span class="nav-number">3.1.</span> <span class="nav-text">烧录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#波特率"><span class="nav-number">3.2.</span> <span class="nav-text">波特率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#晶振"><span class="nav-number">3.3.</span> <span class="nav-text">晶振</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断"><span class="nav-number">3.4.</span> <span class="nav-text">中断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#串口与并口"><span class="nav-number">3.5.</span> <span class="nav-text">串口与并口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#串口"><span class="nav-number">3.5.1.</span> <span class="nav-text">串口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并口"><span class="nav-number">3.5.2.</span> <span class="nav-text">并口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上位机-下位机"><span class="nav-number">3.6.</span> <span class="nav-text">上位机, 下位机</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用通信协议"><span class="nav-number">4.</span> <span class="nav-text">常用通信协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CAN"><span class="nav-number">4.1.</span> <span class="nav-text">CAN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SPI"><span class="nav-number">4.2.</span> <span class="nav-text">SPI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UART"><span class="nav-number">4.3.</span> <span class="nav-text">UART</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IIC"><span class="nav-number">4.4.</span> <span class="nav-text">IIC</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单片机开发大致流程"><span class="nav-number">5.</span> <span class="nav-text">单片机开发大致流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编写程序单片机程序一般使用C-C-语言编写-因为这两个语言能保证运行速度"><span class="nav-number">5.1.</span> <span class="nav-text">编写程序单片机程序一般使用C/C++语言编写,因为这两个语言能保证运行速度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Keil"><span class="nav-number">5.1.1.</span> <span class="nav-text">Keil</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visual-Studio-Code"><span class="nav-number">5.1.2.</span> <span class="nav-text">Visual Studio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">5.1.3.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#烧录到单片机"><span class="nav-number">5.2.</span> <span class="nav-text">烧录到单片机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">5.3.</span> <span class="nav-text">调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些问题"><span class="nav-number">6.</span> <span class="nav-text">一些问题</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        
+  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <p class="site-author-name" itemprop="name">fury车队</p>
+    <div class="site-description" itemprop="description"></div>
+  </div>
+    <nav class="site-state motion-element">
+      
+        <div class="site-state-item site-state-posts">
+          
+            <a href="/archives/">
+          
+            <span class="site-state-item-count">25</span>
+            <span class="site-state-item-name">文章</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-categories">
+          
+            
+              <a href="/categories/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">分类</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-tags">
+          
+            
+              <a href="/tags/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">作者</span>
+          </a>
+        </div>
+      
+    </nav>
+  
+    <div class="feed-link motion-element">
+      <a href="/atom.xml" rel="alternate">
+        <i class="fa fa-rss"></i>RSS
+      </a>
+    </div>
+  
+
+  
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <!-- <i class="fa fa-heart"></i> -->
+    <svg class="icon" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fury车队</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+  <script src="/js/hexo_resize_image.js"></script>
+</body>
+</html>

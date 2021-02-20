@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+  
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      version: '7.3.0',
+      exturl: false,
+      sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+      copycode: {"enable":true,"show_result":false,"style":"mac"},
+      back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+      bookmark: {"enable":false,"color":"#222","save":"auto"},
+      fancybox: false,
+      mediumzoom: false,
+      lazyload: false,
+      pangu: false,
+      algolia: {
+        appID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {"per_page":10},
+        labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      },
+      localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+      path: 'search.xml',
+      motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+      translation: {
+        copy_button: '复制',
+        copy_success: '复制成功',
+        copy_failure: '复制失败'
+      },
+      sidebarPadding: 40
+    };
+  </script>
+  <meta name="description" content="写这篇文章想为大家简单的介绍一下大学生方程式大赛设置的比赛项目和技术发展趋势，希望大家看我能够对比赛有一个简单的概念性的认识吧（笑">
+<meta name="keywords" content="陈松格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简介-大学生方程式是一个什么样的赛车比赛">
+<meta property="og:url" content="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/index.html">
+<meta property="og:site_name" content="fury车队">
+<meta property="og:description" content="写这篇文章想为大家简单的介绍一下大学生方程式大赛设置的比赛项目和技术发展趋势，希望大家看我能够对比赛有一个简单的概念性的认识吧（笑">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/简介-大学生方程式是一个什么样的赛车比赛/8字绕环赛道图.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/简介-大学生方程式是一个什么样的赛车比赛/高避赛道图.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/简介-大学生方程式是一个什么样的赛车比赛/耐久赛道图.png">
+<meta property="og:updated_time" content="2021-02-20T07:29:34.236Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="简介-大学生方程式是一个什么样的赛车比赛">
+<meta name="twitter:description" content="写这篇文章想为大家简单的介绍一下大学生方程式大赛设置的比赛项目和技术发展趋势，希望大家看我能够对比赛有一个简单的概念性的认识吧（笑">
+<meta name="twitter:image" content="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/简介-大学生方程式是一个什么样的赛车比赛/8字绕环赛道图.png">
+  <link rel="alternate" href="/atom.xml" title="fury车队" type="application/atom+xml">
+  <link rel="canonical" href="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>简介-大学生方程式是一个什么样的赛车比赛 | fury车队</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fury车队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>作者</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-schedule">
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://uestc-fury.github.io/2020/01/简介-大学生方程式是一个什么样的赛车比赛/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fury车队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fury车队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">简介-大学生方程式是一个什么样的赛车比赛
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user-o"></i>
+              </span>
+              <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/tags/陈松格" itemprop="url" rel="index">
+                  <span itemprop="name">陈松格</span>
+                </a>
+              </span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-15 21:32:51" itemprop="dateCreated datePublished" datetime="2020-01-15T21:32:51+08:00">2020-01-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-20 15:29:34" itemprop="dateModified" datetime="2021-02-20T15:29:34+08:00">2021-02-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/" itemprop="url" rel="index"><span itemprop="name">电气组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/简介/" itemprop="url" rel="index"><span itemprop="name">简介</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/" itemprop="url" rel="index"><span itemprop="name">底盘组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/" itemprop="url" rel="index"><span itemprop="name">车身组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>5.9k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>5 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>写这篇文章想为大家简单的介绍一下大学生方程式大赛设置的比赛项目和技术发展趋势，希望大家看我能够对比赛有一个简单的概念性的认识吧（笑</p>
+<a id="more"></a>
+<h2 id="大学生方程式是一个什么样的赛车比赛呢"><a href="#大学生方程式是一个什么样的赛车比赛呢" class="headerlink" title="大学生方程式是一个什么样的赛车比赛呢"></a>大学生方程式是一个什么样的赛车比赛呢</h2><p>大学生方程式（下文简称FSAE）比赛不同于纯粹的商业化竞速赛车比赛，比赛将参赛车队设定为一个独立的<strong>赛车制造公司</strong>，比赛的评估项目在<strong>竞速</strong>之外还有对于整个团队在<strong>运营管理</strong>水平的量化评比。可以说是一个建立在真实汽车企业情境背景下的大型工程竞赛。</p>
+<p>因此，参赛车队作为一个独立运营的赛车公司，它们需要在一年的赛季中完成以下任务：</p>
+<ul>
+<li><p>制定完整的赛车产品的<strong>商业计划</strong></p>
+</li>
+<li><p>设计并制造出一辆符合赛事规则要求的<strong>赛车原型车</strong></p>
+</li>
+<li><p>完成车辆量产化的制造方案并进行<strong>成本评估</strong></p>
+</li>
+</ul>
+<p>除了这些比赛规定的项目，在车队的正常发展的过程中，一个车队也一定需要面对这些问题：</p>
+<ul>
+<li><p>如何解决过程中各种各样的<strong>绝境bug</strong></p>
+</li>
+<li><p>如何制定短线与长线<strong>发展策略</strong></p>
+</li>
+<li><p>如何根据车队生存环境制定<strong>财务计划</strong></p>
+</li>
+<li><p>如何寻找<strong>赞助爹</strong></p>
+</li>
+<li><p>如何制定企业品牌与<strong>文化运营</strong>策略（队徽队服，团建活动等）</p>
+</li>
+<li><p><del>如何在领导面前<strong>吹牛[高雅]</strong></del></p>
+</li>
+<li><p>等等</p>
+</li>
+</ul>
+<p>因此，加入车队对同学们而言可以得到一个接近真实企业的工作经历，随着车队的壮大，还可以切身地体验技术型企业的发展历程。是不是很期待（媚</p>
+<h3 id="关于“比赛想要考察的内容”"><a href="#关于“比赛想要考察的内容”" class="headerlink" title="关于“比赛想要考察的内容”"></a>关于“比赛想要考察的内容”</h3><p>同学们应该都有了解过目前大学生能接触到的比赛，相信不少的同学们也了解过赛车比赛，FSAE项目作为一个整合以上两个关键属性的比赛，在<strong>世界范围内</strong>已经形成了独立的成熟的比赛定位和规则体系。同时与所有比赛相同，面向大学生比赛的科研与工程教育性质永远是第一位的。</p>
+<p>看完上面的的内容大家应该能够对这个比赛的内容产生了一个基本的概念。这个比赛在相对于纯粹的赛车竞速比赛，更加考验的是学生车队的<strong>设计水平</strong>与<strong>管理水平</strong>。相对于其他小队规模的工程实现比赛，这个比赛的无论从<strong>学科整合</strong>性，<strong>时间跨度</strong>还是<strong>规范性要求</strong>上都更高，更大，更长。相比于应变能力，更需要参赛同学形成<strong>长期良好的工程习惯</strong>，才能拿到更好的名次。</p>
+<p>比赛情境完全模拟了社会上大部分技术企业的发展过程与工作环境，这也让大学生方程式项目成为有别于其他工程研发类比赛的高门槛项目。不仅是对人员技术与管理水平的考验，还是对<strong>学校财力的考验</strong>（捂。好了不吹了，请大家在参赛过程中慢慢体验吧（捂</p>
+<h2 id="世界范围内的FSAE比赛"><a href="#世界范围内的FSAE比赛" class="headerlink" title="世界范围内的FSAE比赛"></a>世界范围内的FSAE比赛</h2><p>目前在世界范围内共有包括美英德在内的约20多个国家与地区举办油车，电车，无人车分开评比的赛事。并且根据地区的不同形成了以德国赛规则驱动的欧洲地区比赛、以国际赛规则配合地方规则驱动的亚太和北美地区比赛。中国赛规则是赛事组委会与规则委员会为了匹配国内学校研发实力，因此将两份规则进行翻译后整合，并加入地区适应性规则形成</p>
+<h3 id="北美亚太地区与SAE国际赛规则"><a href="#北美亚太地区与SAE国际赛规则" class="headerlink" title="北美亚太地区与SAE国际赛规则"></a>北美亚太地区与SAE国际赛规则</h3><p>北美作为全世界最早开展FSAE比赛的地区,经历了从木板车到单体壳的发展过程。但是目前北美地区的车队顶尖水平不及欧洲地区。北美与亚太地区多使用美国赛会<strong><em>Formula SAE</em></strong>发布的赛事规则（简称“<strong>国际赛规则</strong>”），这套规则在美国、澳洲、日本韩国等地使用，地区赛会配合国内研发水平进行一定的地区规则调整。国内顶尖学校已经能够参加<strong>日本赛</strong>并取得非常不错的成绩，日本赛成绩也会慢慢成为正在进步的国内学校所追求的目标</p>
+<p><em><a href="http://www.fsaeonline.com/" target="_blank" rel="noopener">Formula SAE</a></em></p>
+<p><em><a href="https://www.jsae.or.jp/formula/en/index.php" target="_blank" rel="noopener">Formula SAE Japan -Monozukuri Design Competition</a></em></p>
+<h3 id="欧洲地区与FSG德国赛规则"><a href="#欧洲地区与FSG德国赛规则" class="headerlink" title="欧洲地区与FSG德国赛规则"></a>欧洲地区与<em>FSG</em>德国赛规则</h3><p>以德国赛为首的欧洲地区是目前世界上工程研发能力最强的地区。围绕德国地区的很多学校依托其强大成熟的加工技术，高超的理论设计水平，以及学校与大型企业给予的有力经济与政策保障，使大量欧洲车队能够做到顶尖技术的掌握。同时依托欧洲成熟的赛车文化，欧洲地区的车队拥有一年多站的比赛机会。欧洲地区使用的<strong><em>FSG</em></strong>规则（简称“<strong>德国赛规则</strong>”）与国际赛规则目前大同小异。目前国内顶尖学校已经能够在政策支持下参加德国站比赛并跻身地球组。德国赛也成为了世界上不同国家的车队同场竞技的平台</p>
+<p><em><a href="https://www.formulastudent.de/fsg/" target="_blank" rel="noopener">Formula Student Germany</a></em></p>
+<h3 id="中国赛与中国赛规则"><a href="#中国赛与中国赛规则" class="headerlink" title="中国赛与中国赛规则"></a>中国赛与中国赛规则</h3><p>中国赛油车赛始于2009年，电车赛始于2013年，无人车赛始于2017年。中国赛在世界范围内起步较晚，但依托近十年来国内经济高速发展的技术积累与顶尖学校的大量投入，目前的中国赛与中国车队已经有一定的技术水平。<strong>中国赛规则</strong>由两个国际规则的翻译整合，也慢慢形成了符合中国实际情况的赛事规则。但是中国赛在赛事流程规范性方面仍不及国外赛会，所以参加外国赛事仍然是目前中国车队的目标。因此我们要在适应地区特色的基础上努力做到规范自律，技术上实事求是，问心无愧，以实现国际规范为目标</p>
+<p><a href="http://www.formulastudent.com.cn/" target="_blank" rel="noopener">中国大学生方程式汽车大赛</a></p>
+<h2 id="比赛规则与比赛项目"><a href="#比赛规则与比赛项目" class="headerlink" title="比赛规则与比赛项目"></a>比赛规则与比赛项目</h2><h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><p>赛事规则是方程式比赛的核心，<strong>包括F1在内所有的方程式赛车比赛</strong>都有明确的技术规则对赛车形式进行限定，并在赛前进行严格的技术检查以保证赛车符合条例。</p>
+<p>FSAE中国赛规则由以下部分组成：</p>
+<ul>
+<li><em>第一章  管理规定</em></li>
+</ul>
+<p>描述比赛进行的流程与管理条例。</p>
+<ul>
+<li><em>第二章  通用技术规范</em></li>
+</ul>
+<p>对于赛车的<strong>车架、车身、悬架、转向、传动、冷却、空气动力学套件等</strong>基础设计进行技术限制。</p>
+<ul>
+<li><em>第三章  替代车架规则</em></li>
+</ul>
+<p>有别于常规车架结构，组委会允许对钢管车架进行高度自由的设计，但是无法满足常规要求的车架设计需要提交额外的认证报告才可以使用。</p>
+<ul>
+<li><em>第四章  内燃机车规则</em></li>
+</ul>
+<p>针对<strong>油车</strong>动力系统的安全性做出的技术限制。</p>
+<ul>
+<li><em>第五章  电车规则</em></li>
+</ul>
+<p>对于<strong>电车</strong>动力系统的安全性做出的技术限制。</p>
+<ul>
+<li><p><em>第六章  静态项目规则</em></p>
+</li>
+<li><p><em>第七章  动态项目规则</em></p>
+</li>
+</ul>
+<p>我准备用一篇专门的文章向大家粗略介绍下读规则的方法，在这儿就只要知道<strong>规则很厚很细节</strong>就好啦（笑</p>
+<p><a href="/2019/12/fury资料整理/fury资料整理/杂/大赛规则/2020中国大学生方程式大赛规则1203答题版.pdf">2020中国赛规则 (答题版)</a></p>
+<p><a href="/2019/12/fury资料整理/fury资料整理/杂/大赛规则/FSAE_Rules_2020_V2.1_国际赛.pdf">2020国际赛规则</a></p>
+<p><a href="/2019/12/fury资料整理/fury资料整理/杂/大赛规则/FS-Rules_2020_V1.0_德国赛.pdf">2020德国赛规则</a></p>
+<h3 id="车检"><a href="#车检" class="headerlink" title="车检"></a>车检</h3><p>赛车在拿到动态赛的参赛许可之前必须通过全部的车检以证明赛车满足比赛的规则要求。车检的内容（电车）包括：</p>
+<ul>
+<li><strong>车手逃生测试</strong></li>
+</ul>
+<p>所有参赛车手需要在<strong>5秒之内</strong>从座舱<strong>完全逃出赛车</strong>，未能完成的车手不允许参加动态比赛</p>
+<ul>
+<li><strong>机械检查</strong></li>
+</ul>
+<p>对于规则第二章所描述的机械规范进行检查</p>
+<ul>
+<li><strong>电池箱检查</strong></li>
+</ul>
+<p>对于电池箱机械与电气设计工程规范性进行检查</p>
+<ul>
+<li><strong>通电检查</strong></li>
+</ul>
+<p>在<strong>机械检与电池箱检通过之后</strong>方可安装电池箱，进行整车<strong>高低压通电</strong>检查，以验证系统可靠性。</p>
+<ul>
+<li><strong>侧倾测试</strong></li>
+</ul>
+<p>车辆停靠在侧倾台架上<strong>侧倾60°</strong>不能出现车轮离地与液体泄漏，验证赛车的侧向稳定性。</p>
+<ul>
+<li><strong>淋雨测试</strong></li>
+</ul>
+<p>电车测试项目，电车上电后进行<strong>120秒全方向淋雨</strong>测试，以验证赛车电气绝缘性。</p>
+<ul>
+<li><strong>制动测试</strong></li>
+</ul>
+<p>赛车在短暂加速过后需要在制动过程中<strong>所有车轮抱死</strong>方可通过测试，以验证赛车制动系统可靠性。</p>
+<ul>
+<li><strong>动态练习测试</strong></li>
+</ul>
+<p>赛车需要通电并在规定场地内<strong>自由行驶180秒</strong>无异常，验证系统的可靠性。</p>
+<p>想必大家都明白通过车检是一辆赛车取得比赛成绩的基础。然而需要注意的是，车检仍然是包括我们在内的车队参加比赛所遇到的<strong>第一大考验</strong>。遵守规则条例并最终成功通过车检对于由大学生组成的车队而言，是一项从基础设计阶段开始知道加工制造乃至车检进行时都需要<strong>保持细心，保持坚定</strong>的工作任务。看似简单的车检要求中隐藏着无数需要注意的<strong>细节</strong>。花费一年时间斥巨资打造的赛车因车检未通过而<strong>无法取得动态成绩</strong>抱憾而归的车队<strong>不在少数</strong>。因此这里特意将车检单独列作一项比赛项目。</p>
+<p>在通过上述检查并完成动态赛后，赛车还将接受部分项目<strong>复检</strong>，以验证赛车可靠性。再次强调规则与车检是所有技术类工作需要面对的问题，也是一整年参赛过程中<strong>大量矛盾的来源</strong>。</p>
+<h3 id="比赛文件"><a href="#比赛文件" class="headerlink" title="比赛文件"></a>比赛文件</h3><p>参赛队伍需要在赛季内规定的ddl之前提交比赛要求的一些文件，有些文件用于车检，有些计入静态项目分数。它们包括但不限于：</p>
+<ul>
+<li><p><em>商业逻辑方案</em></p>
+</li>
+<li><p><strong><em>SES*</em></strong>结构等同性表格<em>/**</em>SRCF<em>**</em>结构要求证明表*</p>
+</li>
+<li><p><strong><em>IAD*</em></strong>前端缓冲结构数据要求*</p>
+</li>
+<li><p><em>成本报告</em></p>
+</li>
+<li><p><em>设计报告</em></p>
+</li>
+<li><p><em>设计参数表</em></p>
+</li>
+<li><p><strong><em>ESF*</em></strong>电气系统表*</p>
+</li>
+<li><p><strong><em>FMEA*</em></strong>失效模式及影响分析*</p>
+</li>
+</ul>
+<p>如果不能按时提交，技术检查文件将会影响车检，而计分类文件会在总成绩上扣除罚分。迟交同样有扣分处罚。</p>
+<p>此外还有比赛要求提交的验证性文件，比如参赛人员名单等等。</p>
+<h3 id="赛车设计"><a href="#赛车设计" class="headerlink" title="赛车设计"></a>赛车设计</h3><p><strong>赛车设计（Engineering Design）</strong>是一项评估赛车技术水平的静态项目，分值为<strong>150/1000</strong>。赛车设计项目要求车队提交一份有篇幅限制的<strong>设计报告</strong>用来简述赛车的技术特点。并且在比赛期间进行<strong>设计答辩</strong>来详细阐述赛车的设计理念并回答裁判的问题。项目的评分采用概念排名分制，即150分会按照裁判统一标准进行排名化计分。</p>
+<p>需要大家认识的概念是：赛车设计项目中的设计亮点展示固然重要，但是得到高分更重要的是<strong>对于赛车及其子系统的透彻认识</strong>，并在这些理论基础上使设计思路与设计目标有<strong>明确的逻辑关系</strong>，有能力<strong>展示数据</strong>，向裁判充分展示思路的逻辑完备性，而非一味夸大吹水而无法自圆其说。</p>
+<h3 id="成本与制造分析"><a href="#成本与制造分析" class="headerlink" title="成本与制造分析"></a>成本与制造分析</h3><p><strong>成本与制造分析（Cost and Manufacturing）</strong>是一项评估<strong>赛车制造成本</strong>与参赛团队<strong>成本分析能力</strong>的静态项目。分值为<strong>100/1000</strong>，为多项分项目的组合分数。其中包括：</p>
+<ul>
+<li><p><strong>总成本评分</strong>     <strong>20</strong>分   最低成本比例换算后的排名分</p>
+</li>
+<li><p><strong>现场陈述</strong>      <strong>40</strong>分   答辩与成本报告的准确性评估</p>
+</li>
+<li><p><strong>案例分析</strong>      <strong>40</strong>分   解答比赛现场发布案例分析题目</p>
+</li>
+</ul>
+<p>成本与制造分析项目要求车队完成并提交一份完整的<strong>物料清单（BOM）</strong>以按照标准描述赛车制造流程的材料，工序等项目的成本。并且车队在比赛日现场会参加<strong>成本答辩</strong>，阐述赛车制造工艺，并现场回答“<strong>案例分析</strong>”问题。</p>
+<p>可以看出，在成本报告的评分中，能够得到高分的队伍并非纯粹追求低成本或是高性价比思路。成本项目最重要的得分点其实是<strong>统计的准确性</strong>与所提出制造方案在逻辑上的<strong>合理性</strong>，与设计报告一样，只有成本<strong>计算准确</strong>，过程<strong>严谨</strong>并且<strong>对制造工艺有着清晰的认识</strong>才能得到成本报告的高分。</p>
+<h3 id="营销报告"><a href="#营销报告" class="headerlink" title="营销报告"></a>营销报告</h3><p><strong>营销报告（Business Plan Presentation）</strong>其实我更愿意称之为<strong>商业报告</strong>。为什么要特意称其为商业报告是因为该项目的考核重点实际上是对于车队制定的<strong>商业计划</strong>的评价<del>，而不是金牌销售卖车吹水大会</del>。得到高分的参赛队伍应该能够在<strong>展示商业营销方案</strong>的基础上，<strong>提供足够的数据</strong>以支持商业计划的合理性（比如市场调研），从而达到吸引投资方（裁判）的目的。营销报告的分值为<strong>75/1000</strong>，采用现场打分换算排名分的形式。</p>
+<p>可以看到，三个静态项目的考核重点都不是简单的亮点展示，而是需要<strong>有完整的内容支持</strong>。每一项内容支持都明确地对同学们的竞赛态度有要求：<strong>严谨完整，规范细心</strong>。大家应该要认识到这是FSAE对于参赛同学<strong>长久不变的要求</strong>。</p>
+<p><em>静态项目到此为止↑，动态项目现在开始↓</em></p>
+<h3 id="直线加速"><a href="#直线加速" class="headerlink" title="直线加速"></a>直线加速</h3><p><strong>直线加速（Acceleration）</strong>为赛车加速能力测试，赛道长度<strong>75<em>m</em></strong>铺装路面。分值为<strong>75/1000</strong>，计分模式为<strong>排名换算分</strong>，公式为：</p>
+<script type="math/tex; mode=display">
+3.5+71.5\times\frac{\frac{全场最快圈速}{计分车圈速}-1}{1.50-1}</script><p>可以看出完赛车队能够得到<strong>3.5</strong>分，而圈速在不低于全场最快圈速<strong>150%</strong>的车队将获得比例换算的得分。同时公式第二段下限为0，即最快车能够得到<strong>75</strong>分，后续车队得分递减至<strong>3.5</strong>分。</p>
+<p>目前在世界范围内火星组车队已经能够做到<strong>3.2<em>s</em></strong>，中国赛最好成绩在<strong>4<em>s</em></strong>上下。</p>
+<p>当然<a href="http://driverless.amzracing.ch/en" target="_blank" rel="noopener"><strong><em>AMZ</em></strong></a>当年一秒五零百电车是电机80kw限功关掉以后做出来的</p>
+<h3 id="8字绕环"><a href="#8字绕环" class="headerlink" title="8字绕环"></a>8字绕环</h3><p><strong>8字绕环（Skid Pad）</strong>为赛车<strong>定圆弯</strong>能力测试，赛道为两个定半径圆组成赛道，并计算左右方向最快单环时间取平均。</p>
+<p><img src="./简介-大学生方程式是一个什么样的赛车比赛/8字绕环赛道图.png" alt="8字绕环赛道图"></p>
+<p>项目分值为<strong>50/1000</strong>，计分模式为<strong>排名换算分</strong>，公式为：</p>
+<script type="math/tex; mode=display">
+2.5+47.5 \times \frac{\frac{全场最快圈速}{计分车圈速}-1}{1.25-1}</script><p>公式意义与直线加速是一样的，在此不赘述。</p>
+<h3 id="高速避障"><a href="#高速避障" class="headerlink" title="高速避障"></a>高速避障</h3><p><strong>高速避障（Autocross）</strong>为<strong>单圈计时赛</strong>，赛道形式为<strong>1<em>km</em></strong>左右长度的<strong>桩桶赛道</strong>，赛道平均宽度<strong>3<em>m</em></strong>，由不同半径组合弯，蛇形绕桩与短直道组成，平均速度控制在<strong>40<em>km/h</em></strong>上下（地球组）。</p>
+<p><img src="./简介-大学生方程式是一个什么样的赛车比赛/高避赛道图.png" alt="高避赛道图"></p>
+<p>项目分值为<strong>150/1000</strong>排名分，公式为：</p>
+<script type="math/tex; mode=display">
+7.5+142.5 \times \frac{\frac{全场最快圈速}{计分车圈速}-1}{1.45-1}</script><p>公式意义不再赘述。</p>
+<h3 id="耐久测试"><a href="#耐久测试" class="headerlink" title="耐久测试"></a>耐久测试</h3><p><strong>耐久测试（Endurance）</strong>与<strong>效率测试（Efficiency）</strong>同时进行，体现在流程上为<strong>22<em>km</em></strong>耐力赛，即使用高速避障的赛道进行<strong>多圈耐力赛</strong>，比赛中途需要更换车手来完成前后半段各<strong>11<em>km</em></strong>的跑圈。</p>
+<p><img src="./简介-大学生方程式是一个什么样的赛车比赛/耐久赛道图.png" alt="耐久赛道图"></p>
+<p>耐久赛分值为<strong>300/1000</strong>排名分，公式为：</p>
+<script type="math/tex; mode=display">
+50+250 \times \frac{\frac{全场最快圈速}{计分车圈速}-1}{1.50-1}</script><p>该公式意义不再赘述。在此基础上，未能完成耐久赛全部里程的车队将获得</p>
+<script type="math/tex; mode=display">
+20 \times \frac{车队完成圈数}{耐久赛总圈数}</script><p>的耐久赛得分。</p>
+<h3 id="效率测试"><a href="#效率测试" class="headerlink" title="效率测试"></a>效率测试</h3><p><strong>效率测试（Efficiency）</strong>测试赛车的<strong>能效情况</strong>，通过在赛车上安装赛会发放的电池能量计计算赛车在耐久项目中的能耗情况，并结合圈速计算效率分值，并对效率分值进行排名分。效率测试分值为<strong>100/1000</strong></p>
+<p>由于目前中国赛规则并没有给出电车使用的计算公式（无奈），这里给出德国赛规则使用的计分公式：</p>
+<script type="math/tex; mode=display">
+100 \times \frac{\frac{0.1}{计分车效率因子}-1}{\frac{0.1}{全场最高效率因子}-1}</script><p>其中效率因子为：</p>
+<script type="math/tex; mode=display">
+\frac{全场达成完成效率测试队伍的最快圈速 \times 最快车耗能^2}{计分车即时圈速 \times 计分车耗能^2}</script><p>因此，对于未达成效率测试要求的车队，同时在国际赛规则中未能达到最快车圈速<strong>133%</strong>范围的车队，将会得到<strong>0</strong>分的效率测试成绩。</p>
+<p>意义可能有偏差，看不太懂的可以自行查阅国际赛规则。</p>
+<h2 id="大学生方程式前沿技术趋势"><a href="#大学生方程式前沿技术趋势" class="headerlink" title="大学生方程式前沿技术趋势"></a>大学生方程式前沿技术趋势</h2><p>随着技术进步，现在的大学生方程式赛车已经吸收了大量高级别下放技术，这里主要想让同学们了解一下世界上的顶尖水平，认识差距(捂脸。不过在认识差距的同时也不应该妄自菲薄。不同的客观环境（比如资金）决定了不同的车队必然会有不同的极限与解决方式，能够尽力做到最好的车队才是NB车队。多多了解，追求极限吧。</p>
+<p>以上漂亮话↑，接下来是一些热门的关键词与链接，大家自行查阅吧。。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/53386194" target="_blank" rel="noopener">赛车：寻找大学生方程式的极限 2018 - 曾奕凯的文章 - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/93140853" target="_blank" rel="noopener">FSAE空力原理（续）：空力野兽TUFast分析 - MedinC的文章 - 知乎</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/66999119" target="_blank" rel="noopener">文献综述（伪） - 大学生方程式级电池管理系统 - 曾奕凯的文章 - 知乎</a></p>
+<p><a href="https://www.zhihu.com/topic/20007766" target="_blank" rel="noopener">大学生方程式汽车大赛 - 知乎</a></p>
+<p><a href="https://www.bilibili.com/video/av78474123?from=search&amp;seid=17441891475399336113" target="_blank" rel="noopener">【FSAE】非簧载式尾翼设计</a></p>
+<p><strong>#大学生无人驾驶方程式大赛</strong></p>
+<p><strong>#四电机</strong></p>
+<p><strong>#碳纤维单体壳</strong></p>
+<p><strong>#主动悬架系统</strong></p>
+<p><strong>#多功能方向盘</strong></p>
+<blockquote>
+<p>结尾扣题：希望大家看完这篇文章能了解到这个比赛的运作形式与现在在世界上的影响力，找到自己在车队里的方向和目标，帮助自己提升技术水平，也帮助车队早日踏上火星组的竞争舞台（想[高雅]吃）</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/陈松格/" rel="tag"><i class="fa fa-tag"></i> 陈松格</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/12/fury资料整理/" rel="next" title="fury资料整理">
+                  <i class="fa fa-chevron-left"></i> fury资料整理
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/01/fury教程系列/" rel="prev" title="fury教程系列">
+                  fury教程系列 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#大学生方程式是一个什么样的赛车比赛呢"><span class="nav-number">1.</span> <span class="nav-text">大学生方程式是一个什么样的赛车比赛呢</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于“比赛想要考察的内容”"><span class="nav-number">1.1.</span> <span class="nav-text">关于“比赛想要考察的内容”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#世界范围内的FSAE比赛"><span class="nav-number">2.</span> <span class="nav-text">世界范围内的FSAE比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#北美亚太地区与SAE国际赛规则"><span class="nav-number">2.1.</span> <span class="nav-text">北美亚太地区与SAE国际赛规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧洲地区与FSG德国赛规则"><span class="nav-number">2.2.</span> <span class="nav-text">欧洲地区与FSG德国赛规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中国赛与中国赛规则"><span class="nav-number">2.3.</span> <span class="nav-text">中国赛与中国赛规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比赛规则与比赛项目"><span class="nav-number">3.</span> <span class="nav-text">比赛规则与比赛项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#规则"><span class="nav-number">3.1.</span> <span class="nav-text">规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车检"><span class="nav-number">3.2.</span> <span class="nav-text">车检</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比赛文件"><span class="nav-number">3.3.</span> <span class="nav-text">比赛文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赛车设计"><span class="nav-number">3.4.</span> <span class="nav-text">赛车设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成本与制造分析"><span class="nav-number">3.5.</span> <span class="nav-text">成本与制造分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#营销报告"><span class="nav-number">3.6.</span> <span class="nav-text">营销报告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直线加速"><span class="nav-number">3.7.</span> <span class="nav-text">直线加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8字绕环"><span class="nav-number">3.8.</span> <span class="nav-text">8字绕环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高速避障"><span class="nav-number">3.9.</span> <span class="nav-text">高速避障</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#耐久测试"><span class="nav-number">3.10.</span> <span class="nav-text">耐久测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效率测试"><span class="nav-number">3.11.</span> <span class="nav-text">效率测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大学生方程式前沿技术趋势"><span class="nav-number">4.</span> <span class="nav-text">大学生方程式前沿技术趋势</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        
+  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <p class="site-author-name" itemprop="name">fury车队</p>
+    <div class="site-description" itemprop="description"></div>
+  </div>
+    <nav class="site-state motion-element">
+      
+        <div class="site-state-item site-state-posts">
+          
+            <a href="/archives/">
+          
+            <span class="site-state-item-count">25</span>
+            <span class="site-state-item-name">文章</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-categories">
+          
+            
+              <a href="/categories/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">分类</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-tags">
+          
+            
+              <a href="/tags/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">作者</span>
+          </a>
+        </div>
+      
+    </nav>
+  
+    <div class="feed-link motion-element">
+      <a href="/atom.xml" rel="alternate">
+        <i class="fa fa-rss"></i>RSS
+      </a>
+    </div>
+  
+
+  
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <!-- <i class="fa fa-heart"></i> -->
+    <svg class="icon" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fury车队</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+  <script src="/js/hexo_resize_image.js"></script>
+</body>
+</html>

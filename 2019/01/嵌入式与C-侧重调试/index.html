@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+  
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      version: '7.3.0',
+      exturl: false,
+      sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+      copycode: {"enable":true,"show_result":false,"style":"mac"},
+      back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+      bookmark: {"enable":false,"color":"#222","save":"auto"},
+      fancybox: false,
+      mediumzoom: false,
+      lazyload: false,
+      pangu: false,
+      algolia: {
+        appID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {"per_page":10},
+        labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      },
+      localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+      path: 'search.xml',
+      motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+      translation: {
+        copy_button: '复制',
+        copy_success: '复制成功',
+        copy_failure: '复制失败'
+      },
+      sidebarPadding: 40
+    };
+  </script>
+  <meta name="description" content="我们大部分组员已经学过C语言了, 即便没学过, C语言也不难上手. 我不打算笼统地讲语法, 即便是单片机特有的C语言语法也不算难, 怎么写中断函数, 怎么写延时函数你们自己也能很容易搞懂的👍因此这次我打算主要提几个比较重要的理念和一些调试经验.">
+<meta name="keywords" content="LeoJhonSong">
+<meta property="og:type" content="article">
+<meta property="og:title" content="嵌入式与C(侧重调试)">
+<meta property="og:url" content="https://uestc-fury.github.io/2019/01/嵌入式与C-侧重调试/index.html">
+<meta property="og:site_name" content="fury车队">
+<meta property="og:description" content="我们大部分组员已经学过C语言了, 即便没学过, C语言也不难上手. 我不打算笼统地讲语法, 即便是单片机特有的C语言语法也不算难, 怎么写中断函数, 怎么写延时函数你们自己也能很容易搞懂的👍因此这次我打算主要提几个比较重要的理念和一些调试经验.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-02-20T07:29:34.232Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="嵌入式与C(侧重调试)">
+<meta name="twitter:description" content="我们大部分组员已经学过C语言了, 即便没学过, C语言也不难上手. 我不打算笼统地讲语法, 即便是单片机特有的C语言语法也不算难, 怎么写中断函数, 怎么写延时函数你们自己也能很容易搞懂的👍因此这次我打算主要提几个比较重要的理念和一些调试经验.">
+  <link rel="alternate" href="/atom.xml" title="fury车队" type="application/atom+xml">
+  <link rel="canonical" href="https://uestc-fury.github.io/2019/01/嵌入式与C-侧重调试/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>嵌入式与C(侧重调试) | fury车队</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fury车队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>作者</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-schedule">
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://uestc-fury.github.io/2019/01/嵌入式与C-侧重调试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fury车队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fury车队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">嵌入式与C(侧重调试)
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user-o"></i>
+              </span>
+              <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/tags/LeoJhonSong" itemprop="url" rel="index">
+                  <span itemprop="name">LeoJhonSong</span>
+                </a>
+              </span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-21 01:29:34" itemprop="dateCreated datePublished" datetime="2019-01-21T01:29:34+08:00">2019-01-21</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-20 15:29:34" itemprop="dateModified" datetime="2021-02-20T15:29:34+08:00">2021-02-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/" itemprop="url" rel="index"><span itemprop="name">电气组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/电气组培训/2019寒假/" itemprop="url" rel="index"><span itemprop="name">2019寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/嵌入式/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>3.2k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>3 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>我们大部分组员已经学过C语言了, 即便没学过, C语言也不难上手. 我不打算笼统地讲语法, 即便是单片机特有的C语言语法也不算难, 怎么写中断函数, 怎么写延时函数你们自己也能很容易搞懂的<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png?v8">👍</span><br>因此这次我打算主要提几个比较重要的理念和一些调试经验.</p>
+<a id="more"></a>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 学习C语言我推荐<br><a href="https://akaedu.github.io/book/index.html" target="_blank" rel="noopener">这个教程</a>.<br>如果你担心只是少量操作容易忘记学过的知识,网上有很多练习题的,一搜一箩筐.</p>
+<h1 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h1><h2 id="几个理念"><a href="#几个理念" class="headerlink" title="几个理念"></a>几个理念</h2><h3 id="起顺眼的名字"><a href="#起顺眼的名字" class="headerlink" title="起顺眼的名字"></a>起顺眼的名字</h3><p>变量和函数的命名实际上也是个很重要的问题. 试想在团队中你出于个人喜好命名了别人看不懂的标识符,<br>当别人要审阅你的代码时他不能通过这些名字一眼看出你表达的意思, 极大的降低了效率, 而且假如你的命名习惯和他的完全相反, 他的体感会很差. 因此最好的办法是<strong>使用统一而直观的命名法</strong>.</p>
+<h4 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h4><h4 id="下划线命名法"><a href="#下划线命名法" class="headerlink" title="下划线命名法"></a>下划线命名法</h4><h4 id="匈牙利命名法"><a href="#匈牙利命名法" class="headerlink" title="匈牙利命名法"></a>匈牙利命名法</h4><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><h3 id="善用宏定义"><a href="#善用宏定义" class="headerlink" title="善用宏定义"></a>善用宏定义</h3><h3 id="一口吃不成大胖子"><a href="#一口吃不成大胖子" class="headerlink" title="一口吃不成大胖子"></a>一口吃不成大胖子</h3><p>当要做一个大工程的时候你首先应该想到去GitHub找找有没有有帮助的代码 (Ctrl C Ctrl V), 在网上搜一搜有没有人做过相关工作, 也许应用不一样, 但很与可能他的代码思路对你很有帮助. 林子大了, 你想做的总有人做过或者为你做了铺垫.</p>
+<p>另一方面, 你应该总是<strong>从一个能正确运行的小规模程序开始</strong>，每做一步小的改动就立刻进行调试，这样的好处是总有一个正确的程序做参考：如果正确就继续编程，如果不正确，那么一定是刚才的小改动出了问题。例如，Linux操作系统包含了成千上万行代码，但它也不是一开始就规划好了内存管理、设备管理、文件系统、网络等等大的模块，一开始它仅仅是Linus Torvalds用来琢磨Intel 80386芯片而写的小程序。据Larry Greenfield 说，“Linus的早期工程之一是编写一个交替打印AAAA和BBBB的程序，这玩意儿后来进化成了Linux。”（引自The Linux User’s Guide Beta1版）</p>
+<h3 id="有了注释-妈妈再也不用担心我读不懂代码"><a href="#有了注释-妈妈再也不用担心我读不懂代码" class="headerlink" title="有了注释, 妈妈再也不用担心我读不懂代码"></a>有了注释, 妈妈再也不用担心我读不懂代码</h3><h3 id="代码片段-snippets"><a href="#代码片段-snippets" class="headerlink" title="代码片段 (snippets)"></a>代码片段 (snippets)</h3><!-- 甚至文档 -->
+<h3 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h3><h2 id="一些调试经验"><a href="#一些调试经验" class="headerlink" title="一些调试经验"></a>一些调试经验</h2><p>首先要指出Bug分为三种:</p>
+<ol>
+<li><p>编译时错误</p>
+<p>编译器只能翻译语法正确的程序，否则将导致编译失败，<strong>无法生成可执行文件</strong>。对于自然语言来说，一点语法错误不是很严重的问题，因为我们仍然可以读懂句子。而编译器就没那么宽容了，只要有哪怕一个很小的语法错误，编译器就会输出一条错误提示信息然后罢工，你就得不到你想要的结果。虽然大部分情况下编译器给出的错误提示信息就是你出错的代码行，<strong>但也有个别时候编译器给出的错误提示信息帮助不大，甚至会误导你</strong>。在开始学习编程的前几个星期，你可能会花大量的时间来纠正语法错误。等到有了一些经验之后，还是会犯这样的错误，不过会少得多，而且你能更快地发现错误原因。等到经验更丰富之后你就会觉得，语法错误是最简单最低级的错误，编译器的错误提示也就那么几种，即使错误提示是有误导的也能够立刻找出真正的错误原因是什么。相比下面两种错误，语法错误解决起来要容易得多。</p>
+</li>
+<li><p>运行时错误</p>
+<p>编译器<strong>检查不出这类错误</strong>，仍然可以生成可执行文件，但在运行时会出错而导致程序崩溃。<!-- TODO -->比如</p>
+</li>
+<li><p>逻辑错误和语义错误</p>
+<p>如果程序里有逻辑错误，编译和运行都会很顺利，看上去也不产生任何错误信息，但是程序没有干它该干的事情，而是干了别的事情。当然不管怎么样，计算机只会按你写的程序去做，问题在于你写的程序不是你真正想要的，这意味着程序的想法（即语义）是错的。找到逻辑错误在哪需要十分清醒的头脑，要通过观察程序的输出回过头来判断它到底在做什么。</p>
+</li>
+</ol>
+<h3 id="烫烫烫屯屯屯锟斤拷"><a href="#烫烫烫屯屯屯锟斤拷" class="headerlink" title="烫烫烫屯屯屯锟斤拷"></a>烫烫烫屯屯屯锟斤拷</h3><p>字符的编码格式也是个很令人头疼的问题,一不小心就会出错. 烫烫烫, 屯屯屯, 锟斤拷正是由此而来的梗.<br>但实际上前两个和锟斤拷的产生原因完全不一样.<br><strong>烫烫烫和屯屯屯是因为微软编译器 (MSVC) 的内存保护机制，锟斤拷是编码字符集转换问题。</strong></p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 点击<br><a href="https://akaedu.github.io/book/ch08s04.html" target="_blank" rel="noopener">这里</a>进一步了解字符串</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 具体解释参见以下两个链接:</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/27253604" target="_blank" rel="noopener">知乎-烫烫烫屯屯屯那些事</a></li>
+<li><a href="https://www.zhihu.com/question/23024782" target="_blank" rel="noopener">知乎-锟斤拷是什么?</a></li>
+</ul>
+<h3 id="别忘了编译"><a href="#别忘了编译" class="headerlink" title="别忘了编译!"></a>别忘了编译!</h3><p>有的时候你可能会陷入绝望, 发现怎么改自己觉得可能出错的地方程序运行仍然报错, 你可能欣喜的发现了自己之前犯的一个愚蠢的语法错误, 觉得改过来肯定就能完美运行了, 可现实是<strong>不管你怎么改程序,<br>就算把所有代码都删了徐行程序仍然是那个报错</strong>. 这时候你要看看你是否在改动代码后<strong>重新编译</strong>了程序, 不然你的程序运行起来当然不会有任何改变. 在有的工具中, 比如<strong>CodeBlocks</strong>中有<br><strong>build</strong>, <strong>run</strong>, <strong>build and run</strong> 三个按钮, 建议大家认准<code>build and run</code>.</p>
+<h3 id="数据溢出"><a href="#数据溢出" class="headerlink" title="数据溢出"></a>数据溢出</h3><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="神秘报错"><a href="#神秘报错" class="headerlink" title="神秘报错"></a>神秘报错</h2><p>在C语言程序中有这么一种错误, 再怎么看代码也看不出错, 但编译器就是报错. 请找出下面这个程序的错误.</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, world.\n"</span>)；</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>；</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>正如前面提到的, 宏定义是个很好的东西, 在接下来的两个例子中我们用宏定义弄些奇怪的东西<br><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span></p>
+<h2 id="一门新语言"><a href="#一门新语言" class="headerlink" title="一门新语言"></a>一门新语言</h2><p>请写一个<strong>head.h</strong>文件, 满足程序以下条件:</p>
+<ul>
+<li>用<code>I love{}</code>来定义主函数</li>
+<li>以<code>perfect</code>来返回主函数值</li>
+<li>主程序中只能引用<strong>head.h</strong>一个头文件</li>
+<li><code>fury</code>语句打印<strong>Hello World!</strong></li>
+<li><code>OYeah</code>语句实现<code>getchar()</code></li>
+</ul>
+<p>你可以用以下程序测试你发明的新语言是否成功 (<strong>head.h</strong>是否满足要求)</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"head.h"</span></span></span><br><span class="line"></span><br><span class="line">I love</span><br><span class="line">{</span><br><span class="line">    fury</span><br><span class="line">    OYeah</span><br><span class="line">    OYeah</span><br><span class="line">    perfect</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8">⭐</span> 编译器是<a href="https://www.jianshu.com/p/b940cc575e57" target="_blank" rel="noopener">MinGW</a><br>(Minimalist GNU for Windows) 的话标识符不能是中文, 但如果你的编译器是<a href="#MSVC">MSVC</a><br>的话, 标识符允许是中文<span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f60f.png?v8">😏</span> 也就是说你可以通过<strong>define</strong>关键字写出以下这样的程序</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> <span class="meta-string">"head.h"</span></span></span><br><span class="line"></span><br><span class="line">整数 主函数()</span><br><span class="line">{</span><br><span class="line">    打印(<span class="string">"你好"</span>);</span><br><span class="line">    获取字符();</span><br><span class="line">    获取字符();</span><br><span class="line">    返回 零;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="这个比较骚"><a href="#这个比较骚" class="headerlink" title="这个比较骚"></a>这个比较骚</h2><p>这个使用define的命题我也觉得很骚</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br></pre></td></tr></tbody></table></figure>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2b05.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2b05.png?v8">⬅</span></p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"11111\n"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Print2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"22222\n"</span>);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    Print1;</span><br><span class="line">    Print2;</span><br><span class="line">    getchar();</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>请在<strong>箭头位置</strong>加几行代码使得以上代码输出为:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">11111</span><br><span class="line">22222</span><br></pre></td></tr></tbody></table></figure>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">⚠</span>只要能够得到这个输出就可以, 不必怀疑自己的方法</p>
+<h2 id="先来后到"><a href="#先来后到" class="headerlink" title="先来后到"></a>先来后到</h2><p>这类错误也是很容易忽略的错误</p>
+<p>现在C99标准的<a href="#x86">x86平台</a><a href="#整形变量">整型变量</a><br>是32位的, 也就是说取值范围是-2147483648~2147483647. 现在我们写一段代码做一些计算并打印出来, 检测以下这个标准.</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    {</span><br><span class="line">        a = a * <span class="number">4</span>;</span><br><span class="line">        b = b * <span class="number">2</span>;</span><br><span class="line">        c = a * a / b / b / <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, c);</span><br><span class="line">        <span class="keyword">if</span>(c&lt;=<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>; <span class="comment">//  当幂非正了明显就数据溢出了, 跳出循环</span></span><br><span class="line">    }</span><br><span class="line">    getchar();</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这段代码打印了一些2为底的幂, 一直打印到数据溢出为止, 只不过是生成幂的方式骚一点.</p>
+<p>现在我们脑补一下输出, 应该是这样:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">32</span><br><span class="line">128</span><br><span class="line">512</span><br><span class="line">2048</span><br><span class="line">8192</span><br><span class="line">32768</span><br><span class="line">131072</span><br><span class="line">524288</span><br><span class="line">2097152</span><br><span class="line">8388608</span><br><span class="line">33554432</span><br><span class="line">134217728</span><br><span class="line">536870912</span><br><span class="line">-2147483648</span><br></pre></td></tr></tbody></table></figure>
+<p>然而实际上</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">8</span><br><span class="line">32</span><br><span class="line">128</span><br><span class="line">512</span><br><span class="line">2048</span><br><span class="line">8192</span><br><span class="line">32768</span><br><span class="line">0</span><br></pre></td></tr></tbody></table></figure>
+<p>嗯? 怕不是其实整形的范围是-32767~32768? 为什么到32768就爆了呢???</p>
+<h2 id="轻松一刻"><a href="#轻松一刻" class="headerlink" title="轻松一刻"></a>轻松一刻</h2><p>好吧看了几个难的我们解决一个简单的轻松一下</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span> c[<span class="number">23</span>] = <span class="string">"AaBbCcDdEeFfGgHhIiJjKk"</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">-1</span>;i&lt;<span class="number">23</span>;)</span><br><span class="line">    {</span><br><span class="line">        i = i + <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c\n"</span>, c[i]);</span><br><span class="line">    }</span><br><span class="line">    getchar();</span><br><span class="line">    getchar();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>我们试图用这段代码输出小写字母, 但为什么出错了呢?</p>
+<p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8">⚠</span> 可能并不会报错只是会有乱码</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><p>Microsoft Visual C++. MSVC集成于Visual Studio中, 也就是说如果你用的IDE是VS<br>并且你没有换编译器的话, 那么编译器一定是MSVC,<br>如果是别的其他IDE一般来说默认编译器是gcc, 但一般也可以换成以MSVC为编译器</p>
+<h2 id="x86"><a href="#x86" class="headerlink" title="x86"></a>x86</h2><p>上面说到的<strong>x86</strong>平台是32位的处理器架构, 而另一个很有名的<strong>x64</strong>是<strong>x86-64</strong>的缩写, 是基于<br>x86的64位处理器架构, 向后兼容x86. 因为最先由AMD公开64位指令集因此又称AMD64.</p>
+<h2 id="整形变量"><a href="#整形变量" class="headerlink" title="整形变量"></a>整形变量</h2><p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png?v8">✔</span> 点击<a href="https://akaedu.github.io/book/ch15s01.html" target="_blank" rel="noopener">这里</a>进一步认识整形变量</p>
+<p>值得注意的是, 正如上面链接中提到的整形变量的位数是<strong>Implementation Defined</strong>的,<br>也就是说位数是由平台决定的. 比如<strong>x86平台int为32位, x64平台int为64位, 在C51中int为16位</strong>. 这正体现了C语言的特性之一: <strong>优先考虑效率，而可移植性尚在其次</strong>. C语言与平台和编译器是分不开的, 正如上面MinGW不支持中文标识符而MSVC支持中文标识符, 正如习题<br><a href="#先来后到">先来后到</a>中的问题. 因此大家如果要将代码移植到其他平台<br><strong>一定要确认有没有哪些代码是不可移植或者需要改动的</strong>.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/LeoJhonSong/" rel="tag"><i class="fa fa-tag"></i> LeoJhonSong</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/01/一些单片机基础概念/" rel="next" title="一些单片机基础概念">
+                  <i class="fa fa-chevron-left"></i> 一些单片机基础概念
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/02/python速成-python图像处理体验/" rel="prev" title="python速成-python图像处理体验">
+                  python速成-python图像处理体验 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#理论"><span class="nav-number">1.</span> <span class="nav-text">理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#几个理念"><span class="nav-number">1.1.</span> <span class="nav-text">几个理念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#起顺眼的名字"><span class="nav-number">1.1.1.</span> <span class="nav-text">起顺眼的名字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#驼峰命名法"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">驼峰命名法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下划线命名法"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">下划线命名法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#匈牙利命名法"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">匈牙利命名法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象"><span class="nav-number">1.1.2.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#善用宏定义"><span class="nav-number">1.1.3.</span> <span class="nav-text">善用宏定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一口吃不成大胖子"><span class="nav-number">1.1.4.</span> <span class="nav-text">一口吃不成大胖子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有了注释-妈妈再也不用担心我读不懂代码"><span class="nav-number">1.1.5.</span> <span class="nav-text">有了注释, 妈妈再也不用担心我读不懂代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码片段-snippets"><span class="nav-number">1.1.6.</span> <span class="nav-text">代码片段 (snippets)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#野指针"><span class="nav-number">1.1.7.</span> <span class="nav-text">野指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些调试经验"><span class="nav-number">1.2.</span> <span class="nav-text">一些调试经验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#烫烫烫屯屯屯锟斤拷"><span class="nav-number">1.2.1.</span> <span class="nav-text">烫烫烫屯屯屯锟斤拷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#别忘了编译"><span class="nav-number">1.2.2.</span> <span class="nav-text">别忘了编译!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据溢出"><span class="nav-number">1.2.3.</span> <span class="nav-text">数据溢出</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#习题"><span class="nav-number">2.</span> <span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#神秘报错"><span class="nav-number">2.1.</span> <span class="nav-text">神秘报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一门新语言"><span class="nav-number">2.2.</span> <span class="nav-text">一门新语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这个比较骚"><span class="nav-number">2.3.</span> <span class="nav-text">这个比较骚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#先来后到"><span class="nav-number">2.4.</span> <span class="nav-text">先来后到</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轻松一刻"><span class="nav-number">2.5.</span> <span class="nav-text">轻松一刻</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MSVC"><span class="nav-number">3.1.</span> <span class="nav-text">MSVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x86"><span class="nav-number">3.2.</span> <span class="nav-text">x86</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#整形变量"><span class="nav-number">3.3.</span> <span class="nav-text">整形变量</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        
+  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <p class="site-author-name" itemprop="name">fury车队</p>
+    <div class="site-description" itemprop="description"></div>
+  </div>
+    <nav class="site-state motion-element">
+      
+        <div class="site-state-item site-state-posts">
+          
+            <a href="/archives/">
+          
+            <span class="site-state-item-count">25</span>
+            <span class="site-state-item-name">文章</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-categories">
+          
+            
+              <a href="/categories/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">分类</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-tags">
+          
+            
+              <a href="/tags/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">作者</span>
+          </a>
+        </div>
+      
+    </nav>
+  
+    <div class="feed-link motion-element">
+      <a href="/atom.xml" rel="alternate">
+        <i class="fa fa-rss"></i>RSS
+      </a>
+    </div>
+  
+
+  
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <!-- <i class="fa fa-heart"></i> -->
+    <svg class="icon" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fury车队</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+  <script src="/js/hexo_resize_image.js"></script>
+</body>
+</html>

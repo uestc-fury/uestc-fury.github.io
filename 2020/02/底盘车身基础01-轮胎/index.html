@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+  
+  <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+  
+  <script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      version: '7.3.0',
+      exturl: false,
+      sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+      copycode: {"enable":true,"show_result":false,"style":"mac"},
+      back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+      bookmark: {"enable":false,"color":"#222","save":"auto"},
+      fancybox: false,
+      mediumzoom: false,
+      lazyload: false,
+      pangu: false,
+      algolia: {
+        appID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {"per_page":10},
+        labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      },
+      localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},
+      path: 'search.xml',
+      motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+      translation: {
+        copy_button: '复制',
+        copy_success: '复制成功',
+        copy_failure: '复制失败'
+      },
+      sidebarPadding: 40
+    };
+  </script>
+  <meta name="description" content="不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑">
+<meta name="keywords" content="陈松格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="底盘车身基础01-轮胎">
+<meta property="og:url" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/index.html">
+<meta property="og:site_name" content="fury车队">
+<meta property="og:description" content="不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/轮胎坐标系.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/纵向轮胎变形.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/滑移率一.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/侧偏角.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/轮胎形变.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/侧偏角一.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/垂直载荷-侧偏刚度.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/垂直载荷-侧偏力.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/图18.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/附着椭圆.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/回正力矩图解1.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/接地面偏移.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/接地面偏移修正.png">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/回正力矩图像.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/回正力矩极限.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/滚锥效应.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/外倾侧向力.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/外倾叠加.jpg">
+<meta property="og:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/轮胎模型.png">
+<meta property="og:updated_time" content="2021-02-20T07:29:34.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="底盘车身基础01-轮胎">
+<meta name="twitter:description" content="不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑">
+<meta name="twitter:image" content="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/底盘车身基础01-轮胎/轮胎坐标系.png">
+  <link rel="alternate" href="/atom.xml" title="fury车队" type="application/atom+xml">
+  <link rel="canonical" href="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>底盘车身基础01-轮胎 | fury车队</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fury车队</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>作者</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-schedule">
+      
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://uestc-fury.github.io/2020/02/底盘车身基础01-轮胎/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fury车队">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fury车队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">底盘车身基础01-轮胎
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user-o"></i>
+              </span>
+              <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/tags/陈松格" itemprop="url" rel="index">
+                  <span itemprop="name">陈松格</span>
+                </a>
+              </span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-09 22:50:00" itemprop="dateCreated datePublished" datetime="2020-02-09T22:50:00+08:00">2020-02-09</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-20 15:29:34" itemprop="dateModified" datetime="2021-02-20T15:29:34+08:00">2021-02-20</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/" itemprop="url" rel="index"><span itemprop="name">底盘组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/" itemprop="url" rel="index"><span itemprop="name">车身组培训</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/车身组培训/2020寒假/" itemprop="url" rel="index"><span itemprop="name">2020寒假</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/底盘车身基础/" itemprop="url" rel="index"><span itemprop="name">底盘车身基础</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>7k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span>6 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>不知道大家有没有自己去学习了解一些汽车理论方面的知识，这个系列希望能够帮助专业不相关的同学更快入门吧，顺带扯一句我专业生物医学工程我也就看明白了（笑</p>
+<a id="more"></a>
+<p>为什么说轮胎最重要，相信大家在看简介的时候就已经有了一定的理解。赛车的全部抓地力都是由轮胎与地面不过巴掌大的接触面实现的。所以我们为了赛车的提升做的所有优化本质上都是为了提升轮胎对地面的最大摩擦力。因此在所有的子系统之前，我们必须了解轮胎。</p>
+<blockquote>
+<p>轮胎是一台汽车上最重要的零件（没有之一）。</p>
+<p>​                                                                    ——<del>鲁迅</del></p>
+</blockquote>
+<h2 id="轮胎坐标系"><a href="#轮胎坐标系" class="headerlink" title="轮胎坐标系"></a>轮胎坐标系</h2><p>为了清晰地描述车轮的运动模式，我们定义轮胎坐标系来描述轮胎的运动模式。</p>
+<p><img src="底盘车身基础01-轮胎/轮胎坐标系.png" alt="轮胎坐标系"></p>
+<p>轮胎坐标系为一个以<strong>车轮正前方</strong>为x轴正方向，<strong>与地面垂直的正上方</strong>为z轴正方向的<strong>右手系</strong>。</p>
+<p>在这个坐标系上我们可以清楚地表示一些轮胎的运动规律：</p>
+<ul>
+<li>轮胎运动过程中受到切向，侧向与地面法向三个方向的地面反作用力<strong><em>F<sub>X</sub></em></strong>，<strong><em>F<sub>Y</sub></em></strong>，<strong><em>F<sub>Z</sub></em></strong>；</li>
+<li>轮胎受到三个方向的力矩：切向称为<strong>翻转力矩<em>T<sub>X</sub></em></strong>，地面法向称为<strong>回正力矩<em>T<sub>Z</sub></em></strong>，侧向为<strong>滚动阻力矩<em>T<sub>Y</sub></em></strong>；</li>
+<li>轮胎的滚动并不是圆柱体的滚动，轮胎滚动可能存在<strong>外倾角<em>γ</em></strong>；</li>
+<li>轮胎的<strong>实际行驶方向</strong>可能与轮胎朝向产生偏角，这被表示为<strong>侧偏角<em>u</em></strong>。</li>
+</ul>
+<h2 id="附着力"><a href="#附着力" class="headerlink" title="附着力"></a>附着力</h2><p>赛车依靠轮胎受到的<strong>地面的反作用力</strong>运动，这就是所谓的“抓地力”，为了表示它的极限值，我们引入了<strong>附着力</strong>的概念。同时类比于摩擦系数，我们使用<strong>附着系数</strong>来称呼附着力与地面正压力的比值。</p>
+<script type="math/tex; mode=display">
+F_{max}=F_Zφ\qquad φ=\frac{F_{max}}{F_Z}</script><p>式中<strong><em>F<sub>max</sub></em></strong>为附着力，<strong><em>φ</em></strong>为附着系数。根据力的合成分解原理，附着力与附着系数还可以分为<strong>纵向(切向)</strong>与<strong>横向(侧向)</strong>，分别对应最大的纵向与侧向的地面反力。与此同时，我们还使用<strong>附着率<em>C</em></strong>表示轮胎实际附着情况：</p>
+<script type="math/tex; mode=display">
+C=\frac{F}{F_Z}</script><p>可以看出附着率是一个变量，他与附着系数之恒间有<strong><em>C ≤ φ</em></strong>。</p>
+<p>我们知道，优化赛车的根本手段是提高赛车轮胎的附着力。根据公式，附着力的提高有两种方法。</p>
+<ol>
+<li><p>提高<strong>正压力<em>F<sub>Z</sub></em></strong></p>
+<p>如果单纯使用增重提高正压力的话，车重带来的惯量会损失赛车的灵活性。尤其是有输出功率限制的FSAE比赛，增重会极大的影响赛车的直线加速成绩。所以最好地提升手段是使用空气动力学套件，利用<strong>气动下压力</strong>使赛车在速度较快的弯角获得更大的附着力。</p>
+</li>
+<li><p>提高<strong>附着系数<em>φ</em></strong></p>
+<p>附着系数是一个受到<strong>地面质量、轮胎橡胶性质、轮胎花纹、轮胎接地面积、轮胎倾角、滑移率、侧偏角</strong>等等很多物理属性影响决定的常量。</p>
+<p>因为它非常复杂，随着工况变化而变化，所以目前没有实时定量的技术水平，只能通过测试估计。但是工程上已经针对各种条件总结出了<strong>附着系数的估计值与变化规律</strong>。整个底盘系统绝大部分优化基于附着系数变化的规律，我们在之后的章节中细节分析。请大家牢记附着系数的概念。</p>
+</li>
+</ol>
+<h2 id="轮胎的纵向运动"><a href="#轮胎的纵向运动" class="headerlink" title="轮胎的纵向运动"></a>轮胎的纵向运动</h2><p>之前我们了解到，当车轮转矩过大时，轮胎的滚动状态就会被破坏而进入滑动状态，发生空转或抱死。现在我们来讲点细节。</p>
+<h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>如果车轮是一个刚性的圆柱体，而地面是理想粗糙平面，那么车轮与地面之间的滚动就完全依靠圆柱面与地面之间的静摩擦力实现了，此时地面的<strong>附着系数</strong>完全等于<strong>滑动摩擦系数</strong>。这时车轮转矩对应到地面切向反力会有两种状态：</p>
+<ul>
+<li>当车轮转矩输出到接触面面上的切向力小于附着力(<strong><em>rT ≤ F<sub>Xmax</sub></em></strong>)，此时车轮完全滚动。切向力等于这个转矩的输出。</li>
+<li>当车轮转矩输出到接触面上大于附着极限(<strong><em>rT &gt; F<sub>Xmax</sub></em></strong>)，此时车轮开始滑动，切向力达到附着力并保持在附着力上。</li>
+</ul>
+<p>然而现实中的轮胎是充气的柔软橡胶表面，地面也是颗粒不平的粗糙平面。这个现实问题让我们不能用上述简单模型描述轮胎运动。实际上的轮胎运动过程中，由于橡胶的柔软，轮辋经由轮胎将力传导至地面的过程中，<strong>轮胎接地面会产生微小的形变</strong>。所以轮胎在加减速行驶过程中，胎面一直会与地面之间产生<strong>微观上的滑移</strong>。也就是说，轮胎在加减速行驶过程中，一直处于一种“<strong>边滚边滑</strong>”的状态。</p>
+<p><img src="底盘车身基础01-轮胎/纵向轮胎变形.png" alt="纵向轮胎变形"></p>
+<p>为了描述这种状态，我们引入<strong>滑移率</strong>的定义：</p>
+<h3 id="滑移率"><a href="#滑移率" class="headerlink" title="滑移率"></a>滑移率</h3><script type="math/tex; mode=display">
+s=\frac{u-u_w}{u}\times100\%=\frac{u-rω}{u}\times100\%</script><p>式中<strong><em>u</em></strong>表示车速，<strong><em>u<sub>ω</sub></em></strong>表示车轮转动线速度，<strong><em>ω</em></strong>为车轮滚动角速度，<strong><em>r</em></strong>为车轮半径。滑移率表示<strong>滑动摩擦在车轮纵向运动中所占的比重</strong>。当车轮纯滚动时，<strong><em>u<sub>ω</sub>= u</em></strong> ，<strong><em>s = 0</em></strong>；当车轮抱死纯滑动时，<strong><em>u<sub>ω</sub>= 0</em></strong> , <strong><em>s =100%</em></strong>；当车轮边滚边滑时，<strong><em>u &gt; u<sub>ω</sub></em></strong> ，<strong><em>0 &lt; s &lt; 100%</em></strong>。车轮滑移率越大，说明车轮在运动中滑动成分所占的比例越大。</p>
+<p>滑移率能够描述轮胎因为<strong>微观形变产生的滑移</strong>（肉眼几乎不可见），也能够描述<strong>轮胎的宏观滑移</strong>（明显的车轮滑行）。经验告诉我们，一般当滑移率<strong><em>s ≤ 0.2</em></strong>，轮胎几乎不会产生宏观滑移；当这个数值超过<strong><em>0.2</em></strong>并逐渐增大，轮胎开始产生宏观滑移，并且微观滑移的强度会随着这个数值增大而减弱。这个规律的产生原因与橡胶轮胎的物理特性有关，我把有关内容放扩展吧这里不赘述。</p>
+<p>现在我们来看看滑移率这个指标对赛车的影响</p>
+<h3 id="定性分析"><a href="#定性分析" class="headerlink" title="定性分析"></a>定性分析</h3><p>由于<strong>轮胎的变形程度受到地面纵向反力的直接影响</strong>，即有地面纵向反力的产生意味着轮胎一定产生微观滑移。也就是说若将<strong>滑移率</strong>与车轮所受<strong>纵向反力</strong>作图，这条线将会<strong>通过原点</strong>。因此<strong>滑移率能够在一定程度上直接反应轮胎所受纵向反力的大小</strong>。</p>
+<p>现在我们将滑移率直接设置为车轮的参数变量，这意味着如果此时有一个地面法向反力作用在这个带有滑移的车轮上，车轮将输出这个滑移所对应的纵向反力。</p>
+<script type="math/tex; mode=display">
+F_X=f[F_Z,s]</script><p>显然这个纵向反力是能够根据输入的法向力<strong><em>F<sub>Z</sub></em></strong>与滑移率<strong><em>s</em></strong>唯一确定的。并且这个力应当是在这个状态下轮胎能够受到的最大纵向反力，符合<strong>纵向附着力<em>F<sub>Xmax</sub></em></strong>的定义。</p>
+<script type="math/tex; mode=display">
+F_{X_{max}}=f[F_Z,s]</script><p>所以若我们消去地面法向反力<strong><em>F<sub>Z</sub></em></strong>的影响，就可以看出<strong>滑移率<em>s</em></strong>与<strong>纵向附着系数<em>φ<sub>X</sub></em></strong>之间存在的对应关系。这样我们就得到了<strong>滑移率 - 纵向附着系数</strong>的图像。</p>
+<script type="math/tex; mode=display">
+φ_X=f[s]</script><p><img src="底盘车身基础01-轮胎/滑移率一.png" alt="滑移率一"></p>
+<p>从这个图像里我们可以看出：</p>
+<ul>
+<li>在非松质路面下<ul>
+<li>随着滑移率提升，轮胎的附着能力基本符合<strong>线性增长-峰值区间-衰减</strong>的规律；</li>
+<li>附着系数峰值普遍出现在上文提到的<strong>微观滑移与宏观滑移相结合</strong>的区间。也就是说，最佳的加速或制动性能出现在轮胎肉眼观察将要出现滑动的临界点，符合客观规律；</li>
+<li>这个曲线会受到<strong>路面条件</strong>很大的影响，实际上附着系数本身就是一个受到很多因素影响的常量。</li>
+</ul>
+</li>
+<li>在松质路面下<ul>
+<li>斜率变化平缓，超高的滑移率反而会带来更强的附着能力；</li>
+<li>后段附着能力提升来源于轮胎在松质土地中“刨地”的现象。这就是拉力赛中车手更多使用漂移技术的原因。如果你了解拉力，你会发现虽然在烂路赛段车手会漂移，但在铺装路面赛段车手还是会老实抓地跑的。</li>
+</ul>
+</li>
+</ul>
+<p>实际上轮胎的纵向力学性能受到很多因素的影响，这条曲线的参数还会因为轮胎的配方花纹气压等因素发生改变，在此不赘述。</p>
+<p>以上就是轮胎纵向力学的基本规律，接下来讲轮胎的侧向力学规律。</p>
+<h2 id="轮胎的侧偏运动"><a href="#轮胎的侧偏运动" class="headerlink" title="轮胎的侧偏运动"></a>轮胎的侧偏运动</h2><p>轮胎侧向力学研究的是轮胎实际行驶方向与轮胎指向产生<strong>侧偏角</strong>的原因。</p>
+<h3 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a>现象</h3><p>与纵向运动采用相同的方式开始吧：我们再次假设轮胎是一个刚性圆柱，而地面是一个粗糙的理想平面。轮胎与地面的<strong>侧向附着系数<em>φ<sub>Y</sub></em></strong>等于胎面的<strong>摩擦系数</strong>。此时如果车轮带有初速度，并且不受外力作用，车轮将匀速地沿着轮胎所指的方向滚动。此时如果给轮胎施加<strong>侧向力<em>F<sub>y</sub></em></strong>，那么轮胎会受到地面的<strong>侧向反力<em>F<sub>Y</sub></em></strong>的作用。按照这个逻辑，就可以估计出轮胎侧向运动的现象：</p>
+<ul>
+<li>当<strong>侧向力</strong>未达到轮胎的侧向附着力(<strong><em>F<sub>y</sub> ≤ F<sub>Ymax</sub></em></strong>)，轮胎在侧向上与地面仍然是静摩擦的状态，所以轮胎依旧沿着原有的方向直线匀速滚动；</li>
+<li>当侧向力超过了轮胎的侧向附着极限(<strong><em>F<sub>y</sub> &gt; F<sub>Ymax</sub></em></strong>)，轮胎在侧向上开始了<strong>滑动摩擦</strong>，发生<strong>侧向运动</strong>。侧向运动与原有的滚动的合运动与轮胎的指向间产生了一个角度，我们称其为<strong>侧偏角<em>α</em></strong>，轮胎的行驶方向与实际指向不同，这就是轮胎的<strong>侧偏运动</strong>。</li>
+</ul>
+<p><img src="底盘车身基础01-轮胎/侧偏角.png" alt="侧偏角"></p>
+<p>然而需要再一次强调的，现实中的轮胎是一个柔软的充气橡胶物体，地面也是颗粒不平的，所以上述理想模型肯定是无法描述实际情况的。侧偏运动的实际原理较之纵向运动在理解上稍复杂一些，我们另起一段↓</p>
+<p>在地面侧向反力的作用下，如果轮胎是静止不动的，那么轮胎靠近地面的部分就会被“掰弯”</p>
+<p><img src="底盘车身基础01-轮胎/轮胎形变.png" alt="轮胎形变"></p>
+<p>在这种形变下，<strong>轮胎接地面的中心轨迹就会发生变化</strong>，我们可以在图上清楚地看出来：<strong>A<sub>0</sub></strong>到<strong>A<sub>5</sub></strong>的位置在正视图上发生了明显的弯曲。如果此时轮胎滚动的话，很容易想象的是，<strong>车轮的滚动路线就会沿着轮胎的中心线发生偏移</strong>。一个柔软的轮胎在收到侧向力状态下滚动的时候，这种弯曲的状态是实时发生的，轮胎每转过一个点，就会随着这个轨迹发生偏移。因为这个现象，<strong>只要轮胎受到侧向力的作用，它就会产生侧偏运动</strong>。</p>
+<p>理解了之前在纵向运动中描述的“<strong>微观形变</strong>”，你就会意识到，轮胎<strong>侧偏角</strong>与<strong>滑移率</strong>一样，与轮胎受到的侧向反力直接对应，<strong>当轮胎受到侧向反力<em>F<sub>Y</sub></em>，它就会产生侧偏角<em>α</em></strong>。因此我们也可以用<strong>侧偏角一定程度上反应轮胎受到侧向反力的大小</strong>。</p>
+<h3 id="定性分析-1"><a href="#定性分析-1" class="headerlink" title="定性分析"></a>定性分析</h3><p>现在我们可以用熟悉的方式操作了：我们将侧偏角也作为车轮运动的参数变量，将<strong>法向反力<em>F<sub>Z</sub></em></strong>、<strong>侧偏角<em>α</em></strong>作为输入，就可以直接得到轮胎所受到的<strong>侧向反力<em>F<sub>Y</sub></em></strong>的值：</p>
+<script type="math/tex; mode=display">
+F_Y=f[F_Z,α]</script><p>可以看到，这个侧向反力也是可以根据输入唯一确定的，我们把它直接换成<strong>侧向附着力<em>F<sub>Ymax</sub></em></strong>:</p>
+<script type="math/tex; mode=display">
+F_{Y_{max}}=f[F_Z,α]</script><p>然后我们将<strong>轮胎的法向力<em>F<sub>Z</sub></em></strong>设为不同的定值，就得到了<strong>侧偏角 - 侧向反力</strong>的图像。</p>
+<script type="math/tex; mode=display">
+F_{Y}=f[α]</script><p><img src="底盘车身基础01-轮胎/侧偏角一.png" alt="侧偏角一"></p>
+<p>这个图像告诉我们：</p>
+<ul>
+<li>与滑移率相同，侧偏角图像有一个<strong>线性增长</strong>的区间，而在到达峰值后会<strong>很缓慢的衰减</strong>；</li>
+<li>由于轮胎侧向运动的速度与纵向运动速度之间存在着很大的差距，所以侧向反力的图像<strong>与纵向附着系数的前段非常相似</strong>。</li>
+<li>图像因变量为侧向反力，所以随着<strong>地面法向反力<em>F<sub>Z</sub></em></strong>的增加和减少，曲线的幅度会发生变化。</li>
+</ul>
+<p>看到这里大家可能产生了一点疑惑：<strong>为什么使用侧向反力作为因变量，而不是侧向附着系数呢？</strong></p>
+<p>再稍加仔细地观察，上面的图像中随着正压力的变化，曲线的变化并不是线性的：<strong>轮胎的侧向附着系数与轮胎所受的法向反力相关</strong>。轮胎产生扭转变形引起的侧偏运动相较于纵向的滑移，对压力更加敏感，过高的压力会引起侧向附着系数的下降。</p>
+<p>因此我们描述轮胎侧向性能的时候，一般不用侧向附着系数，而是<strong>侧偏刚度<em>k</em></strong>。在很多文献中的<strong>附着系数<em>φ</em></strong>指纵向附着系数。</p>
+<h3 id="侧偏刚度"><a href="#侧偏刚度" class="headerlink" title="侧偏刚度"></a>侧偏刚度</h3><p>侧偏刚度定义为轮胎所受<strong>侧向力<em>F<sub>y</sub></em>与侧偏角<em>α</em>的比值</strong>，单位为（<strong><em>N/deg</em></strong>)。在轮胎坐标系中观察规律，我们会发现侧向力与侧偏角的方向是相反的，所以<strong>侧偏刚度是一个负值</strong>。如果将它放在图像上，它是<strong>侧偏角 - 侧向力</strong>图像在原点的斜率。由于图像在到达峰值区域前仍然有相当长的一段线性区间，因此侧偏刚度还是能够很好地用来描述轮胎的侧向性能的。</p>
+<p>现在我们看看<strong>垂直载荷(法向力) - 侧偏刚度</strong>的图像</p>
+<p><img src="底盘车身基础01-轮胎/垂直载荷-侧偏刚度.jpg" alt="垂直载荷-侧偏刚度"></p>
+<p>↑很清楚地看见，对于同种型号的轮胎，随着法向力的增加，侧偏刚度有<strong>线性增长 - 增速放缓 - 下降</strong>的变化趋势。因此可以很自然地看出为什么在评价侧向性能指标时不使用侧向附着系数。在这个趋势下我们做出<strong>垂直载荷 - 侧偏力(侧向反力)</strong>的图像，它应该是这样的↓</p>
+<p><img src="底盘车身基础01-轮胎/垂直载荷-侧偏力.jpg" alt="垂直载荷-侧偏力"></p>
+<p>这两幅图像告诉我们：</p>
+<ul>
+<li>决定赛车过弯性能的本质还是轮胎，赛车轮胎本身更高的侧偏刚度决定了赛车能够实现远超民用车的过弯响应；</li>
+<li>由于侧偏性能受到轮胎垂直载荷的影响，重量大的赛车在弯道上必然陷入劣势。因此<strong>车子还是越轻越好</strong>；</li>
+<li>气动下压力能够在不提升车重的基础上提升过弯性能。</li>
+</ul>
+<p>实际上如果垂直载荷无限增大，轮胎的纵向力学特性也会受到这样的影响。但是一般载荷无法增大到这个量级，而且在到达明显变化的区间之前，轮胎应该已经爆了（笑</p>
+<h3 id="附着椭圆"><a href="#附着椭圆" class="headerlink" title="附着椭圆"></a>附着椭圆</h3><p>现在我们来看看侧偏运动与纵向运动之间的关系。之前我们了解过<strong>g值圆</strong>的概念。使用g值圆衡量车手驾驶水平时，我们会注意刹车 - 入弯的加速度转移过程。<img src="底盘车身基础01-轮胎/图18.png" alt="图18"></p>
+<p>纵向附着与侧向附着的共同点就是都伴随着轮胎的形变，<strong>橡胶的变形张力极限</strong>就是这些加速度极限的来源。所以轮胎能提供的最大纵向力与侧向力是关联在一起的。如果将轮胎的纵向附着力与侧向附着力做图，就会是如下的形式↓<img src="底盘车身基础01-轮胎/附着椭圆.jpg" alt="附着椭圆"></p>
+<p>在图上我们很容易就能看出：在不同的侧偏角下，侧向附着都有随着随着纵向附着增大而减小的趋势。这些图线的包络形成一个椭圆形，因此被称为<strong>附着椭圆</strong>。</p>
+<p>如果你理解了以上内容，你就已经掌握轮胎行驶过程中两个分运动方向的基本运动形式了。现在我们了解一些其他的关键知识点吧。</p>
+<h2 id="回正力矩"><a href="#回正力矩" class="headerlink" title="回正力矩"></a>回正力矩</h2><p>我们转向时，会在方向盘上感受到促使方向盘回正的力，组成这个力的成分中，就有一部分来自于轮胎的<strong>回正力矩</strong>。</p>
+<h3 id="现象-2"><a href="#现象-2" class="headerlink" title="现象"></a>现象</h3><p>在轮胎坐标系中，回正力矩被定义为地面法向的力矩。当轮胎侧偏运动的时候，在这个方向上就会有力矩使<strong>轮胎倾向于与轮胎实际运动的方向对正</strong>。</p>
+<p>要解释这个力矩产生的原因，我们还是那句老话：<strong>轮胎是一个柔软的充气橡胶圆柱</strong>。由于刚性轮理想模型不会产生回正力矩，这里我们直接讲实际现象。</p>
+<p>当在地面上滚动的时候，柔软的<strong>轮胎与地面之间存在一个近似于椭圆或圆角矩形的接地面</strong>。如果我们再细分，这个面可以被分为很多<strong>与轮轴平行的线微元</strong>。很好理解的是，在轮胎滚动的瞬态过程中(不存在宏观滑移)，这个接地平面最后段旧的微元离开地面，而最前端又有新的微元接触地面，循环往复。↓<img src="底盘车身基础01-轮胎/回正力矩图解1.png" alt="回正力矩图解1"></p>
+<p>现在我们给轮胎加上侧向力，于是轮胎开始有了侧偏运动，接地面就与正常滚动的轮胎相比发生偏移↓<img src="底盘车身基础01-轮胎/接地面偏移.png" alt="接地面偏移"></p>
+<p>上图中存在一个非常明显的问题：接地面前后端的偏移量是相同的,这是轮胎静止产生的。在轮胎滚动的过程中，由于接地面的前后端接地时间不同，<strong>后端明显比前端接触地面时间更长，偏移距离也更长</strong>，因此这个接地面在滚动时应该是一个接近平行四边形的状态↓<img src="底盘车身基础01-轮胎/接地面偏移修正.png" alt="接地面偏移修正"></p>
+<p>这样一来回正力矩的产生也就不难理解了：根据弹力的原理，<strong>接地面后端更大的形变量显然会引起更大的轮胎回弹力</strong>。在接地面上的<strong>前后弹力差</strong>形成了促使轮胎指向实际行驶方向的回正力矩。</p>
+<h3 id="定性分析-2"><a href="#定性分析-2" class="headerlink" title="定性分析"></a>定性分析</h3><p>回正力矩与侧偏运动是同时存在的，我们使用侧偏角来关联轮胎产生的侧向附着力，也用侧偏角来关联回正力矩。先人根据经验整理出了如下图所示的关系↓<img src="底盘车身基础01-轮胎/回正力矩图像.jpg" alt="回正力矩图像"></p>
+<p>这张图像可以很清晰地看出：</p>
+<ul>
+<li>回正力矩的变化趋势同样是近<strong>线性增长 - 峰值区间 - 减弱</strong>；</li>
+<li>随着正压力的变化存在幅度变化；</li>
+</ul>
+<p>更加仔细地观察，我们会发现，相较于纵向附着与侧向力，<strong>回正力矩的下降非常剧烈</strong>。究其原因还是它的发生机理：当轮胎接近附着极限时，接地面的后端显然会比前端更早突破极限并开始宏观滑移。当<strong>后端回弹力不再增大而前端回弹力持续增加</strong>，轮胎的回正力矩就开始下降，甚至在极端情况下达到负值。因此，有经验的车手能够通过方向盘力回馈的变化来判断赛车转向过程中侧向极限的逼近程度。<img src="底盘车身基础01-轮胎/回正力矩极限.jpg" alt="回正力矩极限"></p>
+<p>如果将接地面所受的力积分，我们会发现这个合力在数值上就是<strong>侧向反力<em>F<sub>Y</sub></em></strong>。它的作用点恰好能将这个合力分为数值相等的前后两部分，作用点与轮胎坐标系z轴的纵向距离被称为<strong>轮胎拖距<em>e</em></strong>。显然的对于<strong>回正力矩<em>T<sub>Z</sub></em></strong>存在</p>
+<script type="math/tex; mode=display">
+\vec T_Z=\vec F_Y\times \vec e</script><h2 id="外倾角"><a href="#外倾角" class="headerlink" title="外倾角"></a>外倾角</h2><p>轮胎坐标系中还有一个定位输入量——外倾角。之前描述的现象中，我们都有“轮胎正着滚动”这样一个大前提，现在我们加入最后一个变量。</p>
+<h3 id="现象-3"><a href="#现象-3" class="headerlink" title="现象"></a>现象</h3><p>轮胎在滚动过程中出现了倾角，那么它会开始转向倾倒的方向滚动，直到倒下为止。你可以试着滚一枚硬币，当它开始倾倒的时候也会出现这种现象。这是因为倾斜滚动的物体可以类比为一个滚动的圆锥或圆台，因为滚动半径的不同，必然会向着滚轴倾斜的方向转弯。这种现象也会被称为“滚锥效应”。<img src="底盘车身基础01-轮胎/滚锥效应.jpg" alt="滚锥效应"></p>
+<p>↑因此当轮胎指向固定而带着外倾角行驶时，外倾的偏转行驶趋势受到轮胎固定装置的<strong>约束力<em>F<sub>y</sub></em></strong>作用，会与地面之间产生额外的<strong>侧向反力<em>F<sub>Y<sub>γ</sub>&lt;/sub&gt;</sub></em></strong>。这个力被称为<strong>外倾侧向力</strong>。</p>
+<h3 id="定性分析-3"><a href="#定性分析-3" class="headerlink" title="定性分析"></a>定性分析</h3><p>我们将外倾角与滑移率或侧偏角一样，作为轮胎的一个参数输入轮胎的话，就会得到<strong>外倾角 - 外倾侧向力</strong>的关系↓<img src="底盘车身基础01-轮胎/外倾侧向力.jpg" alt="外倾侧向力"></p>
+<p>根据图像所示的关系，我们不难推断：</p>
+<ul>
+<li>外倾角与外倾侧向力关系基本是线性的；</li>
+<li>类比于<strong>侧偏刚度<em>k</em></strong>，我们将外倾角转化为外倾侧向力的系数称为轮胎的<strong>外倾刚度<em>k<sub>γ</sub></em></strong>；</li>
+<li>如果一个轮胎在滚动中同时带有侧偏角与外倾角，那么这两个变量带来的侧向力能够<strong>叠加</strong>。<img src="底盘车身基础01-轮胎/外倾叠加.jpg" alt="外倾叠加"></li>
+</ul>
+<p>所以如图所示↑，一个轮胎所受的<strong>侧向力<em>F<sub>Y</sub></em></strong>可以有如下关系：</p>
+<script type="math/tex; mode=display">
+F_Y=k\alpha +k_{\gamma}\gamma</script><h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>至此，我们基本了解了与轮胎有关的所有参数与变量。事实上在现代的工程设计过程中，轮胎的特性参数会根据一系列的测试建立数学模型，并封装到仿真工具中。实际操作过程中可能并不会接触到这些底层的问题。但是一定要有对这些现象的基本理解，因为这些关系本身就是很多设计思路的理论基础。</p>
+<p>轮胎模型系统一般以如下的形式存在：</p>
+<p><img src="底盘车身基础01-轮胎/轮胎模型.png" alt="轮胎模型"></p>
+<p>轮胎<strong>魔术公式</strong>模型是由代尔夫特理工大学的Hans B. Pacejka教授提出的一系列描述轮胎动态力学性质的数学模型，目前在工程界被广泛地使用。关于它的具体关系在此不做赘述，大家有兴趣的或者工作涉及仿真与轮胎模型时请自行查阅吧。</p>
+<h3 id="一些资源"><a href="#一些资源" class="headerlink" title="一些资源"></a>一些资源</h3><ul>
+<li><a href="https://www.gcores.com/articles/93039" target="_blank" rel="noopener">James Sun - 从拟真向竞速游戏出发，聊聊关于赛车动力学的事（轮胎篇）</a></li>
+<li><a href="https://wenku.baidu.com/view/34a4c450ef06eff9aef8941ea76e58fafab04598.html" target="_blank" rel="noopener">汽车理论课件-汽车理论第五版-清华大学余志生 - 百度文库</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hans_B._Pacejka" target="_blank" rel="noopener">Hans B. Pacejka - wikipedia</a></li>
+<li><a href="https://www.cnblogs.com/xpvincent/archive/2013/02/03/2890802.html" target="_blank" rel="noopener">马语者 - 轮胎的魔术公式(Magic Fomula)模型</a></li>
+<li><a href="https://www.bilibili.com/video/av67716364/" target="_blank" rel="noopener">汽车理论（清华大学） - bilibili</a></li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/陈松格/" rel="tag"><i class="fa fa-tag"></i> 陈松格</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/02/2020电气组寒假培训第13讲_绝缘检测装置/" rel="next" title="2020电气组寒假培训第13讲_绝缘检测装置">
+                  <i class="fa fa-chevron-left"></i> 2020电气组寒假培训第13讲_绝缘检测装置
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/02/2020电气组寒假培训第14讲_电池管理系统/" rel="prev" title="2020电气组寒假培训第14讲_电池管理系统">
+                  2020电气组寒假培训第14讲_电池管理系统 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#轮胎坐标系"><span class="nav-number">1.</span> <span class="nav-text">轮胎坐标系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附着力"><span class="nav-number">2.</span> <span class="nav-text">附着力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轮胎的纵向运动"><span class="nav-number">3.</span> <span class="nav-text">轮胎的纵向运动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现象"><span class="nav-number">3.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑移率"><span class="nav-number">3.2.</span> <span class="nav-text">滑移率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定性分析"><span class="nav-number">3.3.</span> <span class="nav-text">定性分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轮胎的侧偏运动"><span class="nav-number">4.</span> <span class="nav-text">轮胎的侧偏运动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现象-1"><span class="nav-number">4.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定性分析-1"><span class="nav-number">4.2.</span> <span class="nav-text">定性分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#侧偏刚度"><span class="nav-number">4.3.</span> <span class="nav-text">侧偏刚度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附着椭圆"><span class="nav-number">4.4.</span> <span class="nav-text">附着椭圆</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回正力矩"><span class="nav-number">5.</span> <span class="nav-text">回正力矩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现象-2"><span class="nav-number">5.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定性分析-2"><span class="nav-number">5.2.</span> <span class="nav-text">定性分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#外倾角"><span class="nav-number">6.</span> <span class="nav-text">外倾角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现象-3"><span class="nav-number">6.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定性分析-3"><span class="nav-number">6.2.</span> <span class="nav-text">定性分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结一下"><span class="nav-number">7.</span> <span class="nav-text">总结一下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一些资源"><span class="nav-number">7.1.</span> <span class="nav-text">一些资源</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        
+  <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <p class="site-author-name" itemprop="name">fury车队</p>
+    <div class="site-description" itemprop="description"></div>
+  </div>
+    <nav class="site-state motion-element">
+      
+        <div class="site-state-item site-state-posts">
+          
+            <a href="/archives/">
+          
+            <span class="site-state-item-count">25</span>
+            <span class="site-state-item-name">文章</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-categories">
+          
+            
+              <a href="/categories/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">分类</span>
+          </a>
+        </div>
+      
+
+      
+        
+        
+        <div class="site-state-item site-state-tags">
+          
+            
+              <a href="/tags/">
+            
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">作者</span>
+          </a>
+        </div>
+      
+    </nav>
+  
+    <div class="feed-link motion-element">
+      <a href="/atom.xml" rel="alternate">
+        <i class="fa fa-rss"></i>RSS
+      </a>
+    </div>
+  
+
+  
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <!-- <i class="fa fa-heart"></i> -->
+    <svg class="icon" aria-hidden="true"><use xlink:href="#heart"></use></svg>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fury车队</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+  
+
+  
+
+  
+
+  <script src="/js/hexo_resize_image.js"></script>
+</body>
+</html>
